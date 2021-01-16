@@ -53,6 +53,20 @@ RestHandler="*res://addons/github-integration/scenes/RestHandler.tscn"
 
 enabled=PoolStringArray( "github-integration" )
 
+[layer_names]
+
+3d_render/layer_1="test"
+3d_physics/layer_1="cooll"
+3d_render/layer_2="set"
+3d_physics/layer_2="sdfdd"
+3d_render/layer_3="actors"
+3d_physics/layer_3="dfffff"
+
+[locale]
+
+test=false
+fallback=false
+
 [rendering]
 
 environment/default_environment="res://default_env.tres"

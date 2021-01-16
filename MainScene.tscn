@@ -1,56 +1,51 @@
-[gd_scene load_steps=16 format=2]
+[gd_scene load_steps=21 format=2]
 
-[ext_resource path="res://textures/Sign018_1K-PNG/Sign018_1K_Color.png" type="Texture" id=1]
+[ext_resource path="res://Prefabs/DangerZone.tscn" type="PackedScene" id=1]
 [ext_resource path="res://materials/gravel.material" type="Material" id=2]
-[ext_resource path="res://materials/danger_sign.tres" type="Material" id=3]
-
-[sub_resource type="SphereMesh" id=1]
+[ext_resource path="res://background.vs" type="Script" id=3]
+[ext_resource path="res://3d/pine.tres" type="ArrayMesh" id=4]
+[ext_resource path="res://3d/landscape.tres" type="ArrayMesh" id=5]
+[ext_resource path="res://Panel.gd" type="Script" id=6]
+[ext_resource path="res://Hero.gd" type="Script" id=7]
+[ext_resource path="res://Prefabs/defender.tscn" type="PackedScene" id=8]
+[ext_resource path="res://CameraRoot.gd" type="Script" id=9]
 
 [sub_resource type="PlaneMesh" id=2]
 
-[sub_resource type="Curve" id=8]
-_data = [ Vector2( 0, 0 ), 0.0, 0.0, 0, 0, Vector2( 0.227891, 1 ), 0.0, 0.0, 0, 0, Vector2( 0.605442, 1 ), 0.0, 0.0, 0, 0, Vector2( 1, 0 ), 0.0, 0.0, 0, 0 ]
+[sub_resource type="BoxShape" id=17]
+extents = Vector3( 5.90723, 0.0850377, 6.60296 )
 
-[sub_resource type="CurveTexture" id=9]
-curve = SubResource( 8 )
+[sub_resource type="PrismMesh" id=11]
 
-[sub_resource type="ParticlesMaterial" id=10]
-emission_shape = 1
-emission_sphere_radius = 1.0
-direction = Vector3( 0, 1, 0 )
-spread = 48.78
-gravity = Vector3( 0, 0, 0 )
-initial_velocity = 5.0
-angular_velocity = 70.9
-angular_velocity_random = 0.78
-angle = 371.6
-angle_random = 1.0
-scale_random = 0.7
-scale_curve = SubResource( 9 )
-color = Color( 0.752941, 0.419608, 0.419608, 1 )
-hue_variation = -0.66
+[sub_resource type="OpenSimplexNoise" id=12]
 
-[sub_resource type="SpatialMaterial" id=11]
-flags_transparent = true
-params_blend_mode = 1
-params_billboard_mode = 3
-particles_anim_h_frames = 1
-particles_anim_v_frames = 1
-particles_anim_loop = false
-albedo_texture = ExtResource( 1 )
+[sub_resource type="NoiseTexture" id=13]
+width = 3654
+height = 3600
+seamless = true
+as_normalmap = true
+bump_strength = 11.1
+noise = SubResource( 12 )
 
-[sub_resource type="QuadMesh" id=12]
-material = SubResource( 11 )
-size = Vector2( 0.636, 0.629 )
+[sub_resource type="SpatialMaterial" id=14]
+albedo_color = Color( 0.686275, 0.541176, 0.788235, 1 )
+metallic = 0.69
+roughness = 0.72
+roughness_texture = SubResource( 13 )
 
-[sub_resource type="ImageTexture" id=3]
+[sub_resource type="SphereShape" id=16]
+radius = 0.585808
 
-[sub_resource type="PanoramaSky" id=4]
-panorama = SubResource( 3 )
+[sub_resource type="SphereMesh" id=15]
 
-[sub_resource type="Environment" id=5]
+[sub_resource type="ImageTexture" id=8]
+
+[sub_resource type="PanoramaSky" id=9]
+panorama = SubResource( 8 )
+
+[sub_resource type="Environment" id=10]
 background_mode = 1
-background_sky = SubResource( 4 )
+background_sky = SubResource( 9 )
 background_color = Color( 0.501961, 0.6, 0.701961, 1 )
 background_energy = 0.87
 fog_enabled = true
@@ -63,13 +58,6 @@ ssao_enabled = true
 ssao_intensity = 2.22
 ssao_light_affect = 1.0
 
-[sub_resource type="CubeMesh" id=6]
-
-[sub_resource type="SpatialMaterial" id=7]
-albedo_color = Color( 0.670588, 0.266667, 0.266667, 1 )
-metallic = 1.0
-roughness = 0.24
-
 [node name="Spatial" type="Spatial"]
 
 [node name="OmniLight" type="OmniLight" parent="."]
@@ -78,75 +66,222 @@ shadow_enabled = true
 shadow_bias = 3.79
 shadow_contact = 1.66
 
-[node name="Spatial" type="Spatial" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.038, 0.024, 0 )
-
-[node name="Sphere" type="MeshInstance" parent="Spatial"]
-transform = Transform( 0.454001, 0, 0, 0, 0.454001, 0, 0, 0, 0.454001, -0.00980043, 0.109573, -0.317768 )
-mesh = SubResource( 1 )
-material/0 = ExtResource( 2 )
-
-[node name="Sphere2" type="MeshInstance" parent="Spatial"]
-transform = Transform( 0.454001, 0, 0, 0, 0.454001, 0, 0, 0, 0.454001, 1.22553, 0.116778, 0.955253 )
-mesh = SubResource( 1 )
-material/0 = ExtResource( 2 )
-
-[node name="Plane" type="MeshInstance" parent="Spatial"]
-transform = Transform( 2.81901, 0.0104123, -0.0145988, -0.0102368, 2.75784, -0.00972791, 0.0202406, 0.0138967, 3.91835, -0.0315386, 0.024584, -0.321308 )
-mesh = SubResource( 2 )
-material/0 = ExtResource( 2 )
-
-[node name="DangerSign" type="MeshInstance" parent="Spatial"]
-transform = Transform( 0.0114997, -0.446906, 0.00183361, 0.44691, 0.0114998, -1.64232e-13, -4.71666e-05, 0.001833, 0.447054, 0.322232, 0.397263, -1.54705 )
-mesh = SubResource( 2 )
-material/0 = ExtResource( 3 )
-
-[node name="Particles" type="Particles" parent="Spatial"]
-transform = Transform( 0.288756, 0, 0, 0, 0.288756, 0, 0, 0, 0.288756, 0.0143568, 0.554467, -0.0528574 )
-amount = 80
-randomness = 0.51
-process_material = SubResource( 10 )
-draw_pass_1 = SubResource( 12 )
-
-[node name="Spatial2" type="Spatial" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 4.43633, 0.033567, 3.15045 )
-
-[node name="Sphere" type="MeshInstance" parent="Spatial2"]
-transform = Transform( 0.454001, 0, 0, 0, 0.454001, 0, 0, 0, 0.454001, -0.00980043, 0.109573, -0.317768 )
-mesh = SubResource( 1 )
-material/0 = ExtResource( 2 )
-
-[node name="Sphere2" type="MeshInstance" parent="Spatial2"]
-transform = Transform( 0.454001, 0, 0, 0, 0.454001, 0, 0, 0, 0.454001, 1.22553, 0.116778, 0.955253 )
-mesh = SubResource( 1 )
-material/0 = ExtResource( 2 )
-
-[node name="Plane" type="MeshInstance" parent="Spatial2"]
-transform = Transform( 4.58678, 0.0169417, -0.0237536, -0.0170258, 4.58681, -0.0161794, 0.0236934, 0.0162674, 4.58678, -0.0315385, 0.024584, -0.321308 )
-mesh = SubResource( 2 )
-material/0 = ExtResource( 2 )
-
-[node name="DangerSign" type="MeshInstance" parent="Spatial2"]
-transform = Transform( 0.0114997, -0.446906, 0.00183361, 0.44691, 0.0114998, -1.64232e-13, -4.71666e-05, 0.001833, 0.447054, 0.322232, 0.397263, -1.54705 )
-mesh = SubResource( 2 )
-material/0 = ExtResource( 3 )
-
-[node name="Particles" type="Particles" parent="Spatial2"]
-transform = Transform( 0.288756, 0, 0, 0, 0.288756, 0, 0, 0, 0.288756, 0.0143568, 0.554467, -0.0528574 )
-amount = 80
-randomness = 0.51
-process_material = SubResource( 10 )
-draw_pass_1 = SubResource( 12 )
-
-[node name="Camera" type="Camera" parent="."]
-transform = Transform( 0.175869, 0.459204, -0.870748, -0.0406348, 0.887167, 0.459656, 0.983575, -0.0454563, 0.174685, -2.38685, 2.41923, 0.707578 )
-environment = SubResource( 5 )
-
-[node name="MeshInstance" type="MeshInstance" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.98547, 0.0161643, -0.5201 )
-mesh = SubResource( 6 )
-material/0 = SubResource( 7 )
-
 [node name="DirectionalLight" type="DirectionalLight" parent="."]
 transform = Transform( 0.657012, 0.314272, -0.685251, 0.265195, 0.754522, 0.600307, 0.705696, -0.576134, 0.412386, 4.34639, 3.76255, -2.21939 )
+visible = false
 shadow_enabled = true
+
+[node name="defender" parent="." instance=ExtResource( 8 )]
+transform = Transform( -0.0561871, 0, -0.398078, 0, 0.402024, 0, 0.398078, 0, -0.0561871, 2.11514, 0.117495, 1.53809 )
+
+[node name="defender2" parent="." instance=ExtResource( 8 )]
+transform = Transform( 0.402024, 0, 0, 0, 0.402024, 0, 0, 0, 0.402024, 2.11514, 0.117495, 1.53809 )
+
+[node name="defender3" parent="." instance=ExtResource( 8 )]
+transform = Transform( -6.5498e-08, 0, 0.402024, 0, 0.402024, 0, -0.402024, 0, -6.5498e-08, 2.11514, 0.117495, 1.49708 )
+
+[node name="defender4" parent="." instance=ExtResource( 8 )]
+transform = Transform( -0.402024, 0, 1.30996e-07, 0, 0.402024, 0, -1.30996e-07, 0, -0.402024, 2.11514, 0.117495, 1.53809 )
+
+[node name="defender5" parent="." instance=ExtResource( 8 )]
+transform = Transform( -0.56636, 0, 1.84544e-07, 0, 0.56636, 0, -1.84544e-07, 0, -0.56636, 4.76308, 0.117495, 0.988778 )
+
+[node name="background" type="Spatial" parent="."]
+script = ExtResource( 3 )
+
+[node name="Forest" type="Spatial" parent="background"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.1606, 0.163459, 0 )
+
+[node name="MeshInstance" type="MeshInstance" parent="background/Forest"]
+visible = false
+mesh = ExtResource( 5 )
+material/0 = null
+
+[node name="MeshInstance2" type="MeshInstance" parent="background/Forest"]
+transform = Transform( 0.454901, 0, 0, 0, 0.454901, 0, 0, 0, 0.454901, 0, 0, 0 )
+visible = false
+mesh = ExtResource( 4 )
+material/0 = null
+
+[node name="Plane" type="MeshInstance" parent="background/Forest"]
+transform = Transform( 2.85877, 0.0105591, -0.0148047, -0.0103812, 2.79673, -0.00986512, 0.020526, 0.0140927, 3.97361, 0.0064614, 0.048584, -2.16225 )
+mesh = SubResource( 2 )
+material/0 = ExtResource( 2 )
+
+[node name="Plane2" type="MeshInstance" parent="background/Forest"]
+transform = Transform( 2.85877, 0.0105591, -0.0148047, -0.0103812, 2.79673, -0.00986512, 0.020526, 0.0140927, 3.97361, 5.54782, 0.048584, -2.16225 )
+mesh = SubResource( 2 )
+material/0 = ExtResource( 2 )
+
+[node name="Plane3" type="MeshInstance" parent="background/Forest"]
+transform = Transform( 2.85877, 0.0105591, -0.0148047, -0.0103812, 2.79673, -0.00986512, 0.020526, 0.0140927, 3.97361, 0.0064614, 0.048584, 5.44006 )
+mesh = SubResource( 2 )
+material/0 = ExtResource( 2 )
+
+[node name="Plane4" type="MeshInstance" parent="background/Forest"]
+transform = Transform( 2.85877, 0.0105591, -0.0148047, -0.0103812, 2.79673, -0.00986512, 0.020526, 0.0140927, 3.97361, 5.54782, 0.048584, 5.44006 )
+mesh = SubResource( 2 )
+material/0 = ExtResource( 2 )
+
+[node name="RigidBody" type="RigidBody" parent="background/Forest"]
+visible = false
+mode = 1
+
+[node name="CollisionShape" type="CollisionShape" parent="background/Forest/RigidBody"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.95449, 0, 0.598963 )
+shape = SubResource( 17 )
+
+[node name="DangerZone" parent="background/Forest" instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.038, 0.024, 0 )
+
+[node name="DangerZone2" parent="background/Forest" instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 4.50179, 0.024, 0.333004 )
+
+[node name="DangerZone3" parent="background/Forest" instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.24647, 0.024, 3.22847 )
+
+[node name="Hero" type="Spatial" parent="."]
+transform = Transform( 0.37742, 0, 0, 0, 0.37742, 0, 0, 0, 0.37742, 3.3148, 0.318188, -0.027549 )
+script = ExtResource( 7 )
+
+[node name="MeshInstance" type="MeshInstance" parent="Hero"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.08655, 0 )
+mesh = SubResource( 11 )
+material/0 = SubResource( 14 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Hero"]
+
+[node name="Spatial" type="Spatial" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.71556, 1.12928, 0.326656 )
+
+[node name="RigidBody" type="RigidBody" parent="Spatial"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3.34258, 1.78871, 1.36853 )
+visible = false
+
+[node name="CollisionShape" type="CollisionShape" parent="Spatial/RigidBody"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0549421, 0 )
+shape = SubResource( 16 )
+
+[node name="MeshInstance" type="MeshInstance" parent="Spatial/RigidBody"]
+transform = Transform( 0.441907, 0, 0, 0, 0.441907, 0, 0, 0, 0.441907, 0, 0.0443251, 0 )
+mesh = SubResource( 15 )
+material/0 = null
+
+[node name="Control" type="Control" parent="."]
+margin_right = 40.0
+margin_bottom = 40.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Panel" type="Panel" parent="Control"]
+self_modulate = Color( 0.0901961, 0.937255, 1, 0.145098 )
+margin_left = 28.0
+margin_top = 39.0
+margin_right = 345.0
+margin_bottom = 230.0
+script = ExtResource( 6 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Control/Panel"]
+margin_left = 26.0
+margin_top = 12.0
+margin_right = 201.0
+margin_bottom = 36.0
+text = "Should the camera rotate ? "
+
+[node name="Button" type="Button" parent="Control/Panel"]
+margin_left = 22.0
+margin_top = 39.0
+margin_right = 108.0
+margin_bottom = 74.0
+hint_tooltip = "this is a tooltip test"
+text = "On"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button2" type="Button" parent="Control/Panel"]
+margin_left = 140.0
+margin_top = 40.0
+margin_right = 226.0
+margin_bottom = 75.0
+hint_tooltip = "this is a tooltip test"
+text = "Off"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button3" type="Button" parent="Control/Panel"]
+margin_left = 255.0
+margin_top = 121.0
+margin_right = 302.0
+margin_bottom = 154.0
+hint_tooltip = "this is a tooltip test"
+text = "Max"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VSeparator" type="VSeparator" parent="Control/Panel"]
+margin_left = 125.0
+margin_top = 39.0
+margin_right = 129.0
+margin_bottom = 79.0
+
+[node name="HSlider" type="HSlider" parent="Control/Panel"]
+margin_left = 34.0
+margin_top = 113.0
+margin_right = 235.0
+margin_bottom = 129.0
+max_value = 1.0
+step = 0.01
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label2" type="Label" parent="Control/Panel/HSlider"]
+margin_left = -9.0
+margin_top = -22.0
+margin_right = 166.0
+margin_bottom = 2.0
+text = "Camera Speed"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HSlider2" type="HSlider" parent="Control/Panel"]
+margin_left = 36.0
+margin_top = 159.0
+margin_right = 237.0
+margin_bottom = 175.0
+max_value = 10.0
+step = 0.1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label3" type="Label" parent="Control/Panel/HSlider2"]
+margin_left = -4.0
+margin_top = -13.0
+margin_right = 171.0
+margin_bottom = 11.0
+text = "Anim Speed"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CameraRoot" type="Spatial" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.3962, 0, 1.42369 )
+script = ExtResource( 9 )
+
+[node name="Camera" type="Camera" parent="CameraRoot"]
+transform = Transform( 0.035798, 0.594396, -0.803376, -0.0588761, 0.803749, 0.592048, 0.997623, 0.0261055, 0.0637684, -3.9538, 3.4121, -0.0233991 )
+environment = SubResource( 10 )
+[connection signal="pressed" from="Control/Panel/Button" to="CameraRoot" method="startRotation"]
+[connection signal="pressed" from="Control/Panel/Button2" to="CameraRoot" method="stopRotation"]
+[connection signal="pressed" from="Control/Panel/Button3" to="CameraRoot" method="setSpeedMax"]
+[connection signal="value_changed" from="Control/Panel/HSlider" to="CameraRoot" method="_on_HSlider_value_changed"]
+[connection signal="value_changed" from="Control/Panel/HSlider2" to="defender5" method="_on_HSlider2_value_changed"]
