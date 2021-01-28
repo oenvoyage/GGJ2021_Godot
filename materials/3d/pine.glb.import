@@ -2,12 +2,12 @@
 
 importer="scene"
 type="PackedScene"
-path="res://.import/defender.fbx-cb43bc828ad915ee0c9dded73550166e.scn"
+path="res://.import/pine.glb-0ba67c1d9a57c4af1ad77e7bfb6a3201.scn"
 
 [deps]
 
-source_file="res://3d/defender.fbx"
-dest_files=[ "res://.import/defender.fbx-cb43bc828ad915ee0c9dded73550166e.scn" ]
+source_file="res://materials/3d/pine.glb"
+dest_files=[ "res://.import/pine.glb-0ba67c1d9a57c4af1ad77e7bfb6a3201.scn" ]
 
 [params]
 

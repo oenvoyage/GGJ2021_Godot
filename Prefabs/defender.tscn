@@ -1,6 +1,6 @@
 [gd_scene load_steps=7 format=2]
 
-[ext_resource path="res://3d/defender.fbx" type="PackedScene" id=1]
+[ext_resource path="res://materials/3d/defender.fbx" type="PackedScene" id=1]
 [ext_resource path="res://Prefabs/defender.gd" type="Script" id=2]
 [ext_resource path="res://textures/organic/Abstract_Organic_003_basecolor.jpg" type="Texture" id=3]
 [ext_resource path="res://textures/organic/Abstract_Organic_003_normal.jpg" type="Texture" id=4]

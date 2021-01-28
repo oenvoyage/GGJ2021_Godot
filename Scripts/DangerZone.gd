@@ -7,8 +7,8 @@ onready var anim = get_node("Sphere/DangerSign/AnimationPlayer")
 # var b = "text"
 
 func _input(ev):
-    if Input.is_action_just_pressed("ui_right"):
-        print("K pressed")
+	if Input.is_action_just_pressed("ui_right"):
+		print("K pressed")
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
