@@ -1,0 +1,59 @@
+[gd_scene load_steps=10 format=2]
+
+[ext_resource path="res://Environment/Environment test Nico.res" type="Environment" id=1]
+[ext_resource path="res://Scripts/Move.gd" type="Script" id=2]
+[ext_resource path="res://materials/gravel.material" type="Material" id=3]
+[ext_resource path="res://materials/Red.tres" type="Material" id=4]
+
+[sub_resource type="CubeMesh" id=4]
+
+[sub_resource type="BoxShape" id=3]
+extents = Vector3( 15.1727, 0.659914, 4.00863 )
+
+[sub_resource type="PhysicsMaterial" id=5]
+rough = true
+
+[sub_resource type="BoxShape" id=1]
+
+[sub_resource type="PrismMesh" id=2]
+material = ExtResource( 3 )
+left_to_right = 0.0
+subdivide_width = 3
+subdivide_height = 3
+subdivide_depth = 3
+
+[node name="MoveForwardCube" type="Spatial"]
+
+[node name="Camera" type="Camera" parent="."]
+transform = Transform( 0.998963, -0.0455199, 0, 0.0399032, 0.875701, 0.481203, -0.0219043, -0.480704, 0.876609, 0, 6.70634, 13.9555 )
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = ExtResource( 1 )
+
+[node name="Ground" type="KinematicBody" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.337608, 0, 0 )
+script = ExtResource( 2 )
+speed = 1
+
+[node name="MeshInstance" type="MeshInstance" parent="Ground"]
+transform = Transform( 14.4067, 0, 0, 0, 0.208745, 0, 0, 0, 3.94074, 0, -2.45776, 0 )
+mesh = SubResource( 4 )
+material/0 = ExtResource( 4 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Ground"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -2.99921, 0 )
+shape = SubResource( 3 )
+
+[node name="RigidBody" type="RigidBody" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4.68827, 0 )
+physics_material_override = SubResource( 5 )
+contact_monitor = true
+can_sleep = false
+
+[node name="CollisionShape" type="CollisionShape" parent="RigidBody"]
+shape = SubResource( 1 )
+
+[node name="MeshInstance" type="MeshInstance" parent="RigidBody"]
+transform = Transform( -0.0841822, 0, -0.99645, 0, 1, 0, 0.99645, 0, -0.0841822, 0, 0, 0 )
+mesh = SubResource( 2 )
+material/0 = null

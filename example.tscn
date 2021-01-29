@@ -32,11 +32,11 @@ func _on_Draggable_drag_move(node, cast):
 
 [sub_resource type="CubeMesh" id=3]
 
-[sub_resource type="BoxShape" id=5]
+[sub_resource type="BoxShape" id=4]
 
-[sub_resource type="PlaneMesh" id=6]
+[sub_resource type="PlaneMesh" id=5]
 
-[sub_resource type="SpatialMaterial" id=7]
+[sub_resource type="SpatialMaterial" id=6]
 albedo_color = Color( 0.741176, 0.145098, 0.145098, 1 )
 metallic = 0.26
 
@@ -67,12 +67,12 @@ transform = Transform( 5.67005, 0, 0, 0, 1, 0, 0, 0, 5.05323, -2.20685, -1.95427
 
 [node name="CollisionShape" type="CollisionShape" parent="Area2"]
 transform = Transform( 1, 0, 0, 0, 0.0384808, 0, 0, 0, 1, 0, 0, 0 )
-shape = SubResource( 5 )
+shape = SubResource( 4 )
 
 [node name="MeshInstance2" type="MeshInstance" parent="Area2/CollisionShape"]
 transform = Transform( 1, 0, 0, 0, 25.987, 0, 0, 0, 1, 0, 0, 0 )
-mesh = SubResource( 6 )
-material/0 = SubResource( 7 )
+mesh = SubResource( 5 )
+material/0 = SubResource( 6 )
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = ExtResource( 3 )

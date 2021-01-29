@@ -17,7 +17,10 @@ func _ready():
 
 
 func _on_Draggable_drag_move(node, cast):
-	set_translation(cast['position']) # Replace with function body.
+	var mousePos = get_viewport().get_mouse_position().normalized()
+	printt(mousePos)
+	printt(cast['position'])
+	set_translation(Vector3(mousePos.x, cast['position'].y,mousePos.y))
 
 
 func _on_Draggable_drag_start(node):
