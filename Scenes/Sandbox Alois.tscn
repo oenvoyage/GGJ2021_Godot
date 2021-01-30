@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Prefabs/LuggagesSpawner.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Prefabs/conveyor_straight.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Prefabs/conveyor_radial90.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Scenes/Sandbox Alois.gd" type="Script" id=4]
+[ext_resource path="res://Scripts/Conveyor.gd" type="Script" id=5]
 
 [node name="Spatial" type="Spatial"]
 script = ExtResource( 4 )
@@ -13,9 +14,11 @@ transform = Transform( -0.577519, 0.267505, -0.771306, -0.0841112, 0.920266, 0.3
 
 [node name="conveyor_straight" parent="." instance=ExtResource( 2 )]
 transform = Transform( 0.0259326, 0, -0.999664, 0, 1, 0, 0.999664, 0, 0.0259326, 15.3582, 9.53674e-07, -14.5803 )
+script = ExtResource( 5 )
 
 [node name="conveyor_straight2" parent="." instance=ExtResource( 2 )]
 transform = Transform( -0.999664, 0, -0.0259327, 0, 1, 0, 0.0259327, 0, -0.999664, 4.54491, 9.53674e-07, -0.273825 )
+script = ExtResource( 5 )
 
 [node name="AnimationPlayer" parent="conveyor_straight2" index="27"]
 playback_speed = 1.62
