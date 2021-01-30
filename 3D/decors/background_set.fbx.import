@@ -2,12 +2,12 @@
 
 importer="scene"
 type="PackedScene"
-path="res://.import/switch.fbx-f26c9b42da8d66fcac3c836948eac57e.scn"
+path="res://.import/background_set.fbx-67657738e69b661ae5916c44eee02520.scn"
 
 [deps]
 
-source_file="res://3D/switch.fbx"
-dest_files=[ "res://.import/switch.fbx-f26c9b42da8d66fcac3c836948eac57e.scn" ]
+source_file="res://3D/decors/background_set.fbx"
+dest_files=[ "res://.import/background_set.fbx-67657738e69b661ae5916c44eee02520.scn" ]
 
 [params]
 
@@ -27,7 +27,7 @@ meshes/lightmap_texel_size=0.1
 skins/use_named_skins=true
 external_files/store_in_subdir=false
 animation/import=true
-animation/fps=25.0
+animation/fps=15
 animation/filter_script=""
 animation/storage=false
 animation/keep_custom_tracks=false

@@ -2,9 +2,10 @@
 
 [ext_resource path="res://Environment/Environment test Nico.res" type="Environment" id=1]
 [ext_resource path="res://Scripts/Move.gd" type="Script" id=2]
-[ext_resource path="res://materials/sapin.tres" type="Material" id=3]
-[ext_resource path="res://materials/gravel.material" type="Material" id=4]
+[ext_resource path="res://_bak_old_project/sapin.tres" type="Material" id=3]
+[ext_resource path="res://_bak_old_project/gravel.material" type="Material" id=4]
 [ext_resource path="res://Prefabs/conveyor_tesat.tscn" type="PackedScene" id=5]
+
 
 [sub_resource type="CubeMesh" id=1]
 

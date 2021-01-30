@@ -2,12 +2,12 @@
 
 importer="scene"
 type="PackedScene"
-path="res://.import/defender.fbx-2ba34a77d80ef784003cdf553ece5130.scn"
+path="res://.import/facade.fbx-b434127e97d3f2f14b699d90d6b289a7.scn"
 
 [deps]
 
-source_file="res://materials/3d/defender.fbx"
-dest_files=[ "res://.import/defender.fbx-2ba34a77d80ef784003cdf553ece5130.scn" ]
+source_file="res://3D/decors/facade.fbx"
+dest_files=[ "res://.import/facade.fbx-b434127e97d3f2f14b699d90d6b289a7.scn" ]
 
 [params]
 

@@ -2,12 +2,12 @@
 
 importer="scene"
 type="PackedScene"
-path="res://.import/landscape.glb-68cc40e72af937a44ecae990ea93f663.scn"
+path="res://.import/arrival_box.fbx-c605feab02e11277ce5dfc0e99205ca6.scn"
 
 [deps]
 
-source_file="res://materials/3d/landscape.glb"
-dest_files=[ "res://.import/landscape.glb-68cc40e72af937a44ecae990ea93f663.scn" ]
+source_file="res://3D/arrival_box.fbx"
+dest_files=[ "res://.import/arrival_box.fbx-c605feab02e11277ce5dfc0e99205ca6.scn" ]
 
 [params]
 

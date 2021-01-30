@@ -2,12 +2,12 @@
 
 importer="scene"
 type="PackedScene"
-path="res://.import/pine.glb-0ba67c1d9a57c4af1ad77e7bfb6a3201.scn"
+path="res://.import/Roger_sub1.fbx-f461650eb6d50043eb0068be3b4a3ad5.scn"
 
 [deps]
 
-source_file="res://materials/3d/pine.glb"
-dest_files=[ "res://.import/pine.glb-0ba67c1d9a57c4af1ad77e7bfb6a3201.scn" ]
+source_file="res://3D/characters/Roger_sub1.fbx"
+dest_files=[ "res://.import/Roger_sub1.fbx-f461650eb6d50043eb0068be3b4a3ad5.scn" ]
 
 [params]
 
