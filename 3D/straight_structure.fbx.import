@@ -2,12 +2,12 @@
 
 importer="scene"
 type="PackedScene"
-path="res://.import/Roger_sub1.fbx-2eaa162e8a1cee49680fc73344aef112.scn"
+path="res://.import/straight_structure.fbx-35adf3a34e13422c89173724a88ea324.scn"
 
 [deps]
 
-source_file="res://Prefabs/3D/Roger_sub1.fbx"
-dest_files=[ "res://.import/Roger_sub1.fbx-2eaa162e8a1cee49680fc73344aef112.scn" ]
+source_file="res://3D/straight_structure.fbx"
+dest_files=[ "res://.import/straight_structure.fbx-35adf3a34e13422c89173724a88ea324.scn" ]
 
 [params]
 

@@ -14,5 +14,4 @@ func _ready():
 		for node in tmpl.get_children():
 		  steps[i].add_child(node.duplicate())
 	$AnimationPlayer.get_animation("Scene").set_loop(true)
-	speed_set(Universe.conveyor_speed)
 	$AnimationPlayer.play("Scene")

@@ -2,12 +2,12 @@
 
 importer="scene"
 type="PackedScene"
-path="res://.import/conveyor_radial90.fbx-7c1ebda966abbd7796f54b8be3ab6cdd.scn"
+path="res://.import/curve_structure.fbx-8bbfe2e4903bb82f45292ed98f5f1a88.scn"
 
 [deps]
 
-source_file="res://Prefabs/3D/conveyor_radial90.fbx"
-dest_files=[ "res://.import/conveyor_radial90.fbx-7c1ebda966abbd7796f54b8be3ab6cdd.scn" ]
+source_file="res://3D/curve_structure.fbx"
+dest_files=[ "res://.import/curve_structure.fbx-8bbfe2e4903bb82f45292ed98f5f1a88.scn" ]
 
 [params]
 

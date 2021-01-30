@@ -2,12 +2,12 @@
 
 importer="scene"
 type="PackedScene"
-path="res://.import/Fimo_sub3.fbx-1b702b3febcfefc70cccf10e2d96804d.scn"
+path="res://.import/curve_belt_elements.fbx-5f159b95c5e75fd4c44916d3521552cb.scn"
 
 [deps]
 
-source_file="res://Prefabs/3D/Fimo_sub3.fbx"
-dest_files=[ "res://.import/Fimo_sub3.fbx-1b702b3febcfefc70cccf10e2d96804d.scn" ]
+source_file="res://3D/curve_belt_elements.fbx"
+dest_files=[ "res://.import/curve_belt_elements.fbx-5f159b95c5e75fd4c44916d3521552cb.scn" ]
 
 [params]
 

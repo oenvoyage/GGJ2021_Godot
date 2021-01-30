@@ -2,12 +2,12 @@
 
 importer="scene"
 type="PackedScene"
-path="res://.import/blue_alien_sub2.fbx-36d5f3606b3c8327e549a04c943ff0b9.scn"
+path="res://.import/switch.fbx-f26c9b42da8d66fcac3c836948eac57e.scn"
 
 [deps]
 
-source_file="res://Prefabs/3D/blue_alien_sub2.fbx"
-dest_files=[ "res://.import/blue_alien_sub2.fbx-36d5f3606b3c8327e549a04c943ff0b9.scn" ]
+source_file="res://3D/switch.fbx"
+dest_files=[ "res://.import/switch.fbx-f26c9b42da8d66fcac3c836948eac57e.scn" ]
 
 [params]
 

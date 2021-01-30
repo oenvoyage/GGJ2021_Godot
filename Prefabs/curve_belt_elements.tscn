@@ -1,0 +1,328 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://3D/curve_belt_elements.fbx" type="PackedScene" id=1]
+[ext_resource path="res://Scripts/Conveyor.gd" type="Script" id=2]
+
+[sub_resource type="ConvexPolygonShape" id=1]
+points = PoolVector3Array( -0.00706668, 0.00149265, 0.0102016, -0.00706668, 0.0032775, 0.0099271, -0.00692969, -0.00468097, 0.0108879, -0.00692969, -0.00372059, 0.0110251, -0.00692969, 0.0032775, 0.00773172, -0.00687212, 0.0037, 0.00898212, -0.00679269, -0.00536773, 0.0103389, -0.00679269, -0.00536773, 0.0112997, -0.00679269, -0.0050932, 0.0112997, -0.00679269, -0.00440645, 0.00951569, -0.00679269, -0.00111307, 0.008418, -0.00679269, 0.00313979, 0.00773172, -0.0066557, -0.00536773, 0.00924153, -0.0066557, -0.00495549, 0.00910427, -0.0066557, -0.00372059, 0.00882976, -0.00661224, 0.00361598, 0.00781344, -0.00637181, 0.00337457, 0.00976289, -0.00624472, -0.00495549, 0.0112997, -0.00610635, -0.00536773, 0.0112997, -0.00610635, -0.00372059, 0.00882976, -0.00596936, -0.00536773, 0.00924153, -0.00596936, -0.00495549, 0.00910427, -0.00500902, -0.00523002, 0.0112997, -0.0039117, -0.0050932, 0.00924153, -0.00212665, -0.00440645, 0.0112997, -0.0013745, 0.00361744, 0.00781321, -0.00130112, 0.00338321, 0.00976336, 0.00157907, -0.00399511, 0.00910427, 0.00308737, -0.00372059, 0.0112997, 0.00432307, -0.00399511, 0.0112997, 0.00477292, 0.00338321, 0.00976336, 0.00500941, 0.00231712, 0.00786898, 0.0052834, -0.0038583, 0.00924153, 0.00610674, -0.00234797, 0.00882976, 0.00610674, 0.00314069, 0.00773172, 0.00624373, -0.00372059, 0.00924153, 0.00638211, -0.00372059, 0.0112997, 0.00638211, -0.00330835, 0.0112997, 0.0063852, 0.00338303, 0.00976339, 0.00661263, 0.00361598, 0.00781344, 0.00665609, -0.00330835, 0.00910427, 0.00687251, 0.0037, 0.00898212, 0.00693008, -0.00358378, 0.00924153, 0.00693008, -0.00358378, 0.0112997, 0.00693008, -0.00330835, 0.0112997, 0.00693008, -0.00221116, 0.00882976, 0.00693008, 0.0032784, 0.00773172, 0.00706707, 0.0032784, 0.0099271, 0.00706707, 0.00341432, 0.00896702 )
+
+[node name="curve_belt_elements" instance=ExtResource( 1 )]
+script = ExtResource( 2 )
+
+[node name="KinematicBody" type="KinematicBody" parent="Step073" index="0"]
+
+[node name="CollisionShape" type="CollisionShape" parent="Step073/KinematicBody" index="0"]
+transform = Transform( 1, 0, 0, 0, 1, -1.42109e-14, 3.55271e-15, 1.11022e-14, 1, 0, 0, 0 )
+shape = SubResource( 1 )
+
+[node name="KinematicBody2" type="KinematicBody" parent="Step074" index="0"]
+transform = Transform( 1, -3.70711e-14, 1.03872e-07, 0, 1, 3.56893e-07, -1.03872e-07, -3.56893e-07, 1, 0, 0, 9.37315e-10 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Step074/KinematicBody2" index="0"]
+transform = Transform( 1, 0, 0, 0, 1, -1.42109e-14, 3.55271e-15, 1.11022e-14, 1, 0, 0, 0 )
+shape = SubResource( 1 )
+
+[node name="KinematicBody3" type="KinematicBody" parent="Step075" index="0"]
+transform = Transform( 1, -1.20411e-14, -9.85805e-08, 0, 1, -1.22145e-07, 9.85805e-08, 1.22145e-07, 1, 0, 0, -5.56807e-09 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Step075/KinematicBody3" index="0"]
+transform = Transform( 1, 0, 0, 0, 1, -1.42109e-14, 3.55271e-15, 1.11022e-14, 1, 0, 0, 0 )
+shape = SubResource( 1 )
+
+[node name="KinematicBody4" type="KinematicBody" parent="Step076" index="0"]
+transform = Transform( 1, 6.15058e-16, 9.33682e-08, 0, 1, -6.58745e-09, -9.33682e-08, 6.58745e-09, 1, 0, 0, -5.8482e-09 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Step076/KinematicBody4" index="0"]
+transform = Transform( 1, 0, 0, 0, 1, -1.42109e-14, 3.55271e-15, 1.11022e-14, 1, 0, 0, 0 )
+shape = SubResource( 1 )
+
+[node name="KinematicBody5" type="KinematicBody" parent="Step077" index="0"]
+transform = Transform( 1, 2.45439e-14, -1.08242e-07, 0, 1, 2.2675e-07, 1.08242e-07, -2.2675e-07, 1, 0, 0, 5.68434e-16 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Step077/KinematicBody5" index="0"]
+transform = Transform( 1, 0, 0, 0, 1, -1.42109e-14, 3.55271e-15, 1.11022e-14, 1, 0, 0, 0 )
+shape = SubResource( 1 )
+
+[node name="KinematicBody6" type="KinematicBody" parent="Step078" index="0"]
+transform = Transform( 1, 1.35468e-14, -1.34046e-07, 0, 1, 1.01061e-07, 1.34046e-07, -1.01061e-07, 1, 0, 0, -4.56297e-09 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Step078/KinematicBody6" index="0"]
+transform = Transform( 1, 0, 0, 0, 1, -1.42109e-14, 3.55271e-15, 1.11022e-14, 1, 0, 0, 0 )
+shape = SubResource( 1 )
+
+[node name="KinematicBody7" type="KinematicBody" parent="Step079" index="0"]
+transform = Transform( 1, 5.87775e-15, -2.76688e-08, 0, 1, 2.12433e-07, 2.76688e-08, -2.12433e-07, 1, 0, 0, -9.30819e-10 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Step079/KinematicBody7" index="0"]
+transform = Transform( 1, 0, 0, 0, 1, -1.42109e-14, 3.55271e-15, 1.11022e-14, 1, 0, 0, 0 )
+shape = SubResource( 1 )
+
+[node name="KinematicBody8" type="KinematicBody" parent="Step080" index="0"]
+transform = Transform( 1, 0, -1.39235e-07, 0, 1, 3.22495e-07, 1.39235e-07, -3.22495e-07, 1, 0, 0, 5.81962e-09 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Step080/KinematicBody8" index="0"]
+transform = Transform( 1, 0, 0, 0, 1, -1.42109e-14, 3.55271e-15, 1.11022e-14, 1, 0, 0, 0 )
+shape = SubResource( 1 )
+
+[node name="KinematicBody9" type="KinematicBody" parent="Step081" index="0"]
+transform = Transform( 1, -4.1132e-14, -2.49674e-07, 0, 1, -1.64743e-07, 2.49673e-07, 1.64743e-07, 1, 0, 0, -2.05015e-08 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Step081/KinematicBody9" index="0"]
+transform = Transform( 1, 0, 0, 0, 1, -1.42109e-14, 3.55271e-15, 1.11022e-14, 1, 0, 0, 0 )
+shape = SubResource( 1 )
+
+[node name="KinematicBody10" type="KinematicBody" parent="Step082" index="0"]
+transform = Transform( 1, 1.41237e-14, -2.27488e-07, 0, 1, 6.20857e-08, 2.27488e-07, -6.20857e-08, 1, 0, 0, -7.75832e-09 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Step082/KinematicBody10" index="0"]
+transform = Transform( 1, 0, 0, 0, 1, -1.42109e-14, 3.55271e-15, 1.11022e-14, 1, 0, 0, 0 )
+shape = SubResource( 1 )
+
+[node name="KinematicBody11" type="KinematicBody" parent="Step083" index="0"]
+transform = Transform( 1, 8.27717e-15, -2.87605e-08, 0, 1, 2.87797e-07, 2.87605e-08, -2.87797e-07, 1, 0, 0, 4.14461e-09 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Step083/KinematicBody11" index="0"]
+transform = Transform( 1, 0, 0, 0, 1, -1.42109e-14, 3.55271e-15, 1.11022e-14, 1, 0, 0, 0 )
+shape = SubResource( 1 )
+
+[node name="KinematicBody12" type="KinematicBody" parent="Step084" index="0"]
+transform = Transform( 1, 4.12424e-14, -2.66354e-07, 0, 1, 1.54841e-07, 2.66354e-07, -1.54841e-07, 1, 0, 0, 2.55795e-15 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Step084/KinematicBody12" index="0"]
+transform = Transform( 1, 0, 0, 0, 1, -1.42109e-14, 3.55271e-15, 1.11022e-14, 1, 0, 0, 0 )
+shape = SubResource( 1 )
+
+[node name="KinematicBody13" type="KinematicBody" parent="Step085" index="0"]
+transform = Transform( 1, 1.30293e-14, 1.32574e-07, 0, 1, -9.82797e-08, -1.32574e-07, 9.82797e-08, 1, 0, 0, -3.08756e-08 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Step085/KinematicBody13" index="0"]
+transform = Transform( 1, 0, 0, 0, 1, -1.42109e-14, 3.55271e-15, 1.11022e-14, 1, 0, 0, 0 )
+shape = SubResource( 1 )
+
+[node name="KinematicBody15" type="KinematicBody" parent="Step086" index="0"]
+transform = Transform( 1, 1.92854e-16, -3.59529e-08, 0, 1, 5.36408e-09, 3.59529e-08, -5.36408e-09, 1, 0, 0, -1.85913e-08 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Step086/KinematicBody15" index="0"]
+transform = Transform( 1, 0, 0, 0, 1, -1.42109e-14, 3.55271e-15, 1.11022e-14, 1, 0, 0, 0 )
+shape = SubResource( 1 )
+
+[node name="KinematicBody14" type="KinematicBody" parent="Step087" index="0"]
+transform = Transform( 1, 5.34616e-15, -4.93919e-08, 0, 1, 1.0824e-07, 4.93919e-08, -1.0824e-07, 1, 0, 0, -9.67668e-09 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Step087/KinematicBody14" index="0"]
+transform = Transform( 1, 0, 0, 0, 1, -1.42109e-14, 3.55271e-15, 1.11022e-14, 1, 0, 0, 0 )
+shape = SubResource( 1 )
+
+[node name="KinematicBody16" type="KinematicBody" parent="Step088" index="0"]
+
+[node name="CollisionShape" type="CollisionShape" parent="Step088/KinematicBody16" index="0"]
+transform = Transform( 1, 0, 0, 0, 1, -1.42109e-14, 3.55271e-15, 1.11022e-14, 1, 0, 0, 0 )
+shape = SubResource( 1 )
+
+[node name="KinematicBody15" type="KinematicBody" parent="Step089" index="0"]
+
+[node name="CollisionShape" type="CollisionShape" parent="Step089/KinematicBody15" index="0"]
+transform = Transform( 1, 0, 0, 0, 1, -1.42109e-14, 3.55271e-15, 1.11022e-14, 1, 0, 0, 0 )
+shape = SubResource( 1 )
+
+[node name="KinematicBody16" type="KinematicBody" parent="Step090" index="0"]
+
+[node name="CollisionShape" type="CollisionShape" parent="Step090/KinematicBody16" index="0"]
+transform = Transform( 1, 0, 0, 0, 1, -1.42109e-14, 3.55271e-15, 1.11022e-14, 1, 0, 0, 0 )
+shape = SubResource( 1 )
+
+[node name="KinematicBody17" type="KinematicBody" parent="Step091" index="0"]
+
+[node name="CollisionShape" type="CollisionShape" parent="Step091/KinematicBody17" index="0"]
+transform = Transform( 1, 0, 0, 0, 1, -1.42109e-14, 3.55271e-15, 1.11022e-14, 1, 0, 0, 0 )
+shape = SubResource( 1 )
+
+[node name="KinematicBody18" type="KinematicBody" parent="Step092" index="0"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Step092/KinematicBody18" index="0"]
+transform = Transform( 1, 0, 0, 0, 1, -1.42109e-14, 3.55271e-15, 1.11022e-14, 1, 0, 0, 0 )
+shape = SubResource( 1 )
+
+[node name="KinematicBody19" type="KinematicBody" parent="Step093" index="0"]
+
+[node name="CollisionShape" type="CollisionShape" parent="Step093/KinematicBody19" index="0"]
+transform = Transform( 1, 0, 0, 0, 1, -1.42109e-14, 3.55271e-15, 1.11022e-14, 1, 0, 0, 0 )
+shape = SubResource( 1 )
+
+[node name="KinematicBody20" type="KinematicBody" parent="Step094" index="0"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Step094/KinematicBody20" index="0"]
+transform = Transform( 1, 0, 0, 0, 1, -1.42109e-14, 3.55271e-15, 1.11022e-14, 1, 0, 0, 0 )
+shape = SubResource( 1 )
+
+[node name="KinematicBody21" type="KinematicBody" parent="Step095" index="0"]
+
+[node name="CollisionShape" type="CollisionShape" parent="Step095/KinematicBody21" index="0"]
+transform = Transform( 1, 0, 0, 0, 1, -1.42109e-14, 3.55271e-15, 1.11022e-14, 1, 0, 0, 0 )
+shape = SubResource( 1 )
+
+[node name="KinematicBody25" type="KinematicBody" parent="Step096" index="0"]
+
+[node name="CollisionShape" type="CollisionShape" parent="Step096/KinematicBody25" index="0"]
+transform = Transform( 1, 0, 0, 0, 1, -1.42109e-14, 3.55271e-15, 1.11022e-14, 1, 0, 0, 0 )
+shape = SubResource( 1 )
+
+[node name="KinematicBody24" type="KinematicBody" parent="Step097" index="0"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Step097/KinematicBody24" index="0"]
+transform = Transform( 1, 0, 0, 0, 1, -1.42109e-14, 3.55271e-15, 1.11022e-14, 1, 0, 0, 0 )
+shape = SubResource( 1 )
+
+[node name="KinematicBody23" type="KinematicBody" parent="Step098" index="0"]
+
+[node name="CollisionShape" type="CollisionShape" parent="Step098/KinematicBody23" index="0"]
+transform = Transform( 1, 0, 0, 0, 1, -1.42109e-14, 3.55271e-15, 1.11022e-14, 1, 0, 0, 0 )
+shape = SubResource( 1 )
+
+[node name="KinematicBody22" type="KinematicBody" parent="Step099" index="0"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -9.67669e-09 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Step099/KinematicBody22" index="0"]
+transform = Transform( 1, 0, 0, 0, 1, -1.42109e-14, 3.55271e-15, 1.11022e-14, 1, 0, 0, 0 )
+shape = SubResource( 1 )
+
+[node name="KinematicBody26" type="KinematicBody" parent="Step100" index="0"]
+
+[node name="CollisionShape" type="CollisionShape" parent="Step100/KinematicBody26" index="0"]
+transform = Transform( 1, 0, 0, 0, 1, -1.42109e-14, 3.55271e-15, 1.11022e-14, 1, 0, 0, 0 )
+shape = SubResource( 1 )
+
+[node name="KinematicBody25" type="KinematicBody" parent="Step101" index="0"]
+
+[node name="CollisionShape" type="CollisionShape" parent="Step101/KinematicBody25" index="0"]
+transform = Transform( 1, 0, 0, 0, 1, -1.42109e-14, 3.55271e-15, 1.11022e-14, 1, 0, 0, 0 )
+shape = SubResource( 1 )
+
+[node name="KinematicBody24" type="KinematicBody" parent="Step102" index="0"]
+
+[node name="CollisionShape" type="CollisionShape" parent="Step102/KinematicBody24" index="0"]
+transform = Transform( 1, 0, 0, 0, 1, -1.42109e-14, 3.55271e-15, 1.11022e-14, 1, 0, 0, 0 )
+shape = SubResource( 1 )
+
+[node name="KinematicBody23" type="KinematicBody" parent="Step103" index="0"]
+
+[node name="CollisionShape" type="CollisionShape" parent="Step103/KinematicBody23" index="0"]
+transform = Transform( 1, 0, 0, 0, 1, -1.42109e-14, 3.55271e-15, 1.11022e-14, 1, 0, 0, 0 )
+shape = SubResource( 1 )
+
+[node name="KinematicBody27" type="KinematicBody" parent="Step104" index="0"]
+
+[node name="CollisionShape" type="CollisionShape" parent="Step104/KinematicBody27" index="0"]
+transform = Transform( 1, 0, 0, 0, 1, -1.42109e-14, 3.55271e-15, 1.11022e-14, 1, 0, 0, 0 )
+shape = SubResource( 1 )
+
+[node name="KinematicBody26" type="KinematicBody" parent="Step105" index="0"]
+
+[node name="CollisionShape" type="CollisionShape" parent="Step105/KinematicBody26" index="0"]
+transform = Transform( 1, 0, 0, 0, 1, -1.42109e-14, 3.55271e-15, 1.11022e-14, 1, 0, 0, 0 )
+shape = SubResource( 1 )
+
+[node name="KinematicBody25" type="KinematicBody" parent="Step106" index="0"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Step106/KinematicBody25" index="0"]
+transform = Transform( 1, 0, 0, 0, 1, -1.42109e-14, 3.55271e-15, 1.11022e-14, 1, 0, 0, 0 )
+shape = SubResource( 1 )
+
+[node name="KinematicBody24" type="KinematicBody" parent="Step030" index="0"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Step030/KinematicBody24" index="0"]
+transform = Transform( 1, 0, 0, 0, 1, -1.42109e-14, 3.55271e-15, 1.11022e-14, 1, 0, 0, 0 )
+shape = SubResource( 1 )
+
+[node name="KinematicBody25" type="KinematicBody" parent="Step063" index="0"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -1.27541e-08 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Step063/KinematicBody25" index="0"]
+transform = Transform( 1, 0, 0, 0, 1, -1.42109e-14, 3.55271e-15, 1.11022e-14, 1, 0, 0, 0 )
+shape = SubResource( 1 )
+
+[node name="KinematicBody26" type="KinematicBody" parent="Step064" index="0"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -3.35232e-08 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Step064/KinematicBody26" index="0"]
+transform = Transform( 1, 0, 0, 0, 1, -1.42109e-14, 3.55271e-15, 1.11022e-14, 1, 0, 0, 0 )
+shape = SubResource( 1 )
+
+[node name="KinematicBody28" type="KinematicBody" parent="Step107" index="0"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -5.8482e-09 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Step107/KinematicBody28" index="0"]
+transform = Transform( 1, 0, 0, 0, 1, -1.42109e-14, 3.55271e-15, 1.11022e-14, 1, 0, 0, 0 )
+shape = SubResource( 1 )
+
+[node name="KinematicBody27" type="KinematicBody" parent="Step108" index="0"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 2.81084e-09 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Step108/KinematicBody27" index="0"]
+transform = Transform( 1, 0, 0, 0, 1, -1.42109e-14, 3.55271e-15, 1.11022e-14, 1, 0, 0, 0 )
+shape = SubResource( 1 )
+
+[node name="KinematicBody28" type="KinematicBody" parent="Step070" index="0"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -1.9047e-09 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Step070/KinematicBody28" index="0"]
+transform = Transform( 1, 0, 0, 0, 1, -1.42109e-14, 3.55271e-15, 1.11022e-14, 1, 0, 0, 0 )
+shape = SubResource( 1 )
+
+[node name="KinematicBody29" type="KinematicBody" parent="Step042" index="0"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -3.86286e-09 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Step042/KinematicBody29" index="0"]
+transform = Transform( 1, 1.42109e-14, 0, 1.13687e-13, 1, -1.30862e-13, 7.10543e-14, 1.20917e-13, 1, 0, 0, 0 )
+shape = SubResource( 1 )
+
+[node name="KinematicBody30" type="KinematicBody" parent="Step027" index="0"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Step027/KinematicBody30" index="0"]
+transform = Transform( 1, 0, 0, 0, 1, -1.42109e-14, 3.55271e-15, 1.11022e-14, 1, 0, 0, 0 )
+shape = SubResource( 1 )
+
+[node name="KinematicBody31" type="KinematicBody" parent="Step031" index="0"]
+
+[node name="CollisionShape" type="CollisionShape" parent="Step031/KinematicBody31" index="0"]
+transform = Transform( 1, -1.49012e-08, 1.77636e-15, -2.98023e-08, 1, 3.10862e-15, 0, 2.66454e-14, 1, 0, 0, 0 )
+shape = SubResource( 1 )
+
+[node name="KinematicBody32" type="KinematicBody" parent="Step032" index="0"]
+transform = Transform( 1, -4.55692e-14, 7.89058e-08, 0, 1, 5.77515e-07, -7.89057e-08, -5.77515e-07, 1, 0, 0, -4.45891e-09 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Step032/KinematicBody32" index="0"]
+transform = Transform( 1, 0, -7.10543e-15, 2.84217e-14, 1, 3.61142e-14, -7.10543e-15, -3.9626e-14, 1, 0, 0, 0 )
+shape = SubResource( 1 )
+
+[node name="KinematicBody33" type="KinematicBody" parent="Step033" index="0"]
+
+[node name="CollisionShape" type="CollisionShape" parent="Step033/KinematicBody33" index="0"]
+transform = Transform( 1, 3.72529e-09, -1.19638e-14, -1.19209e-07, 1, -1.38334e-15, -7.10543e-15, -3.12861e-13, 1, 0, 0, 0 )
+shape = SubResource( 1 )
+
+[node name="KinematicBody34" type="KinematicBody" parent="Step066" index="0"]
+transform = Transform( 1, 0, 0, 0, 1, -6.63531e-07, 0, 6.63531e-07, 1, 0, 0, -1.72005e-08 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Step066/KinematicBody34" index="0"]
+transform = Transform( 1, 0, 0, 0, 1, -1.42109e-14, 3.55271e-15, 1.11022e-14, 1, 0, 0, 0 )
+shape = SubResource( 1 )
+
+[node name="KinematicBody35" type="KinematicBody" parent="Step109" index="0"]
+transform = Transform( 1, 0, 0, 0, 1, -3.43323e-07, 0, 3.43323e-07, 1, 0, 0, 5.96048e-10 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Step109/KinematicBody35" index="0"]
+transform = Transform( 1, 0, 0, 0, 1, -1.42109e-14, 3.55271e-15, 1.11022e-14, 1, 0, 0, 0 )
+shape = SubResource( 1 )
+
+[node name="KinematicBody36" type="KinematicBody" parent="Step110" index="0"]
+
+[node name="CollisionShape" type="CollisionShape" parent="Step110/KinematicBody36" index="0"]
+transform = Transform( 1, 0, 0, 0, 1, -1.42109e-14, 3.55271e-15, 1.11022e-14, 1, 0, 0, 0 )
+shape = SubResource( 1 )

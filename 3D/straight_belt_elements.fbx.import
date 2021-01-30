@@ -2,12 +2,12 @@
 
 importer="scene"
 type="PackedScene"
-path="res://.import/conveyor_straight.fbx-bff8373ac7d212ca3aed94bb8daca8c6.scn"
+path="res://.import/straight_belt_elements.fbx-da4491f0ecee308b0f298e8a14610dc4.scn"
 
 [deps]
 
-source_file="res://Prefabs/3D/conveyor_straight.fbx"
-dest_files=[ "res://.import/conveyor_straight.fbx-bff8373ac7d212ca3aed94bb8daca8c6.scn" ]
+source_file="res://3D/straight_belt_elements.fbx"
+dest_files=[ "res://.import/straight_belt_elements.fbx-da4491f0ecee308b0f298e8a14610dc4.scn" ]
 
 [params]
 
