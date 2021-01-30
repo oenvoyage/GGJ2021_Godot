@@ -1,6 +1,8 @@
-[gd_scene load_steps=160 format=2]
+[gd_scene load_steps=162 format=2]
 
 [ext_resource path="res://3D/curve_structure.fbx" type="PackedScene" id=1]
+[ext_resource path="res://materials/structure_dark.material" type="Material" id=2]
+[ext_resource path="res://materials/structure.material" type="Material" id=3]
 
 [sub_resource type="ConvexPolygonShape" id=1]
 points = PoolVector3Array( 0.0457209, 0.0463669, 0.00931133, 0.0457209, 0.0463669, 0.00995071, 0.0457209, 0.0495654, 0.00867194, 0.0457209, 0.0495654, 0.00995071, 0.0482788, 0.0463669, 0.00867194, 0.0482788, 0.0553192, 0.00867194, 0.0482788, 0.0553192, 0.00995071, 0.0495562, 0.0470075, 0.00867194, 0.0495562, 0.0470075, 0.00995071, 0.0521135, 0.0521207, 0.00867194, 0.0521135, 0.0521207, 0.00995071, 0.0521135, 0.0546786, 0.00867194, 0.0521135, 0.0553192, 0.00931133, 0.0521135, 0.0553192, 0.00995071 )
@@ -477,6 +479,10 @@ points = PoolVector3Array( -0.000319723, -0.0150173, -0.000919722, -0.000319723,
 points = PoolVector3Array( 0.0220608, 0.0214286, -0.000919722, 0.0220608, 0.0214286, 0.000359167, 0.0220608, 0.022071, -0.000919722, 0.0220608, 0.022071, 0.000359167, 0.0303751, 0.026545, 0.000359167, 0.0406042, 0.0380501, 0.000359167, 0.0418801, 0.0425303, -0.000919722, 0.0418801, 0.0425303, 0.000359167, 0.0425231, 0.0214286, -0.000919722, 0.0425231, 0.0214286, -0.000280278, 0.0425231, 0.0412476, 0.000359167, 0.0425231, 0.0425303, -0.000919722 )
 
 [node name="curve_structure" instance=ExtResource( 1 )]
+
+[node name="Circular_Structure2" parent="." index="0"]
+material/0 = ExtResource( 3 )
+material/1 = ExtResource( 2 )
 
 [node name="StaticBody" type="StaticBody" parent="Circular_Structure2" index="0"]
 
