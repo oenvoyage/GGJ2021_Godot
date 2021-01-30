@@ -1,8 +1,8 @@
 [gd_scene load_steps=13 format=2]
 
-[ext_resource path="res://Prefabs/GlowingCube.tscn" type="PackedScene" id=1]
-[ext_resource path="res://addons/DragDrop3D/Draggable.gd" type="Script" id=2]
-[ext_resource path="res://materials/Green.tres" type="Material" id=3]
+[ext_resource path="res://materials/Green.tres" type="Material" id=1]
+[ext_resource path="res://Prefabs/GlowingCube.tscn" type="PackedScene" id=2]
+[ext_resource path="res://addons/DragDrop3D/Draggable.gd" type="Script" id=3]
 [ext_resource path="res://Scripts/Box.gd" type="Script" id=4]
 
 [sub_resource type="BoxShape" id=1]
@@ -37,7 +37,7 @@ roughness = 0.74
 
 [node name="Level" type="Spatial"]
 
-[node name="Box2" parent="." instance=ExtResource( 1 )]
+[node name="Box2" parent="." instance=ExtResource( 2 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3.73731, 1.80564, 0 )
 
 [node name="Box" type="RigidBody" parent="."]
@@ -57,7 +57,7 @@ mesh = SubResource( 2 )
 material/0 = SubResource( 3 )
 
 [node name="Draggable" type="Node" parent="Box"]
-script = ExtResource( 2 )
+script = ExtResource( 3 )
 
 [node name="Camera" type="Camera" parent="."]
 transform = Transform( -0.170029, 0.493168, -0.853156, 0.0963896, 0.869934, 0.483656, 0.980714, 7.59668e-09, -0.19545, -9.81841, 7.39914, -3.15963 )
@@ -86,7 +86,7 @@ shape = SubResource( 7 )
 extra_cull_margin = 176.17
 use_in_baked_light = true
 mesh = SubResource( 8 )
-material/0 = ExtResource( 3 )
+material/0 = ExtResource( 1 )
 [connection signal="drag_move" from="Box/Draggable" to="Box" method="_on_Draggable_drag_move"]
 [connection signal="drag_start" from="Box/Draggable" to="Box" method="_on_Draggable_drag_start"]
 [connection signal="drag_stop" from="Box/Draggable" to="Box" method="_on_Draggable_drag_stop"]

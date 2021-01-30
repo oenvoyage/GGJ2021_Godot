@@ -13,6 +13,6 @@ func pop():
 
 func _ready():
   for luggage in $Luggages.get_children():
-    luggage.set_mode(RigidBody.MODE_STATIC)
-    luggage.visible = false
-    luggages.append(luggage)
+	luggage.set_mode(RigidBody.MODE_STATIC)
+	luggage.visible = false
+	luggages.append(luggage)

@@ -1,0 +1,154 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Prefabs/3D/conveyor_radial90.fbx" type="PackedScene" id=1]
+[ext_resource path="res://Prefabs/3D/pupil.material" type="Material" id=2]
+[ext_resource path="res://Prefabs/3D/skin_grey.material" type="Material" id=3]
+
+[node name="conveyor_radial90" instance=ExtResource( 1 )]
+
+[node name="Step073" parent="." index="0"]
+material/0 = ExtResource( 3 )
+
+[node name="Bordure2" parent="." index="1"]
+material/0 = ExtResource( 2 )
+
+[node name="Step041" parent="." index="2"]
+material/0 = ExtResource( 3 )
+
+[node name="Step074" parent="." index="3"]
+material/0 = ExtResource( 3 )
+
+[node name="Step075" parent="." index="4"]
+material/0 = ExtResource( 3 )
+
+[node name="Step076" parent="." index="5"]
+material/0 = ExtResource( 3 )
+
+[node name="Step077" parent="." index="6"]
+material/0 = ExtResource( 3 )
+
+[node name="Step078" parent="." index="7"]
+material/0 = ExtResource( 3 )
+
+[node name="Step079" parent="." index="8"]
+material/0 = ExtResource( 3 )
+
+[node name="Step080" parent="." index="9"]
+material/0 = ExtResource( 3 )
+
+[node name="Step081" parent="." index="10"]
+material/0 = ExtResource( 3 )
+
+[node name="Step082" parent="." index="11"]
+material/0 = ExtResource( 3 )
+
+[node name="Step083" parent="." index="12"]
+material/0 = ExtResource( 3 )
+
+[node name="Step084" parent="." index="13"]
+material/0 = ExtResource( 3 )
+
+[node name="Step085" parent="." index="14"]
+material/0 = ExtResource( 3 )
+
+[node name="Step086" parent="." index="15"]
+material/0 = ExtResource( 3 )
+
+[node name="Step087" parent="." index="16"]
+material/0 = ExtResource( 3 )
+
+[node name="Step088" parent="." index="17"]
+material/0 = ExtResource( 3 )
+
+[node name="Step089" parent="." index="18"]
+material/0 = ExtResource( 3 )
+
+[node name="Step090" parent="." index="19"]
+material/0 = ExtResource( 3 )
+
+[node name="Step091" parent="." index="20"]
+material/0 = ExtResource( 3 )
+
+[node name="Step092" parent="." index="21"]
+material/0 = ExtResource( 3 )
+
+[node name="Step093" parent="." index="22"]
+material/0 = ExtResource( 3 )
+
+[node name="Step094" parent="." index="23"]
+material/0 = ExtResource( 3 )
+
+[node name="Step095" parent="." index="24"]
+material/0 = ExtResource( 3 )
+
+[node name="Step096" parent="." index="25"]
+material/0 = ExtResource( 3 )
+
+[node name="Step097" parent="." index="26"]
+material/0 = ExtResource( 3 )
+
+[node name="Step098" parent="." index="27"]
+material/0 = ExtResource( 3 )
+
+[node name="Step099" parent="." index="28"]
+material/0 = ExtResource( 3 )
+
+[node name="Step100" parent="." index="29"]
+material/0 = ExtResource( 3 )
+
+[node name="Step101" parent="." index="30"]
+material/0 = ExtResource( 3 )
+
+[node name="Step102" parent="." index="31"]
+material/0 = ExtResource( 3 )
+
+[node name="Step103" parent="." index="32"]
+material/0 = ExtResource( 3 )
+
+[node name="Step104" parent="." index="33"]
+material/0 = ExtResource( 3 )
+
+[node name="Step105" parent="." index="34"]
+material/0 = ExtResource( 3 )
+
+[node name="Step106" parent="." index="35"]
+material/0 = ExtResource( 3 )
+
+[node name="Step107" parent="." index="36"]
+material/0 = ExtResource( 3 )
+
+[node name="Step108" parent="." index="37"]
+material/0 = ExtResource( 3 )
+
+[node name="Step109" parent="." index="38"]
+material/0 = ExtResource( 3 )
+
+[node name="Step110" parent="." index="39"]
+material/0 = ExtResource( 3 )
+
+[node name="Step111" parent="." index="40"]
+material/0 = ExtResource( 3 )
+
+[node name="Step112" parent="." index="41"]
+material/0 = ExtResource( 3 )
+
+[node name="Step113" parent="." index="42"]
+material/0 = ExtResource( 3 )
+
+[node name="Step114" parent="." index="43"]
+material/0 = ExtResource( 3 )
+
+[node name="Step115" parent="." index="44"]
+material/0 = ExtResource( 3 )
+
+[node name="Step116" parent="." index="45"]
+material/0 = ExtResource( 3 )
+
+[node name="Step117" parent="." index="46"]
+material/0 = ExtResource( 3 )
+
+[node name="Step118" parent="." index="47"]
+material/0 = ExtResource( 3 )
+
+[node name="Step119" parent="." index="48"]
+material/0 = ExtResource( 3 )
