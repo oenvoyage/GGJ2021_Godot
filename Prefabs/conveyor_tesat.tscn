@@ -21,6 +21,7 @@ material/0 = ExtResource( 3 )
 [node name="KinematicBody" type="KinematicBody" parent="Mesh_Conveyor2/Cube018" index="0"]
 
 [node name="CollisionShape" type="CollisionShape" parent="Mesh_Conveyor2/Cube018/KinematicBody" index="0"]
+transform = Transform( 1, 5.42395e-08, -9.61792e-08, 6.3395e-08, 0.429375, 0.0191851, -1.87774e-07, 0.019185, 0.239358, 0, 0.0040482, 0.000404645 )
 shape = SubResource( 1 )
 
 [node name="Cube010" parent="Mesh_Conveyor2" index="1"]
