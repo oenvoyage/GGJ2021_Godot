@@ -1,10 +1,11 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://Environment/Environment test Nico.res" type="Environment" id=1]
 [ext_resource path="res://Scripts/Move.gd" type="Script" id=2]
 [ext_resource path="res://materials/sapin.tres" type="Material" id=3]
 [ext_resource path="res://Prefabs/LuggagesSpawner.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Prefabs/conveyor_tesat.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Prefabs/conveyor_straight.tscn" type="PackedScene" id=6]
 
 [sub_resource type="CubeMesh" id=1]
 
@@ -15,9 +16,6 @@ extents = Vector3( 15.1727, 0.659914, 4.00863 )
 
 [node name="Camera" type="Camera" parent="."]
 transform = Transform( 0.998963, -0.0455199, 0, 0.0399032, 0.875701, 0.481203, -0.0219043, -0.480704, 0.876609, 0, 6.70634, 13.9555 )
-
-[node name="conveyor_tesat" parent="." instance=ExtResource( 5 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.96066, 0, -3.82434 )
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = ExtResource( 1 )
@@ -41,3 +39,5 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -6.97318, 0, -3.79625 )
 
 [node name="LuggagesSpawner" parent="." instance=ExtResource( 4 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4.15886, 0 )
+
+[node name="conveyor_straight" parent="." instance=ExtResource( 6 )]

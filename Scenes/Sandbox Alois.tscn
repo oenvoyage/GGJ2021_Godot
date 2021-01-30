@@ -1,0 +1,102 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Prefabs/LuggagesSpawner.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Prefabs/conveyor_straight.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Prefabs/conveyor_radial90.tscn" type="PackedScene" id=3]
+
+[node name="Spatial" type="Spatial"]
+
+[node name="Camera" type="Camera" parent="."]
+transform = Transform( -0.577519, 0.267505, -0.771306, -0.0841112, 0.920266, 0.382146, 0.812033, 0.285572, -0.508971, -1.8747, 3.83576, -15.7256 )
+
+[node name="conveyor_straight" parent="." instance=ExtResource( 2 )]
+transform = Transform( 0.0259326, 0, -0.999664, 0, 1, 0, 0.999664, 0, 0.0259326, 15.3582, 9.53674e-07, -14.5803 )
+
+[node name="conveyor_straight2" parent="." instance=ExtResource( 2 )]
+transform = Transform( -0.999664, 0, -0.0259327, 0, 1, 0, 0.0259327, 0, -0.999664, 3.72527, 9.53674e-07, -0.273825 )
+
+[node name="Step025" parent="conveyor_straight2" index="0"]
+transform = Transform( 8.75696e-06, 100, 1.49012e-05, 2.18924e-05, 5.96046e-06, -100, -146.917, 1.49012e-05, -2.38419e-05, 3, 0, 0 )
+
+[node name="Step026" parent="conveyor_straight2" index="1"]
+transform = Transform( 1.75139e-05, 70.7107, 70.7107, 0, 70.7107, -70.7107, -146.917, 8.9407e-06, 1.19209e-05, 4, 0, 0 )
+
+[node name="Step027" parent="conveyor_straight2" index="2"]
+transform = Transform( 3.50278e-05, -100, -2.38419e-05, 0, -2.38419e-05, 100, -146.917, -2.38419e-05, 0, 0, 0, 0 )
+
+[node name="Step028" parent="conveyor_straight2" index="3"]
+transform = Transform( 3.50278e-05, -100, -2.38419e-05, 0, -2.38419e-05, 100, -146.917, -2.38419e-05, 0, 1.5, 0, 0 )
+
+[node name="Step020" parent="conveyor_straight2" index="4"]
+transform = Transform( 3.50278e-05, -100, -2.38419e-05, 0, -2.38419e-05, 100, -146.917, -2.38419e-05, 0, 0.5, 0, 0 )
+
+[node name="Step008" parent="conveyor_straight2" index="6"]
+transform = Transform( 1.75139e-05, -70.7107, 70.7107, -4.37848e-06, 70.7107, 70.7107, -146.917, -8.9407e-06, 5.96046e-06, 4, 0, 0 )
+
+[node name="Step017" parent="conveyor_straight2" index="8"]
+transform = Transform( 8.75696e-06, 100, 1.49012e-05, 2.18924e-05, 5.96046e-06, -100, -146.917, 1.49012e-05, -2.38419e-05, 1.5, 0, 0 )
+
+[node name="Step018" parent="conveyor_straight2" index="9"]
+transform = Transform( 7.00557e-05, 3.89414e-05, -100, 8.35129e-12, -100, -3.89414e-05, -146.917, 1.27898e-11, -5.96046e-05, 0, 0, 0 )
+
+[node name="Step010" parent="conveyor_straight2" index="10"]
+transform = Transform( 8.75696e-06, 100, 1.49012e-05, 2.18924e-05, 5.96046e-06, -100, -146.917, 1.49012e-05, -2.38419e-05, 2, 0, 0 )
+
+[node name="Step029" parent="conveyor_straight2" index="11"]
+transform = Transform( 3.50278e-05, -100, -2.38419e-05, 0, -2.38419e-05, 100, -146.917, -2.38419e-05, 0, 2, 0, 0 )
+
+[node name="Step021" parent="conveyor_straight2" index="12"]
+transform = Transform( 3.50278e-05, -100, -2.38419e-05, 0, -2.38419e-05, 100, -146.917, -2.38419e-05, 0, 1, 0, 0 )
+
+[node name="Step003" parent="conveyor_straight2" index="13"]
+transform = Transform( 8.75696e-06, 100, 1.49012e-05, 2.18924e-05, 5.96046e-06, -100, -146.917, 1.49012e-05, -2.38419e-05, 3.5, 0, 0 )
+
+[node name="Step030" parent="conveyor_straight2" index="14"]
+transform = Transform( 3.50278e-05, -100, -2.38419e-05, 0, -2.38419e-05, 100, -146.917, -2.38419e-05, 0, 3.5, 0, 0 )
+
+[node name="Step006" parent="conveyor_straight2" index="15"]
+transform = Transform( 8.75696e-06, 100, 1.49012e-05, 2.18924e-05, 5.96046e-06, -100, -146.917, 1.49012e-05, -2.38419e-05, 2.5, 0, 0 )
+
+[node name="Step009" parent="conveyor_straight2" index="16"]
+transform = Transform( 5.25417e-05, -1.19249e-06, 100, 6.52444e-14, 100, 1.19249e-06, -146.917, -3.10862e-13, 3.57628e-05, 4, 0, 0 )
+
+[node name="Step007" parent="conveyor_straight2" index="17"]
+transform = Transform( 8.75696e-06, 100, 1.49012e-05, 2.18924e-05, 5.96046e-06, -100, -146.917, 1.49012e-05, -2.38419e-05, 4, 0, 0 )
+
+[node name="Step015" parent="conveyor_straight2" index="18"]
+transform = Transform( 8.75696e-06, 100, 1.49012e-05, 2.18924e-05, 5.96046e-06, -100, -146.917, 1.49012e-05, -2.38419e-05, 1, 0, 0 )
+
+[node name="Step019" parent="conveyor_straight2" index="19"]
+transform = Transform( 8.75696e-06, 100, 1.49012e-05, 2.18924e-05, 5.96046e-06, -100, -146.917, 1.49012e-05, -2.38419e-05, 0, 0, 0 )
+
+[node name="Step024" parent="conveyor_straight2" index="20"]
+transform = Transform( 5.25417e-05, 70.7106, -70.7107, 4.37848e-06, -70.7107, -70.7106, -146.917, 2.68221e-05, -3.57628e-05, 0, 0, 0 )
+
+[node name="Step013" parent="conveyor_straight2" index="22"]
+transform = Transform( 8.75696e-06, 100, 1.49012e-05, 2.18924e-05, 5.96046e-06, -100, -146.917, 1.49012e-05, -2.38419e-05, 0.5, 0, 0 )
+
+[node name="Step031" parent="conveyor_straight2" index="23"]
+transform = Transform( 3.50278e-05, -100, -2.38419e-05, 0, -2.38419e-05, 100, -146.917, -2.38419e-05, 0, 3, 0, 0 )
+
+[node name="Step023" parent="conveyor_straight2" index="24"]
+transform = Transform( 3.50278e-05, -70.7107, -70.7107, -8.75696e-06, -70.7107, 70.7107, -146.917, -1.19209e-05, -2.38419e-05, 0, 0, 0 )
+
+[node name="Step002" parent="conveyor_straight2" index="25"]
+transform = Transform( 3.50278e-05, -100, -2.38419e-05, 0, -2.38419e-05, 100, -146.917, -2.38419e-05, 0, 4, 0, 0 )
+
+[node name="Step032" parent="conveyor_straight2" index="26"]
+transform = Transform( 3.50278e-05, -100, -2.38419e-05, 0, -2.38419e-05, 100, -146.917, -2.38419e-05, 0, 2.5, 0, 0 )
+
+[node name="AnimationPlayer" parent="conveyor_straight2" index="27"]
+playback_speed = 1.62
+
+[node name="DirectionalLight" type="DirectionalLight" parent="."]
+transform = Transform( 1, 0, 0, 0, 0.795124, 0.606447, 0, -0.606447, 0.795124, 2.39206, 5.49963, 8.13609 )
+
+[node name="conveyor_radial90" parent="." instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 5.51211, 0, 0 )
+
+[node name="LuggagesSpawner" parent="." instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 5, 0 )
+
+[editable path="conveyor_straight2"]
