@@ -1,15 +1,27 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://Environment/Environment test Nico.res" type="Environment" id=1]
 [ext_resource path="res://Scripts/Move.gd" type="Script" id=2]
 [ext_resource path="res://materials/sapin.tres" type="Material" id=3]
-[ext_resource path="res://Prefabs/LuggagesSpawner.tscn" type="PackedScene" id=4]
+[ext_resource path="res://materials/gravel.material" type="Material" id=4]
 [ext_resource path="res://Prefabs/conveyor_tesat.tscn" type="PackedScene" id=5]
 
 [sub_resource type="CubeMesh" id=1]
 
 [sub_resource type="BoxShape" id=2]
 extents = Vector3( 15.1727, 0.659914, 4.00863 )
+
+[sub_resource type="PhysicsMaterial" id=3]
+rough = true
+
+[sub_resource type="BoxShape" id=4]
+
+[sub_resource type="PrismMesh" id=5]
+material = ExtResource( 4 )
+left_to_right = 0.0
+subdivide_width = 3
+subdivide_height = 3
+subdivide_depth = 3
 
 [node name="MoveForwardCube" type="Spatial"]
 
@@ -36,8 +48,19 @@ material/0 = ExtResource( 3 )
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -2.99921, 0 )
 shape = SubResource( 2 )
 
+[node name="RigidBody" type="RigidBody" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4.68827, 0 )
+physics_material_override = SubResource( 3 )
+contact_monitor = true
+can_sleep = false
+
+[node name="CollisionShape" type="CollisionShape" parent="RigidBody"]
+shape = SubResource( 4 )
+
+[node name="MeshInstance" type="MeshInstance" parent="RigidBody"]
+transform = Transform( -0.049313, 0.0495512, -0.518478, 0.426523, 0.808411, 0, 0.583709, -0.586529, -0.0438021, 0.990361, 0, 0.0836677 )
+mesh = SubResource( 5 )
+material/0 = null
+
 [node name="conveyor_tesat2" parent="." instance=ExtResource( 5 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -6.97318, 0, -3.79625 )
-
-[node name="LuggagesSpawner" parent="." instance=ExtResource( 4 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4.15886, 0 )

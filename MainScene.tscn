@@ -338,8 +338,6 @@ material/0 = null
 
 [node name="CubeGlowing" parent="." instance=ExtResource( 10 )]
 transform = Transform( 0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 2.53015, 0.721999, 0 )
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 [connection signal="pressed" from="Control/Panel/Button" to="CameraRoot" method="startRotation"]
 [connection signal="pressed" from="Control/Panel/Button2" to="CameraRoot" method="stopRotation"]
 [connection signal="pressed" from="Control/Panel/Button3" to="CameraRoot" method="setSpeedMax"]

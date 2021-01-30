@@ -3,10 +3,10 @@ extends Spatial
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	deferedInitialisationOn(1.0)
-	
+	onEnterScene()	
 	
 func onEnterScene():
-	Universe.playBackGroundMusic()
+	pass
 
 func onExitScene():
 	Universe.stopBackGroundMusic()
@@ -17,4 +17,4 @@ func _on_GameOver():
 
 func deferedInitialisationOn(t):
 	yield(get_tree().create_timer(t), "timeout")
-	onEnterScene()
+	Universe.playBackGroundMusic()
