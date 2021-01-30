@@ -2,12 +2,12 @@
 
 importer="scene"
 type="PackedScene"
-path="res://.import/Roger_sub1.fbx-65e034e38851750d35917f1254904be2.scn"
+path="res://.import/defender.fbx-cd8fd577e541e289a20800bf1124d159.scn"
 
 [deps]
 
-source_file="res://Prefabs/Roger_sub1.fbx"
-dest_files=[ "res://.import/Roger_sub1.fbx-65e034e38851750d35917f1254904be2.scn" ]
+source_file="res://_bak_old_project/3d/defender.fbx"
+dest_files=[ "res://.import/defender.fbx-cd8fd577e541e289a20800bf1124d159.scn" ]
 
 [params]
 

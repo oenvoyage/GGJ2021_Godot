@@ -2,12 +2,12 @@
 
 importer="scene"
 type="PackedScene"
-path="res://.import/background_set.fbx-1f278e7fde5150db767ed8086ecddae6.scn"
+path="res://.import/facade.fbx-b434127e97d3f2f14b699d90d6b289a7.scn"
 
 [deps]
 
-source_file="res://3D/background_set.fbx"
-dest_files=[ "res://.import/background_set.fbx-1f278e7fde5150db767ed8086ecddae6.scn" ]
+source_file="res://3D/decors/facade.fbx"
+dest_files=[ "res://.import/facade.fbx-b434127e97d3f2f14b699d90d6b289a7.scn" ]
 
 [params]
 

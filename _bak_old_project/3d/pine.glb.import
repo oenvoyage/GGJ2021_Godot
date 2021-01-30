@@ -2,12 +2,12 @@
 
 importer="scene"
 type="PackedScene"
-path="res://.import/landscape.glb-68cc40e72af937a44ecae990ea93f663.scn"
+path="res://.import/pine.glb-7d25b9126376ac6a8b7bf6e283defb77.scn"
 
 [deps]
 
-source_file="res://materials/3d/landscape.glb"
-dest_files=[ "res://.import/landscape.glb-68cc40e72af937a44ecae990ea93f663.scn" ]
+source_file="res://_bak_old_project/3d/pine.glb"
+dest_files=[ "res://.import/pine.glb-7d25b9126376ac6a8b7bf6e283defb77.scn" ]
 
 [params]
 
