@@ -10,7 +10,9 @@ extends Spatial
 func _ready():
   get_node("Curve_NE_Back/curve_belt_elements").speed_set(-Universe.conveyor_speed)
   get_node("Curve_NE_Front/curve_belt_elements").speed_set(-Universe.conveyor_speed)
-
+  get_node("Curve_NW_Back/curve_belt_elements").speed_set(-Universe.conveyor_speed)
+  get_node("Curve_NW_Front/curve_belt_elements").speed_set(-Universe.conveyor_speed)
+  
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):
