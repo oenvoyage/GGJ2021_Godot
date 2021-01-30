@@ -1,0 +1,32 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Prefabs/LuggagesSpawner.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Prefabs/conveyor_straight.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Prefabs/conveyor_radial90.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Scenes/Sandbox Alois.gd" type="Script" id=4]
+
+[node name="Spatial" type="Spatial"]
+script = ExtResource( 4 )
+
+[node name="Camera" type="Camera" parent="."]
+transform = Transform( -0.577519, 0.267505, -0.771306, -0.0841112, 0.920266, 0.382146, 0.812033, 0.285572, -0.508971, -1.8747, 3.83576, -15.7256 )
+
+[node name="conveyor_straight" parent="." instance=ExtResource( 2 )]
+transform = Transform( 0.0259326, 0, -0.999664, 0, 1, 0, 0.999664, 0, 0.0259326, 15.3582, 9.53674e-07, -14.5803 )
+
+[node name="conveyor_straight2" parent="." instance=ExtResource( 2 )]
+transform = Transform( -0.999664, 0, -0.0259327, 0, 1, 0, 0.0259327, 0, -0.999664, 4.54491, 9.53674e-07, -0.273825 )
+
+[node name="AnimationPlayer" parent="conveyor_straight2" index="27"]
+playback_speed = 1.62
+
+[node name="DirectionalLight" type="DirectionalLight" parent="."]
+transform = Transform( 1, 0, 0, 0, 0.795124, 0.606447, 0, -0.606447, 0.795124, 2.39206, 5.49963, 8.13609 )
+
+[node name="conveyor_radial90" parent="." instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 5.51211, 0, 0 )
+
+[node name="LuggagesSpawner" parent="." instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 5, 0 )
+
+[editable path="conveyor_straight2"]
