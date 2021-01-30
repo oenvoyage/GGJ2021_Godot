@@ -1,4 +1,12 @@
 extends Node
 
 func _ready():
-  $AudioStreamPlayer.play()
+  pass
+
+
+func playBackGroundMusic():
+	$AudioStreamPlayer.play()
+	
+func stopBackGroundMusic():
+	$AudioStreamPlayer.stop()
+	

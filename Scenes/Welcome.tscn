@@ -20,4 +20,7 @@ margin_top = 189.675
 margin_right = 51.9042
 margin_bottom = 223.675
 text = "Play!"
+__meta__ = {
+"_edit_use_anchors_": false
+}
 [connection signal="pressed" from="Button" to="." method="_on_Next_Scene"]
