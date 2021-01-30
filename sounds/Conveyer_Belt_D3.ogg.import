@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Conveyer_Belt_D3.ogg-87b212f05da4a47a44338731fe4f38ff.oggstr"
+
+[deps]
+
+source_file="res://sounds/Conveyer_Belt_D3.ogg"
+dest_files=[ "res://.import/Conveyer_Belt_D3.ogg-87b212f05da4a47a44338731fe4f38ff.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

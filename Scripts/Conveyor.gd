@@ -2,6 +2,9 @@ extends Spatial
 
 var steps = []
 
+func speed_set(speed):
+  $AnimationPlayer.playback_speed = speed
+
 func _ready():
   for node in get_children():
     if node.name.begins_with("Step"):
@@ -13,4 +16,5 @@ func _ready():
       steps[i].add_child(node.duplicate())
 
   $AnimationPlayer.get_animation("Scene").set_loop(true)
+  speed_set(Universe.conveyor_speed)
   $AnimationPlayer.play("Scene")
