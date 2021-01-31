@@ -33,7 +33,6 @@ func _conveyor_wobbling():
 	if randi() % 2 == 0:
 		wobble = 0.0 - wobble
 
-	print(wobble)
 
 	$NoiseConveyor.pitch_scale = conveyor_speed + wobble
 

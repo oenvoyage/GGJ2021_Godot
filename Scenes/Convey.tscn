@@ -39,7 +39,7 @@ mesh = SubResource( 2 )
 material/0 = ExtResource( 9 )
 
 [node name="LuggagesSpawner" parent="." instance=ExtResource( 3 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2.7, 3.9, -0.100001 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -16.9, 3.9, -19.8 )
 
 [node name="Controller" type="Spatial" parent="."]
 script = ExtResource( 6 )
