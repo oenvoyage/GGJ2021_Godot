@@ -14,3 +14,41 @@ text = "Game Over"
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="Score" type="Node" parent="."]
+
+[node name="Current" type="Label" parent="Score"]
+margin_left = 932.597
+margin_top = 14.3859
+margin_right = 967.597
+margin_bottom = 51.3859
+text = "30"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Sep" type="Label" parent="Score"]
+margin_left = 946.124
+margin_top = 14.0
+margin_right = 981.124
+margin_bottom = 51.0
+text = "/"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Max" type="Label" parent="Score"]
+margin_left = 959.572
+margin_top = 13.693
+margin_right = 994.572
+margin_bottom = 50.693
+text = "30"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
