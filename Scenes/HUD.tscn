@@ -31,6 +31,7 @@ position = Vector2( 511.153, 298.743 )
 shape = SubResource( 1 )
 
 [node name="Sprite" type="Sprite" parent="GameOver/Area2D"]
+visible = false
 position = Vector2( 529.653, 304.91 )
 scale = Vector2( 0.759531, 0.812818 )
 texture = ExtResource( 2 )
@@ -80,11 +81,27 @@ __meta__ = {
 
 [node name="Score" type="Node" parent="."]
 
+[node name="TextureRect" type="TextureRect" parent="Score"]
+anchor_left = 1.0
+anchor_right = 1.0
+margin_left = -217.0
+margin_top = -5.0
+margin_right = -1.0
+margin_bottom = 133.0
+texture = ExtResource( 3 )
+expand = true
+stretch_mode = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
 [node name="LabelCurrent" type="Label" parent="Score"]
-margin_left = 891.57
-margin_top = 35.3457
-margin_right = 938.57
-margin_bottom = 49.3457
+anchor_left = 1.0
+anchor_right = 1.0
+margin_left = -132.43
+margin_top = 42.3457
+margin_right = -85.4299
+margin_bottom = 56.3457
 text = "Current"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -94,9 +111,9 @@ __meta__ = {
 anchor_left = 1.0
 anchor_right = 1.0
 margin_left = -77.7651
-margin_top = 25.4777
+margin_top = 32.4777
 margin_right = -42.7651
-margin_bottom = 62.4777
+margin_bottom = 69.4777
 text = "30"
 align = 1
 valign = 1
@@ -118,10 +135,12 @@ __meta__ = {
 }
 
 [node name="Max" type="Label" parent="Score"]
-margin_left = 944.729
-margin_top = 61.9314
-margin_right = 979.729
-margin_bottom = 98.9314
+anchor_left = 1.0
+anchor_right = 1.0
+margin_left = -79.2711
+margin_top = 56.9314
+margin_right = -44.2711
+margin_bottom = 93.9314
 text = "30"
 align = 1
 valign = 1
@@ -130,20 +149,16 @@ __meta__ = {
 }
 
 [node name="LabelMax" type="Label" parent="Score"]
-margin_left = 861.127
-margin_top = 72.6009
-margin_right = 942.127
-margin_bottom = 86.6009
+anchor_left = 1.0
+anchor_right = 1.0
+margin_left = -162.873
+margin_top = 67.6009
+margin_right = -81.873
+margin_bottom = 81.6009
 text = "Max Allowed"
 __meta__ = {
 "_edit_use_anchors_": false
 }
-
-[node name="Sprite" type="Sprite" parent="."]
-modulate = Color( 1, 1, 1, 0.329412 )
-position = Vector2( 917.5, 63 )
-scale = Vector2( 0.130137, 0.21 )
-texture = ExtResource( 3 )
 [connection signal="input_event" from="GameOver/Area2D" to="." method="_on_GameOver_input_event"]
 [connection signal="pressed" from="GameOver/Button restart" to="." method="_on_Button_Restart_Game"]
 [connection signal="pressed" from="GameOver/Button Credits" to="." method="_on_Button_Load_Credits"]
