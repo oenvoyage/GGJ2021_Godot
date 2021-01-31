@@ -1,14 +1,32 @@
-[gd_resource type="Environment" format=2]
+[gd_resource type="Environment" load_steps=3 format=2]
+
+[ext_resource path="res://textures/neurathen_rock_castle_1k.exr" type="Texture" id=1]
+
+[sub_resource type="PanoramaSky" id=1]
+panorama = ExtResource( 1 )
 
 [resource]
-background_energy = 12.09
-ambient_light_color = Color( 0.290196, 0.388235, 0.380392, 1 )
-ambient_light_energy = 0.31
+background_mode = 2
+background_sky = SubResource( 1 )
+background_sky_custom_fov = 7.0
+background_energy = 1.05
+ambient_light_color = Color( 0.215686, 0.215686, 0.215686, 1 )
+ambient_light_energy = 0.8
+ambient_light_sky_contribution = 0.24
+tonemap_mode = 2
 ss_reflections_enabled = true
-ss_reflections_max_steps = 32
+ss_reflections_fade_in = 0.121838
+ss_reflections_fade_out = 1.23114
+ss_reflections_depth_tolerance = 1.1
 ssao_enabled = true
-ssao_intensity = 93.16
-ssao_bias = 0.1
+ssao_intensity = 14.81
+ssao_radius2 = 1.37
+ssao_intensity2 = 9.2
+ssao_bias = 0.128
 ssao_quality = 2
+ssao_edge_sharpness = 3.54
 glow_enabled = true
-adjustment_saturation = 2.64
+glow_intensity = 1.4
+glow_strength = 0.67
+glow_bloom = 0.09
+adjustment_enabled = true
