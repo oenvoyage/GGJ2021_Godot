@@ -1,15 +1,9 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://3D/switch.fbx" type="PackedScene" id=1]
 [ext_resource path="res://Scripts/switch.gd" type="Script" id=2]
 [ext_resource path="res://materials/structure_dark.material" type="Material" id=3]
 [ext_resource path="res://materials/structure.material" type="Material" id=4]
-
-[sub_resource type="ConvexPolygonShape" id=1]
-points = PoolVector3Array( -0.0248492, 0.00220705, -0.00405298, 0, 0.00220705, -0.00405298, 0, -0.00220705, -0.00405298, -0.0248492, -0.00220705, -0.00405298, -0.0248492, 0.00220705, 0.00405298, -0.0248492, -0.00220705, 0.00405298, 0, -0.00220705, 0.00405298, 0, 0.00220705, 0.00405298, 0, -0.00220705, -0.00405298, 0, 0.00220705, -0.00405298, 0, 0.00220705, 0.00405298, 0, -0.00220705, 0.00405298, -0.0248492, 0.00220705, -0.00405298, -0.0248492, -0.00220705, -0.00405298, -0.0248492, -0.00220705, 0.00405298, -0.0248492, 0.00220705, 0.00405298, 0, 0.00220705, -0.00405298, -0.0248492, 0.00220705, -0.00405298, -0.0248492, 0.00220705, 0.00405298, 0, 0.00220705, 0.00405298, -0.0248492, -0.00220705, -0.00405298, 0, -0.00220705, -0.00405298, 0, -0.00220705, 0.00405298, -0.0248492, -0.00220705, 0.00405298 )
-
-[sub_resource type="ConvexPolygonShape" id=2]
-points = PoolVector3Array( -0.0248492, 0.00220705, -0.00405298, 0, 0.00220705, -0.00405298, 0, -0.00220705, -0.00405298, -0.0248492, -0.00220705, -0.00405298, -0.0248492, 0.00220705, 0.00405298, -0.0248492, -0.00220705, 0.00405298, 0, -0.00220705, 0.00405298, 0, 0.00220705, 0.00405298, 0, -0.00220705, -0.00405298, 0, 0.00220705, -0.00405298, 0, 0.00220705, 0.00405298, 0, -0.00220705, 0.00405298, -0.0248492, 0.00220705, -0.00405298, -0.0248492, -0.00220705, -0.00405298, -0.0248492, -0.00220705, 0.00405298, -0.0248492, 0.00220705, 0.00405298, 0, 0.00220705, -0.00405298, -0.0248492, 0.00220705, -0.00405298, -0.0248492, 0.00220705, 0.00405298, 0, 0.00220705, 0.00405298, -0.0248492, -0.00220705, -0.00405298, 0, -0.00220705, -0.00405298, 0, -0.00220705, 0.00405298, -0.0248492, -0.00220705, 0.00405298 )
 
 [node name="switch" instance=ExtResource( 1 )]
 script = ExtResource( 2 )
@@ -23,36 +17,28 @@ transform = Transform( 1, 0, 0, 0, -1.19209e-07, -1, 0, 1, -1.19209e-07, 0, 0, 0
 [node name="opening_L" parent="Armature" index="1"]
 transform = Transform( 2.38419e-07, -1, 2.38419e-07, 0, -2.38419e-07, -1, 1, 2.38419e-07, 0, 0.03746, -0.0144263, 0.00680884 )
 
-[node name="Bordure004" parent="Armature/opening_L" index="1"]
+[node name="Cube_L2" parent="Armature/opening_L" index="1"]
 material/0 = ExtResource( 4 )
-
-[node name="KinematicBody" type="KinematicBody" parent="Armature/opening_L/Bordure004" index="0"]
-
-[node name="CollisionShape" type="CollisionShape" parent="Armature/opening_L/Bordure004/KinematicBody" index="0"]
-transform = Transform( 1, 7.10543e-15, -4.73695e-15, -2.84217e-14, 1, 0, 1.59872e-14, 0, 1, 0, 0, 0 )
-shape = SubResource( 1 )
 
 [node name="opening_R" parent="Armature" index="2"]
 transform = Transform( 2.38419e-07, -1, 2.38419e-07, 0, -2.38419e-07, -1, 1, 2.38419e-07, 0, 0.03746, 0.0125153, 0.00680884 )
 
-[node name="Bordure005" parent="Armature/opening_R" index="1"]
+[node name="Cube_R2" parent="Armature/opening_R" index="1"]
+transform = Transform( -1.78814e-07, 5.96046e-08, 1, -1.5, -1.19209e-07, -5.96046e-08, 8.9407e-08, -1, 0, 0, 0, 0 )
 material/0 = ExtResource( 4 )
-
-[node name="KinematicBody" type="KinematicBody" parent="Armature/opening_R/Bordure005" index="0"]
-
-[node name="CollisionShape" type="CollisionShape" parent="Armature/opening_R/Bordure005/KinematicBody" index="0"]
-transform = Transform( 1, 7.10543e-15, -4.73695e-15, -2.84217e-14, 1, 0, 1.59872e-14, 0, 1, 0, 0, 0 )
-shape = SubResource( 2 )
 
 [node name="opening_L001" parent="Armature" index="3"]
 transform = Transform( 2.38419e-07, -1, 2.38419e-07, 0, -2.38419e-07, -1, 1, 2.38419e-07, 0, 0.050848, -0.0136469, 0.00680884 )
 
+[node name="petit_cube_L2" parent="Armature/opening_L001" index="1"]
+material/0 = ExtResource( 4 )
+
 [node name="opening_R001" parent="Armature" index="4"]
 transform = Transform( 2.38419e-07, -1, 2.38419e-07, 0, -2.38419e-07, -1, 1, 2.38419e-07, 0, 0.050848, 0.0125153, 0.00680884 )
 
-[node name="Bordure006" parent="Armature/opening_R001" index="1"]
+[node name="petit_cube_R2" parent="Armature/opening_R001" index="1"]
 material/0 = ExtResource( 4 )
 
-[node name="Bordure002" parent="." index="1"]
+[node name="strcute_bas2" parent="." index="1"]
 material/0 = ExtResource( 4 )
 material/1 = ExtResource( 3 )

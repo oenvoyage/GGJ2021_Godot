@@ -46,16 +46,25 @@ _global_script_class_icons={
 
 config/name="GodotTest"
 run/main_scene="res://Scenes/Welcome.tscn"
+boot_splash/image="res://textures/Gravel020_2K-PNG/Gravel020_2K_Displacement.png"
 config/icon="res://icon.png"
 
 [autoload]
 
+PluginSettings="*res://addons/github-integration/scripts/PluginSettings.gd"
+IconLoaderGithub="*res://addons/github-integration/scripts/IconLoaderGithub.gd"
+UserData="*res://addons/github-integration/scripts/user_data.gd"
+RestHandler="*res://addons/github-integration/scenes/RestHandler.tscn"
 DragDropController="*res://addons/DragDrop3D/DragDropController.gd"
 Universe="*res://Universe.tscn"
 
+[debug]
+
+settings/image=""
+
 [editor_plugins]
 
-enabled=PoolStringArray( "DragDrop3D" )
+enabled=PoolStringArray( "DragDrop3D", "github-integration" )
 
 [layer_names]
 
