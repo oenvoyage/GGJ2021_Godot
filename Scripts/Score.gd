@@ -22,6 +22,7 @@ func addLuggage(nb):
   score += 1
 
 func removeLuggage(nb):
+  score -= 1
   UFOs[nb-1].pop()
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -32,7 +33,8 @@ func _process(delta):
     onGameOver()
 
 func onGameOver():
-  gameOver.visible = true
+  pass
+#  gameOver.visible = true
 
 func _on_Timer_timeout():
   score += 1

@@ -1,15 +1,21 @@
 extends Spatial
 
+export var spawnerId = 1
 var ufos = []
+var currentUfo = null
 
 func pop():
+  if currentUfo != null:
+    currentUfo.queue_free()
   var i = randi() % len(ufos)
-  var l = ufos[i].duplicate()
-  l.translation = $Spawner.translation
-  l.set_mode(RigidBody.MODE_RIGID)
-  l.visible = true
-  $Spawner.add_child(l)
-  return l.name
+  currentUfo = ufos[i].duplicate()
+  currentUfo.translation = $Spawner.translation
+  currentUfo.set_mode(RigidBody.MODE_RIGID)
+  currentUfo.visible = true
+  currentUfo.add_to_group("Spawner%s" % spawnerId)
+  $Spawner.add_child(currentUfo)
+  print_debug("Spawner %s spawning %s" % [spawnerId, currentUfo.name])
+  return currentUfo.name
 
 func _ready():
   for ufo in $TheUfo.get_children():

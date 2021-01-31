@@ -80,7 +80,7 @@ transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -10.972
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -9.44775, 0 )
 
 [node name="CollisionShape" type="CollisionShape" parent="Ground"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -11.6, 2.8, -30.7 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -11.6, 2.2, -30.7 )
 shape = SubResource( 2 )
 [connection signal="body_entered" from="Counters/Exit3/Area" to="Counters/Exit3/Area" method="_on_Area_body_entered"]
 [connection signal="body_entered" from="Counters/Exit2/Area" to="Counters/Exit2/Area" method="_on_Area_body_entered"]
