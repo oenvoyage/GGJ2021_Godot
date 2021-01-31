@@ -1,6 +1,8 @@
 [gd_resource type="Environment" load_steps=2 format=2]
 
 [sub_resource type="ProceduralSky" id=1]
+sky_curve = 0.136414
+sun_longitude = 0.53
 
 [resource]
 background_mode = 2
