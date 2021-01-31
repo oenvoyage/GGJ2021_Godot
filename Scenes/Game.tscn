@@ -5,7 +5,7 @@
 [ext_resource path="res://Scenes/HUD.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Scripts/Area_baggage.gd" type="Script" id=4]
 [ext_resource path="res://Prefabs/decors/decors.tscn" type="PackedScene" id=5]
-[ext_resource path="res://Scripts/Score.gd" type="Script" id=6]
+[ext_resource path="res://Environment/env_spaceport.tres" type="Environment" id=6]
 
 [sub_resource type="BoxShape" id=1]
 extents = Vector3( 4.6, 4.3, 2.2 )
@@ -17,6 +17,12 @@ extents = Vector3( 86.4, 0.3, 83.8 )
 script = ExtResource( 1 )
 
 [node name="HUD" parent="." instance=ExtResource( 3 )]
+
+[node name="Camera" type="Camera" parent="."]
+transform = Transform( -0.906308, 0.178606, -0.383022, 0, 0.906308, 0.422618, 0.422618, 0.383022, -0.821394, -27.5678, 31.9198, -65.5582 )
+environment = ExtResource( 6 )
+fov = 67.5
+size = 32.3
 
 [node name="Convey" parent="." instance=ExtResource( 2 )]
 
@@ -36,24 +42,9 @@ shape = SubResource( 1 )
 transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -11.0722, -5.27277, -21.0089 )
 
 [node name="Ground" type="StaticBody" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -9.44775, 0 )
 
 [node name="CollisionShape" type="CollisionShape" parent="Ground"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -11.6, -5.3, -30.7 )
 shape = SubResource( 2 )
-
-[node name="Camera" type="Camera" parent="."]
-transform = Transform( -0.906308, 0.178606, -0.383022, 0, 0.906308, 0.422618, 0.422618, 0.383022, -0.821394, -16.0099, 8.77956, -51.7646 )
-projection = 1
-current = true
-fov = 88.1
-size = 32.3
-
-[node name="============================" type="Spatial" parent="."]
-
-[node name="Score" type="Spatial" parent="."]
-script = ExtResource( 6 )
-
-[node name="Timer" type="Timer" parent="Score"]
-autostart = true
 [connection signal="body_entered" from="Counters/Exit3/Area" to="Counters/Exit3/Area" method="_on_Area_body_entered"]
-[connection signal="timeout" from="Score/Timer" to="Score" method="_on_Timer_timeout"]

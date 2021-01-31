@@ -1,11 +1,13 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://Prefabs/decors/facade.tscn" type="PackedScene" id=1]
 [ext_resource path="res://3D/decors/background_set.fbx" type="PackedScene" id=2]
+[ext_resource path="res://Environment/env_spaceport.tres" type="Environment" id=3]
 
 [node name="Decor_Background" type="Spatial"]
 
 [node name="background_set" parent="." instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.1311, 0 )
 
 [node name="OmniLight" type="OmniLight" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -10.3079, 21.6689, -9.84422 )
@@ -16,7 +18,7 @@ omni_range = 35.6
 omni_attenuation = 2.21914
 
 [node name="OmniLight2" type="OmniLight" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -6.12168, 12.3635, 16.4949 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -17.2103, 12.3635, 46.6036 )
 light_color = Color( 0.85098, 0.827451, 0.74902, 1 )
 light_energy = 16.24
 shadow_enabled = true
@@ -24,9 +26,9 @@ omni_range = 40.1
 omni_attenuation = 2.21914
 
 [node name="DirectionalLight" type="DirectionalLight" parent="."]
-transform = Transform( 0.263472, 0.791882, -0.550914, 0.453322, 0.402471, 0.795309, 0.851517, -0.459283, -0.252937, -2.49941, 27.491, 22.4553 )
-light_color = Color( 0.811765, 0.941176, 0.894118, 1 )
-light_energy = 4.51
+transform = Transform( 0.523264, 0.713668, 0.465696, -0.511975, -0.173586, 0.841279, 0.681232, -0.678635, 0.274549, -1.14885, 28.0708, 22.4553 )
+light_color = Color( 0.929412, 0.913725, 0.839216, 1 )
+light_energy = 1.54
 shadow_enabled = true
 shadow_bias = 1.01
 shadow_contact = 1.49
@@ -75,7 +77,8 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -4.23086, 3.8147e-06, -47.1142
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -34.0804, 3.8147e-06, -47.1142 )
 
 [node name="Camera" type="Camera" parent="."]
-transform = Transform( 0.434412, -0.477508, 0.763723, -0.058359, 0.831205, 0.552895, -0.898822, -0.284754, 0.333218, 67.9433, 71.3259, 34.5848 )
+transform = Transform( 0.623307, -0.40228, 0.670566, -0.058359, 0.831205, 0.552895, -0.779796, -0.383757, 0.494619, 36.358, 44.8436, 36.1837 )
+environment = ExtResource( 3 )
 fov = 36.6
 size = 64.09
 near = 0.78
