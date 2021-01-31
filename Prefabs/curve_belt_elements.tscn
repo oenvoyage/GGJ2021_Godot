@@ -32,7 +32,7 @@ transform = Transform( 1, -3.70711e-14, 1.03872e-07, 0, 1, 3.56893e-07, -1.03872
 transform = Transform( 1, 0, 0, 0, 1, -1.42109e-14, 3.55271e-15, 1.11022e-14, 1, 0, 0, 0 )
 shape = SubResource( 1 )
 
-[node name="Step075" parent="." index="2"]
+[node name="Step075" parent="." index="3"]
 material/0 = ExtResource( 4 )
 material/1 = ExtResource( 3 )
 
@@ -43,7 +43,7 @@ transform = Transform( 1, -1.20411e-14, -9.85805e-08, 0, 1, -1.22145e-07, 9.8580
 transform = Transform( 1, 0, 0, 0, 1, -1.42109e-14, 3.55271e-15, 1.11022e-14, 1, 0, 0, 0 )
 shape = SubResource( 1 )
 
-[node name="Step076" parent="." index="3"]
+[node name="Step076" parent="." index="4"]
 material/0 = ExtResource( 4 )
 material/1 = ExtResource( 3 )
 
@@ -54,7 +54,7 @@ transform = Transform( 1, 6.15058e-16, 9.33682e-08, 0, 1, -6.58745e-09, -9.33682
 transform = Transform( 1, 0, 0, 0, 1, -1.42109e-14, 3.55271e-15, 1.11022e-14, 1, 0, 0, 0 )
 shape = SubResource( 1 )
 
-[node name="Step077" parent="." index="4"]
+[node name="Step077" parent="." index="5"]
 material/0 = ExtResource( 4 )
 material/1 = ExtResource( 3 )
 
@@ -65,7 +65,7 @@ transform = Transform( 1, 2.45439e-14, -1.08242e-07, 0, 1, 2.2675e-07, 1.08242e-
 transform = Transform( 1, 0, 0, 0, 1, -1.42109e-14, 3.55271e-15, 1.11022e-14, 1, 0, 0, 0 )
 shape = SubResource( 1 )
 
-[node name="Step078" parent="." index="5"]
+[node name="Step078" parent="." index="6"]
 material/0 = ExtResource( 4 )
 material/1 = ExtResource( 3 )
 
@@ -76,7 +76,39 @@ transform = Transform( 1, 1.35468e-14, -1.34046e-07, 0, 1, 1.01061e-07, 1.34046e
 transform = Transform( 1, 0, 0, 0, 1, -1.42109e-14, 3.55271e-15, 1.11022e-14, 1, 0, 0, 0 )
 shape = SubResource( 1 )
 
-[node name="Step079" parent="." index="6"]
+[node name="Step042" parent="." index="7"]
+material/0 = ExtResource( 4 )
+material/1 = ExtResource( 3 )
+
+[node name="KinematicBody29" type="KinematicBody" parent="Step042" index="0"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -3.86286e-09 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Step042/KinematicBody29" index="0"]
+transform = Transform( 1, 1.42109e-14, 0, 1.13687e-13, 1, -1.30862e-13, 7.10543e-14, 1.20917e-13, 1, 0, 0, 0 )
+shape = SubResource( 1 )
+
+[node name="Step032" parent="." index="13"]
+material/0 = ExtResource( 4 )
+material/1 = ExtResource( 3 )
+
+[node name="KinematicBody32" type="KinematicBody" parent="Step032" index="0"]
+transform = Transform( 1, -4.55692e-14, 7.89058e-08, 0, 1, 5.77515e-07, -7.89057e-08, -5.77515e-07, 1, 0, 0, -4.45891e-09 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Step032/KinematicBody32" index="0"]
+transform = Transform( 1, 0, -7.10543e-15, 2.84217e-14, 1, 3.61142e-14, -7.10543e-15, -3.9626e-14, 1, 0, 0, 0 )
+shape = SubResource( 1 )
+
+[node name="Step033" parent="." index="14"]
+material/0 = ExtResource( 4 )
+material/1 = ExtResource( 3 )
+
+[node name="KinematicBody33" type="KinematicBody" parent="Step033" index="0"]
+
+[node name="CollisionShape" type="CollisionShape" parent="Step033/KinematicBody33" index="0"]
+transform = Transform( 1, 3.72529e-09, -1.19638e-14, -1.19209e-07, 1, -1.38334e-15, -7.10543e-15, -3.12861e-13, 1, 0, 0, 0 )
+shape = SubResource( 1 )
+
+[node name="Step079" parent="." index="21"]
 material/0 = ExtResource( 4 )
 material/1 = ExtResource( 3 )
 
@@ -87,7 +119,7 @@ transform = Transform( 1, 5.87775e-15, -2.76688e-08, 0, 1, 2.12433e-07, 2.76688e
 transform = Transform( 1, 0, 0, 0, 1, -1.42109e-14, 3.55271e-15, 1.11022e-14, 1, 0, 0, 0 )
 shape = SubResource( 1 )
 
-[node name="Step080" parent="." index="7"]
+[node name="Step080" parent="." index="22"]
 material/0 = ExtResource( 4 )
 material/1 = ExtResource( 3 )
 
@@ -98,7 +130,7 @@ transform = Transform( 1, 0, -1.39235e-07, 0, 1, 3.22495e-07, 1.39235e-07, -3.22
 transform = Transform( 1, 0, 0, 0, 1, -1.42109e-14, 3.55271e-15, 1.11022e-14, 1, 0, 0, 0 )
 shape = SubResource( 1 )
 
-[node name="Step081" parent="." index="8"]
+[node name="Step081" parent="." index="23"]
 material/0 = ExtResource( 4 )
 material/1 = ExtResource( 3 )
 
@@ -109,7 +141,7 @@ transform = Transform( 1, -4.1132e-14, -2.49674e-07, 0, 1, -1.64743e-07, 2.49673
 transform = Transform( 1, 0, 0, 0, 1, -1.42109e-14, 3.55271e-15, 1.11022e-14, 1, 0, 0, 0 )
 shape = SubResource( 1 )
 
-[node name="Step082" parent="." index="9"]
+[node name="Step082" parent="." index="24"]
 material/0 = ExtResource( 4 )
 material/1 = ExtResource( 3 )
 
@@ -120,7 +152,7 @@ transform = Transform( 1, 1.41237e-14, -2.27488e-07, 0, 1, 6.20857e-08, 2.27488e
 transform = Transform( 1, 0, 0, 0, 1, -1.42109e-14, 3.55271e-15, 1.11022e-14, 1, 0, 0, 0 )
 shape = SubResource( 1 )
 
-[node name="Step083" parent="." index="10"]
+[node name="Step083" parent="." index="25"]
 material/0 = ExtResource( 4 )
 material/1 = ExtResource( 3 )
 
@@ -131,7 +163,7 @@ transform = Transform( 1, 8.27717e-15, -2.87605e-08, 0, 1, 2.87797e-07, 2.87605e
 transform = Transform( 1, 0, 0, 0, 1, -1.42109e-14, 3.55271e-15, 1.11022e-14, 1, 0, 0, 0 )
 shape = SubResource( 1 )
 
-[node name="Step084" parent="." index="11"]
+[node name="Step084" parent="." index="26"]
 material/0 = ExtResource( 4 )
 material/1 = ExtResource( 3 )
 
@@ -142,7 +174,7 @@ transform = Transform( 1, 4.12424e-14, -2.66354e-07, 0, 1, 1.54841e-07, 2.66354e
 transform = Transform( 1, 0, 0, 0, 1, -1.42109e-14, 3.55271e-15, 1.11022e-14, 1, 0, 0, 0 )
 shape = SubResource( 1 )
 
-[node name="Step085" parent="." index="12"]
+[node name="Step085" parent="." index="27"]
 material/0 = ExtResource( 4 )
 material/1 = ExtResource( 3 )
 
@@ -153,7 +185,7 @@ transform = Transform( 1, 1.30293e-14, 1.32574e-07, 0, 1, -9.82797e-08, -1.32574
 transform = Transform( 1, 0, 0, 0, 1, -1.42109e-14, 3.55271e-15, 1.11022e-14, 1, 0, 0, 0 )
 shape = SubResource( 1 )
 
-[node name="Step086" parent="." index="13"]
+[node name="Step086" parent="." index="28"]
 material/0 = ExtResource( 4 )
 material/1 = ExtResource( 3 )
 
@@ -164,7 +196,7 @@ transform = Transform( 1, 1.92854e-16, -3.59529e-08, 0, 1, 5.36408e-09, 3.59529e
 transform = Transform( 1, 0, 0, 0, 1, -1.42109e-14, 3.55271e-15, 1.11022e-14, 1, 0, 0, 0 )
 shape = SubResource( 1 )
 
-[node name="Step087" parent="." index="14"]
+[node name="Step087" parent="." index="29"]
 material/0 = ExtResource( 4 )
 material/1 = ExtResource( 3 )
 
@@ -175,7 +207,7 @@ transform = Transform( 1, 5.34616e-15, -4.93919e-08, 0, 1, 1.0824e-07, 4.93919e-
 transform = Transform( 1, 0, 0, 0, 1, -1.42109e-14, 3.55271e-15, 1.11022e-14, 1, 0, 0, 0 )
 shape = SubResource( 1 )
 
-[node name="Step088" parent="." index="15"]
+[node name="Step088" parent="." index="31"]
 material/0 = ExtResource( 4 )
 material/1 = ExtResource( 3 )
 
@@ -185,7 +217,7 @@ material/1 = ExtResource( 3 )
 transform = Transform( 1, 0, 0, 0, 1, -1.42109e-14, 3.55271e-15, 1.11022e-14, 1, 0, 0, 0 )
 shape = SubResource( 1 )
 
-[node name="Step089" parent="." index="16"]
+[node name="Step089" parent="." index="32"]
 material/0 = ExtResource( 4 )
 material/1 = ExtResource( 3 )
 
@@ -195,183 +227,13 @@ material/1 = ExtResource( 3 )
 transform = Transform( 1, 0, 0, 0, 1, -1.42109e-14, 3.55271e-15, 1.11022e-14, 1, 0, 0, 0 )
 shape = SubResource( 1 )
 
-[node name="Step090" parent="." index="17"]
+[node name="Step090" parent="." index="33"]
 material/0 = ExtResource( 4 )
 material/1 = ExtResource( 3 )
 
 [node name="KinematicBody16" type="KinematicBody" parent="Step090" index="0"]
 
 [node name="CollisionShape" type="CollisionShape" parent="Step090/KinematicBody16" index="0"]
-transform = Transform( 1, 0, 0, 0, 1, -1.42109e-14, 3.55271e-15, 1.11022e-14, 1, 0, 0, 0 )
-shape = SubResource( 1 )
-
-[node name="Step091" parent="." index="18"]
-material/0 = ExtResource( 4 )
-material/1 = ExtResource( 3 )
-
-[node name="KinematicBody17" type="KinematicBody" parent="Step091" index="0"]
-
-[node name="CollisionShape" type="CollisionShape" parent="Step091/KinematicBody17" index="0"]
-transform = Transform( 1, 0, 0, 0, 1, -1.42109e-14, 3.55271e-15, 1.11022e-14, 1, 0, 0, 0 )
-shape = SubResource( 1 )
-
-[node name="Step092" parent="." index="19"]
-material/0 = ExtResource( 4 )
-material/1 = ExtResource( 3 )
-
-[node name="KinematicBody18" type="KinematicBody" parent="Step092" index="0"]
-
-[node name="CollisionShape" type="CollisionShape" parent="Step092/KinematicBody18" index="0"]
-transform = Transform( 1, 0, 0, 0, 1, -1.42109e-14, 3.55271e-15, 1.11022e-14, 1, 0, 0, 0 )
-shape = SubResource( 1 )
-
-[node name="Step093" parent="." index="20"]
-material/0 = ExtResource( 4 )
-material/1 = ExtResource( 3 )
-
-[node name="KinematicBody19" type="KinematicBody" parent="Step093" index="0"]
-
-[node name="CollisionShape" type="CollisionShape" parent="Step093/KinematicBody19" index="0"]
-transform = Transform( 1, 0, 0, 0, 1, -1.42109e-14, 3.55271e-15, 1.11022e-14, 1, 0, 0, 0 )
-shape = SubResource( 1 )
-
-[node name="Step094" parent="." index="21"]
-material/0 = ExtResource( 4 )
-material/1 = ExtResource( 3 )
-
-[node name="KinematicBody20" type="KinematicBody" parent="Step094" index="0"]
-
-[node name="CollisionShape" type="CollisionShape" parent="Step094/KinematicBody20" index="0"]
-transform = Transform( 1, 0, 0, 0, 1, -1.42109e-14, 3.55271e-15, 1.11022e-14, 1, 0, 0, 0 )
-shape = SubResource( 1 )
-
-[node name="Step095" parent="." index="22"]
-material/0 = ExtResource( 4 )
-material/1 = ExtResource( 3 )
-
-[node name="KinematicBody21" type="KinematicBody" parent="Step095" index="0"]
-
-[node name="CollisionShape" type="CollisionShape" parent="Step095/KinematicBody21" index="0"]
-transform = Transform( 1, 0, 0, 0, 1, -1.42109e-14, 3.55271e-15, 1.11022e-14, 1, 0, 0, 0 )
-shape = SubResource( 1 )
-
-[node name="Step096" parent="." index="23"]
-material/0 = ExtResource( 4 )
-material/1 = ExtResource( 3 )
-
-[node name="KinematicBody25" type="KinematicBody" parent="Step096" index="0"]
-
-[node name="CollisionShape" type="CollisionShape" parent="Step096/KinematicBody25" index="0"]
-transform = Transform( 1, 0, 0, 0, 1, -1.42109e-14, 3.55271e-15, 1.11022e-14, 1, 0, 0, 0 )
-shape = SubResource( 1 )
-
-[node name="Step097" parent="." index="24"]
-material/0 = ExtResource( 4 )
-material/1 = ExtResource( 3 )
-
-[node name="KinematicBody24" type="KinematicBody" parent="Step097" index="0"]
-
-[node name="CollisionShape" type="CollisionShape" parent="Step097/KinematicBody24" index="0"]
-transform = Transform( 1, 0, 0, 0, 1, -1.42109e-14, 3.55271e-15, 1.11022e-14, 1, 0, 0, 0 )
-shape = SubResource( 1 )
-
-[node name="Step098" parent="." index="25"]
-material/0 = ExtResource( 4 )
-material/1 = ExtResource( 3 )
-
-[node name="KinematicBody23" type="KinematicBody" parent="Step098" index="0"]
-
-[node name="CollisionShape" type="CollisionShape" parent="Step098/KinematicBody23" index="0"]
-transform = Transform( 1, 0, 0, 0, 1, -1.42109e-14, 3.55271e-15, 1.11022e-14, 1, 0, 0, 0 )
-shape = SubResource( 1 )
-
-[node name="Step099" parent="." index="26"]
-material/0 = ExtResource( 4 )
-material/1 = ExtResource( 3 )
-
-[node name="KinematicBody22" type="KinematicBody" parent="Step099" index="0"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -9.67669e-09 )
-
-[node name="CollisionShape" type="CollisionShape" parent="Step099/KinematicBody22" index="0"]
-transform = Transform( 1, 0, 0, 0, 1, -1.42109e-14, 3.55271e-15, 1.11022e-14, 1, 0, 0, 0 )
-shape = SubResource( 1 )
-
-[node name="Step100" parent="." index="27"]
-material/0 = ExtResource( 4 )
-material/1 = ExtResource( 3 )
-
-[node name="KinematicBody26" type="KinematicBody" parent="Step100" index="0"]
-
-[node name="CollisionShape" type="CollisionShape" parent="Step100/KinematicBody26" index="0"]
-transform = Transform( 1, 0, 0, 0, 1, -1.42109e-14, 3.55271e-15, 1.11022e-14, 1, 0, 0, 0 )
-shape = SubResource( 1 )
-
-[node name="Step101" parent="." index="28"]
-material/0 = ExtResource( 4 )
-material/1 = ExtResource( 3 )
-
-[node name="KinematicBody25" type="KinematicBody" parent="Step101" index="0"]
-
-[node name="CollisionShape" type="CollisionShape" parent="Step101/KinematicBody25" index="0"]
-transform = Transform( 1, 0, 0, 0, 1, -1.42109e-14, 3.55271e-15, 1.11022e-14, 1, 0, 0, 0 )
-shape = SubResource( 1 )
-
-[node name="Step102" parent="." index="29"]
-material/0 = ExtResource( 4 )
-material/1 = ExtResource( 3 )
-
-[node name="KinematicBody24" type="KinematicBody" parent="Step102" index="0"]
-
-[node name="CollisionShape" type="CollisionShape" parent="Step102/KinematicBody24" index="0"]
-transform = Transform( 1, 0, 0, 0, 1, -1.42109e-14, 3.55271e-15, 1.11022e-14, 1, 0, 0, 0 )
-shape = SubResource( 1 )
-
-[node name="Step103" parent="." index="30"]
-material/0 = ExtResource( 4 )
-material/1 = ExtResource( 3 )
-
-[node name="KinematicBody23" type="KinematicBody" parent="Step103" index="0"]
-
-[node name="CollisionShape" type="CollisionShape" parent="Step103/KinematicBody23" index="0"]
-transform = Transform( 1, 0, 0, 0, 1, -1.42109e-14, 3.55271e-15, 1.11022e-14, 1, 0, 0, 0 )
-shape = SubResource( 1 )
-
-[node name="Step104" parent="." index="31"]
-material/0 = ExtResource( 4 )
-material/1 = ExtResource( 3 )
-
-[node name="KinematicBody27" type="KinematicBody" parent="Step104" index="0"]
-
-[node name="CollisionShape" type="CollisionShape" parent="Step104/KinematicBody27" index="0"]
-transform = Transform( 1, 0, 0, 0, 1, -1.42109e-14, 3.55271e-15, 1.11022e-14, 1, 0, 0, 0 )
-shape = SubResource( 1 )
-
-[node name="Step105" parent="." index="32"]
-material/0 = ExtResource( 4 )
-material/1 = ExtResource( 3 )
-
-[node name="KinematicBody26" type="KinematicBody" parent="Step105" index="0"]
-
-[node name="CollisionShape" type="CollisionShape" parent="Step105/KinematicBody26" index="0"]
-transform = Transform( 1, 0, 0, 0, 1, -1.42109e-14, 3.55271e-15, 1.11022e-14, 1, 0, 0, 0 )
-shape = SubResource( 1 )
-
-[node name="Step106" parent="." index="33"]
-material/0 = ExtResource( 4 )
-material/1 = ExtResource( 3 )
-
-[node name="KinematicBody25" type="KinematicBody" parent="Step106" index="0"]
-
-[node name="CollisionShape" type="CollisionShape" parent="Step106/KinematicBody25" index="0"]
-transform = Transform( 1, 0, 0, 0, 1, -1.42109e-14, 3.55271e-15, 1.11022e-14, 1, 0, 0, 0 )
-shape = SubResource( 1 )
-
-[node name="Step030" parent="." index="34"]
-material/0 = ExtResource( 4 )
-
-[node name="KinematicBody24" type="KinematicBody" parent="Step030" index="0"]
-
-[node name="CollisionShape" type="CollisionShape" parent="Step030/KinematicBody24" index="0"]
 transform = Transform( 1, 0, 0, 0, 1, -1.42109e-14, 3.55271e-15, 1.11022e-14, 1, 0, 0, 0 )
 shape = SubResource( 1 )
 
@@ -397,29 +259,27 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -3.35232e-08 )
 transform = Transform( 1, 0, 0, 0, 1, -1.42109e-14, 3.55271e-15, 1.11022e-14, 1, 0, 0, 0 )
 shape = SubResource( 1 )
 
-[node name="Step107" parent="." index="37"]
+[node name="Step091" parent="." index="40"]
 material/0 = ExtResource( 4 )
 material/1 = ExtResource( 3 )
 
-[node name="KinematicBody28" type="KinematicBody" parent="Step107" index="0"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -5.8482e-09 )
+[node name="KinematicBody17" type="KinematicBody" parent="Step091" index="0"]
 
-[node name="CollisionShape" type="CollisionShape" parent="Step107/KinematicBody28" index="0"]
+[node name="CollisionShape" type="CollisionShape" parent="Step091/KinematicBody17" index="0"]
 transform = Transform( 1, 0, 0, 0, 1, -1.42109e-14, 3.55271e-15, 1.11022e-14, 1, 0, 0, 0 )
 shape = SubResource( 1 )
 
-[node name="Step108" parent="." index="38"]
+[node name="Step092" parent="." index="41"]
 material/0 = ExtResource( 4 )
 material/1 = ExtResource( 3 )
 
-[node name="KinematicBody27" type="KinematicBody" parent="Step108" index="0"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 2.81084e-09 )
+[node name="KinematicBody18" type="KinematicBody" parent="Step092" index="0"]
 
-[node name="CollisionShape" type="CollisionShape" parent="Step108/KinematicBody27" index="0"]
+[node name="CollisionShape" type="CollisionShape" parent="Step092/KinematicBody18" index="0"]
 transform = Transform( 1, 0, 0, 0, 1, -1.42109e-14, 3.55271e-15, 1.11022e-14, 1, 0, 0, 0 )
 shape = SubResource( 1 )
 
-[node name="Step070" parent="." index="39"]
+[node name="Step070" parent="." index="42"]
 material/0 = ExtResource( 4 )
 material/1 = ExtResource( 3 )
 
@@ -430,86 +290,21 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -1.9047e-09 )
 transform = Transform( 1, 0, 0, 0, 1, -1.42109e-14, 3.55271e-15, 1.11022e-14, 1, 0, 0, 0 )
 shape = SubResource( 1 )
 
-[node name="Step042" parent="." index="40"]
+[node name="Step030" parent="." index="43"]
 material/0 = ExtResource( 4 )
-material/1 = ExtResource( 3 )
 
-[node name="KinematicBody29" type="KinematicBody" parent="Step042" index="0"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -3.86286e-09 )
+[node name="KinematicBody24" type="KinematicBody" parent="Step030" index="0"]
 
-[node name="CollisionShape" type="CollisionShape" parent="Step042/KinematicBody29" index="0"]
-transform = Transform( 1, 1.42109e-14, 0, 1.13687e-13, 1, -1.30862e-13, 7.10543e-14, 1.20917e-13, 1, 0, 0, 0 )
-shape = SubResource( 1 )
-
-[node name="Step027" parent="." index="41"]
-material/0 = ExtResource( 4 )
-material/1 = ExtResource( 3 )
-
-[node name="KinematicBody30" type="KinematicBody" parent="Step027" index="0"]
-
-[node name="CollisionShape" type="CollisionShape" parent="Step027/KinematicBody30" index="0"]
+[node name="CollisionShape" type="CollisionShape" parent="Step030/KinematicBody24" index="0"]
 transform = Transform( 1, 0, 0, 0, 1, -1.42109e-14, 3.55271e-15, 1.11022e-14, 1, 0, 0, 0 )
 shape = SubResource( 1 )
 
-[node name="Step031" parent="." index="42"]
+[node name="Step093" parent="." index="47"]
 material/0 = ExtResource( 4 )
 material/1 = ExtResource( 3 )
 
-[node name="KinematicBody31" type="KinematicBody" parent="Step031" index="0"]
+[node name="KinematicBody19" type="KinematicBody" parent="Step093" index="0"]
 
-[node name="CollisionShape" type="CollisionShape" parent="Step031/KinematicBody31" index="0"]
-transform = Transform( 1, -1.49012e-08, 1.77636e-15, -2.98023e-08, 1, 3.10862e-15, 0, 2.66454e-14, 1, 0, 0, 0 )
-shape = SubResource( 1 )
-
-[node name="Step032" parent="." index="43"]
-material/0 = ExtResource( 4 )
-material/1 = ExtResource( 3 )
-
-[node name="KinematicBody32" type="KinematicBody" parent="Step032" index="0"]
-transform = Transform( 1, -4.55692e-14, 7.89058e-08, 0, 1, 5.77515e-07, -7.89057e-08, -5.77515e-07, 1, 0, 0, -4.45891e-09 )
-
-[node name="CollisionShape" type="CollisionShape" parent="Step032/KinematicBody32" index="0"]
-transform = Transform( 1, 0, -7.10543e-15, 2.84217e-14, 1, 3.61142e-14, -7.10543e-15, -3.9626e-14, 1, 0, 0, 0 )
-shape = SubResource( 1 )
-
-[node name="Step033" parent="." index="44"]
-material/0 = ExtResource( 4 )
-material/1 = ExtResource( 3 )
-
-[node name="KinematicBody33" type="KinematicBody" parent="Step033" index="0"]
-
-[node name="CollisionShape" type="CollisionShape" parent="Step033/KinematicBody33" index="0"]
-transform = Transform( 1, 3.72529e-09, -1.19638e-14, -1.19209e-07, 1, -1.38334e-15, -7.10543e-15, -3.12861e-13, 1, 0, 0, 0 )
-shape = SubResource( 1 )
-
-[node name="Step066" parent="." index="45"]
-material/0 = ExtResource( 4 )
-material/1 = ExtResource( 3 )
-
-[node name="KinematicBody34" type="KinematicBody" parent="Step066" index="0"]
-transform = Transform( 1, 0, 0, 0, 1, -6.63531e-07, 0, 6.63531e-07, 1, 0, 0, -1.72005e-08 )
-
-[node name="CollisionShape" type="CollisionShape" parent="Step066/KinematicBody34" index="0"]
-transform = Transform( 1, 0, 0, 0, 1, -1.42109e-14, 3.55271e-15, 1.11022e-14, 1, 0, 0, 0 )
-shape = SubResource( 1 )
-
-[node name="Step109" parent="." index="46"]
-material/0 = ExtResource( 4 )
-material/1 = ExtResource( 3 )
-
-[node name="KinematicBody35" type="KinematicBody" parent="Step109" index="0"]
-transform = Transform( 1, 0, 0, 0, 1, -3.43323e-07, 0, 3.43323e-07, 1, 0, 0, 5.96048e-10 )
-
-[node name="CollisionShape" type="CollisionShape" parent="Step109/KinematicBody35" index="0"]
-transform = Transform( 1, 0, 0, 0, 1, -1.42109e-14, 3.55271e-15, 1.11022e-14, 1, 0, 0, 0 )
-shape = SubResource( 1 )
-
-[node name="Step110" parent="." index="47"]
-material/0 = ExtResource( 4 )
-material/1 = ExtResource( 3 )
-
-[node name="KinematicBody36" type="KinematicBody" parent="Step110" index="0"]
-
-[node name="CollisionShape" type="CollisionShape" parent="Step110/KinematicBody36" index="0"]
+[node name="CollisionShape" type="CollisionShape" parent="Step093/KinematicBody19" index="0"]
 transform = Transform( 1, 0, 0, 0, 1, -1.42109e-14, 3.55271e-15, 1.11022e-14, 1, 0, 0, 0 )
 shape = SubResource( 1 )

@@ -1,7 +1,9 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Scripts/HUD.gd" type="Script" id=1]
-[ext_resource path="res://images/Background_Main_menu.jpg" type="Texture" id=2]
+[ext_resource path="res://images/Game_Over_Screen_Final.png" type="Texture" id=2]
+[ext_resource path="res://images/button_empty.png" type="Texture" id=3]
+[ext_resource path="res://images/Thanks_for_playing.jpg" type="Texture" id=4]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 514.94, 301.257 )
@@ -10,12 +12,11 @@ extents = Vector2( 514.94, 301.257 )
 script = ExtResource( 1 )
 
 [node name="Button" type="Button" parent="."]
-visible = false
-margin_left = 505.096
-margin_top = 564.209
-margin_right = 586.096
-margin_bottom = 589.209
-text = "Game Over"
+margin_left = 14.096
+margin_top = 14.209
+margin_right = 113.096
+margin_bottom = 39.209
+text = "Back to Menu"
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -24,7 +25,6 @@ __meta__ = {
 visible = false
 
 [node name="Area2D" type="Area2D" parent="GameOver"]
-visible = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="GameOver/Area2D"]
 position = Vector2( 511.153, 298.743 )
@@ -35,7 +35,14 @@ position = Vector2( 529.653, 304.91 )
 scale = Vector2( 0.759531, 0.812818 )
 texture = ExtResource( 2 )
 
+[node name="Sprite credits" type="Sprite" parent="GameOver/Area2D"]
+visible = false
+position = Vector2( 529.653, 304.91 )
+scale = Vector2( 0.759531, 0.812818 )
+texture = ExtResource( 4 )
+
 [node name="Label" type="Label" parent="GameOver/Area2D"]
+visible = false
 margin_left = 461.0
 margin_top = 271.0
 margin_right = 639.0
@@ -49,14 +56,34 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="Button restart" type="Button" parent="GameOver"]
+modulate = Color( 1, 1, 1, 0 )
+margin_left = 54.0
+margin_top = 297.0
+margin_right = 416.0
+margin_bottom = 406.0
+text = "restart"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button Credits" type="Button" parent="GameOver"]
+modulate = Color( 1, 1, 1, 0 )
+margin_left = 653.0
+margin_top = 297.0
+margin_right = 1015.0
+margin_bottom = 406.0
+text = "restart"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
 [node name="Score" type="Node" parent="."]
 
 [node name="LabelCurrent" type="Label" parent="Score"]
-anchor_left = 1.0
-anchor_right = 1.0
-margin_left = -132.43
+margin_left = 891.57
 margin_top = 35.3457
-margin_right = -85.4299
+margin_right = 938.57
 margin_bottom = 49.3457
 text = "Current"
 __meta__ = {
@@ -70,7 +97,7 @@ margin_left = -77.7651
 margin_top = 25.4777
 margin_right = -42.7651
 margin_bottom = 62.4777
-text = "0"
+text = "30"
 align = 1
 valign = 1
 __meta__ = {
@@ -91,11 +118,9 @@ __meta__ = {
 }
 
 [node name="Max" type="Label" parent="Score"]
-anchor_left = 1.0
-anchor_right = 1.0
-margin_left = -82.271
+margin_left = 944.729
 margin_top = 61.9314
-margin_right = -47.271
+margin_right = 979.729
 margin_bottom = 98.9314
 text = "30"
 align = 1
@@ -105,14 +130,20 @@ __meta__ = {
 }
 
 [node name="LabelMax" type="Label" parent="Score"]
-anchor_left = 1.0
-anchor_right = 1.0
-margin_left = -164.873
+margin_left = 861.127
 margin_top = 72.6009
-margin_right = -83.873
+margin_right = 942.127
 margin_bottom = 86.6009
 text = "Max Allowed"
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="Sprite" type="Sprite" parent="."]
+modulate = Color( 1, 1, 1, 0.329412 )
+position = Vector2( 917.5, 63 )
+scale = Vector2( 0.130137, 0.21 )
+texture = ExtResource( 3 )
 [connection signal="input_event" from="GameOver/Area2D" to="." method="_on_GameOver_input_event"]
+[connection signal="pressed" from="GameOver/Button restart" to="." method="_on_Button_Restart_Game"]
+[connection signal="pressed" from="GameOver/Button Credits" to="." method="_on_Button_Load_Credits"]
