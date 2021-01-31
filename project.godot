@@ -78,4 +78,5 @@ fallback=false
 
 [rendering]
 
+quality/filters/use_nearest_mipmap_filter=true
 environment/default_environment="res://default_env.tres"
