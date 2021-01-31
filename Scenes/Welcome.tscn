@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=3 format=2]
 
 [ext_resource path="res://Scripts/Welcome.gd" type="Script" id=1]
+[ext_resource path="res://images/Background_Main_menu.jpg" type="Texture" id=2]
 
 [node name="Control" type="Control"]
 anchor_right = 1.0
@@ -10,15 +11,20 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 530.837, 307.41 )
+scale = Vector2( 0.773495, 0.773495 )
+texture = ExtResource( 2 )
+
 [node name="Button" type="Button" parent="."]
 anchor_left = 0.523
 anchor_top = 0.5
 anchor_right = 0.523
 anchor_bottom = 0.5
-margin_left = -45.0958
-margin_top = 189.675
-margin_right = 51.9042
-margin_bottom = 223.675
+margin_left = -62.2008
+margin_top = 133.296
+margin_right = 39.7992
+margin_bottom = 172.296
 text = "Play!"
 __meta__ = {
 "_edit_use_anchors_": false
