@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=2]
+[gd_scene load_steps=23 format=2]
 
 [ext_resource path="res://props/yellow.material" type="Material" id=1]
 [ext_resource path="res://props/blue.material" type="Material" id=2]
@@ -11,6 +11,7 @@
 [ext_resource path="res://props/violet.material" type="Material" id=9]
 [ext_resource path="res://materials/physics/luggage0.tres" type="PhysicsMaterial" id=10]
 [ext_resource path="res://Prefabs/UFOSpawner.gd" type="Script" id=11]
+[ext_resource path="res://Scenes/Alien_gris.fbx" type="PackedScene" id=12]
 
 [sub_resource type="ArrayMesh" id=1]
 surfaces/0 = {
@@ -229,6 +230,9 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0 )
 transform = Transform( 1, 0, 0, 0, 1, -1.42109e-14, 0, 1.42109e-14, 1, 0, 0, 0 )
 visible = false
 physics_material_override = ExtResource( 10 )
+
+[node name="Alien_gris" parent="TheUfo/Red" instance=ExtResource( 12 )]
+transform = Transform( 0.481463, 0, 0.876466, 0, 1, 0, -0.876466, 0, 0.481463, 0, 0.315903, 0 )
 
 [node name="cube_nice2" type="MeshInstance" parent="TheUfo/Red"]
 transform = Transform( 25, 0, 0, 0, -2.98023e-06, 25, 0, -25, -2.98023e-06, 0, 0, 0 )
