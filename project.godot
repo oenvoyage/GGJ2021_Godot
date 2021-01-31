@@ -46,8 +46,8 @@ _global_script_class_icons={
 
 config/name="GodotTest"
 run/main_scene="res://Scenes/Welcome.tscn"
-boot_splash/image="res://textures/Gravel020_2K-PNG/Gravel020_2K_Displacement.png"
-config/icon="res://icon.png"
+boot_splash/image="res://images/Team_Cuisine_Logo.png"
+config/icon="res://images/Team_Cuisine_Logo.png"
 
 [autoload]
 
