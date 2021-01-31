@@ -1,13 +1,15 @@
 extends Node2D
 
-
+var main = null
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	var button = get_node("Button")
-	var main = get_tree().root.find_node("Main", true, false)
+	main = get_tree().root.find_node("Main", true, false)
 	button.connect("pressed",main,"_on_GameOver") 
 
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta):
-#	pass
+func _on_GameOver_input_event(viewport, event, shape_idx):
+  print("restart...")
+  if event is InputEventMouseButton \
+    and event.button_index == BUTTON_LEFT \
+    and event.pressed:
+     main._on_GameOver()

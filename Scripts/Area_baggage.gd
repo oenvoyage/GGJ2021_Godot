@@ -11,7 +11,8 @@ func _ready():
   score = get_tree().root.get_node("Main/Score") # Replace with function body.
 
 func _on_Area_body_entered(body):
-  if body is RigidBody:
-    print("Luggage '%s' entered" % body.name)
+  if body is RigidBody && "Blue" in body.name:
+    print("Luggage '%s' Match" % body.name)
     body.queue_free()
+  elif body is RigidBody:
     score.addLuggage()
