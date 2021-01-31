@@ -17,11 +17,23 @@ __meta__ = {
 
 [node name="Score" type="Node" parent="."]
 
+[node name="LabelCurrent" type="Label" parent="Score"]
+margin_left = 891.57
+margin_top = 35.3457
+margin_right = 938.57
+margin_bottom = 49.3457
+text = "Current"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
 [node name="Current" type="Label" parent="Score"]
-margin_left = 932.597
-margin_top = 14.3859
-margin_right = 967.597
-margin_bottom = 51.3859
+anchor_left = 1.0
+anchor_right = 1.0
+margin_left = -77.7651
+margin_top = 25.4777
+margin_right = -42.7651
+margin_bottom = 62.4777
 text = "30"
 align = 1
 valign = 1
@@ -30,6 +42,7 @@ __meta__ = {
 }
 
 [node name="Sep" type="Label" parent="Score"]
+visible = false
 margin_left = 946.124
 margin_top = 14.0
 margin_right = 981.124
@@ -42,13 +55,23 @@ __meta__ = {
 }
 
 [node name="Max" type="Label" parent="Score"]
-margin_left = 959.572
-margin_top = 13.693
-margin_right = 994.572
-margin_bottom = 50.693
+margin_left = 944.729
+margin_top = 61.9314
+margin_right = 979.729
+margin_bottom = 98.9314
 text = "30"
 align = 1
 valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="LabelMax" type="Label" parent="Score"]
+margin_left = 861.127
+margin_top = 72.6009
+margin_right = 942.127
+margin_bottom = 86.6009
+text = "Max Allowed"
 __meta__ = {
 "_edit_use_anchors_": false
 }

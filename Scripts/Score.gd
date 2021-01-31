@@ -1,6 +1,6 @@
 extends Spatial
 
-var score = 0
+var score = 30
 var maxScore = 30
 var scoreNode = null
 var maxNode = null
@@ -11,7 +11,12 @@ func _ready():
   scoreNode = get_node("../HUD/Score/Current")
   maxNode = get_node("../HUD/Score/Max")
   
+func addLuggage():
+  score += 1
 
+func removeLuggage():
+  if score > 0:
+    score -= 1
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
