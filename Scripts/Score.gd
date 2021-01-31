@@ -5,6 +5,7 @@ var maxScore = 2
 var scoreNode = null
 var maxNode = null
 var gameOver = null
+var UFOs = []
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -12,14 +13,16 @@ func _ready():
   scoreNode = get_node("../HUD/Score/Current")
   maxNode = get_node("../HUD/Score/Max")
   gameOver = get_node("../HUD/GameOver")
+  UFOs.append(get_node("../Convey/UFOSpawner1"))
+  UFOs.append(get_node("../Convey/UFOSpawner2")) 
+  UFOs.append(get_node("../Convey/UFOSpawner3"))    
   gameOver.visible = false
   
-func addLuggage():
+func addLuggage(nb):
   score += 1
 
-func removeLuggage():
-  if score > 0:
-    score -= 1
+func removeLuggage(nb):
+  UFOs[nb-1].pop()
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):

@@ -20,8 +20,10 @@ __meta__ = {
 }
 
 [node name="GameOver" type="Node2D" parent="."]
+visible = false
 
 [node name="Area2D" type="Area2D" parent="GameOver"]
+visible = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="GameOver/Area2D"]
 position = Vector2( 511.153, 298.743 )
@@ -66,7 +68,7 @@ margin_left = -77.7651
 margin_top = 25.4777
 margin_right = -42.7651
 margin_bottom = 62.4777
-text = "30"
+text = "0"
 align = 1
 valign = 1
 __meta__ = {

@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://Prefabs/straight_belt_elements.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Prefabs/straight_structure.tscn" type="PackedScene" id=2]
@@ -8,6 +8,7 @@
 [ext_resource path="res://Scripts/Controller.gd" type="Script" id=6]
 [ext_resource path="res://Prefabs/switch.tscn" type="PackedScene" id=7]
 [ext_resource path="res://Scripts/SwitchCtr.gd" type="Script" id=8]
+[ext_resource path="res://Prefabs/UFOSpawner.tscn" type="PackedScene" id=9]
 [ext_resource path="res://Prefabs/arrival_box.tscn" type="PackedScene" id=10]
 
 [sub_resource type="BoxShape" id=1]
@@ -17,6 +18,15 @@ extents = Vector3( 2.8, 2.8, 2.2 )
 
 [node name="LuggagesSpawner" parent="." instance=ExtResource( 3 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 18.4, 2.7, -1.19209e-06 )
+
+[node name="UFOSpawner1" parent="." instance=ExtResource( 9 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.7, -5.2, -55.5 )
+
+[node name="UFOSpawner2" parent="." instance=ExtResource( 9 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -18, 1, -47.7 )
+
+[node name="UFOSpawner3" parent="." instance=ExtResource( 9 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -24.2, -5.4, -35.8 )
 
 [node name="Controller" type="Spatial" parent="."]
 script = ExtResource( 6 )
@@ -267,7 +277,7 @@ transform = Transform( -1.62921e-07, 0, 1, 0, 1, 0, -1, 0, -1.62921e-07, 27.786,
 [node name="curve_belt_elements" parent="Controller/Curve_NW_Front" instance=ExtResource( 5 )]
 
 [node name="Camera" type="Camera" parent="."]
-transform = Transform( -0.642788, -3.9271e-07, -0.766044, -0.262003, 0.939693, 0.219846, 0.719846, 0.34202, -0.604023, -16, 7, -27 )
+transform = Transform( -0.642788, -6.41745e-07, -0.766044, -0.262003, 0.939693, 0.219846, 0.719846, 0.34202, -0.604023, -16, 12.4, -69.6 )
 [connection signal="input_event" from="Controller/Switch_S_3/Area" to="Controller/Switch_S_3" method="_on_Area_input_event"]
 [connection signal="input_event" from="Controller/Switch_S_2/Area" to="Controller/Switch_S_2" method="_on_Area_input_event"]
 [connection signal="input_event" from="Controller/Switch_S_1/Area" to="Controller/Switch_S_1" method="_on_Area_input_event"]
