@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=2]
+[gd_scene load_steps=27 format=2]
 
 [ext_resource path="res://props/yellow.material" type="Material" id=1]
 [ext_resource path="res://props/blue.material" type="Material" id=2]
@@ -11,7 +11,11 @@
 [ext_resource path="res://props/violet.material" type="Material" id=9]
 [ext_resource path="res://materials/physics/luggage0.tres" type="PhysicsMaterial" id=10]
 [ext_resource path="res://Prefabs/UFOSpawner.gd" type="Script" id=11]
-[ext_resource path="res://Scenes/Alien_gris.fbx" type="PackedScene" id=12]
+[ext_resource path="res://Prefabs/Alien_gris.tscn" type="PackedScene" id=12]
+[ext_resource path="res://Prefabs/Alien_vert.tscn" type="PackedScene" id=13]
+[ext_resource path="res://Prefabs/Alien_turquoise.tscn" type="PackedScene" id=14]
+[ext_resource path="res://Prefabs/Alien_jaune.tscn" type="PackedScene" id=15]
+[ext_resource path="res://Prefabs/Alien_violet.tscn" type="PackedScene" id=16]
 
 [sub_resource type="ArrayMesh" id=1]
 surfaces/0 = {
@@ -226,44 +230,56 @@ script = ExtResource( 11 )
 [node name="TheUfo" type="Spatial" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0 )
 
-[node name="Red" type="RigidBody" parent="TheUfo"]
+[node name="Gris" type="RigidBody" parent="TheUfo" groups=[
+"Gris",
+"Ufo",
+]]
 transform = Transform( 1, 0, 0, 0, 1, -1.42109e-14, 0, 1.42109e-14, 1, 0, 0, 0 )
 visible = false
 physics_material_override = ExtResource( 10 )
 
-[node name="Alien_gris" parent="TheUfo/Red" instance=ExtResource( 12 )]
-transform = Transform( 0.481463, 0, 0.876466, 0, 1, 0, -0.876466, 0, 0.481463, 0, 0.315903, 0 )
+[node name="Alien_gris" parent="TheUfo/Gris" instance=ExtResource( 12 )]
 
-[node name="cube_nice2" type="MeshInstance" parent="TheUfo/Red"]
+[node name="cube_nice2" type="MeshInstance" parent="TheUfo/Gris"]
 transform = Transform( 25, 0, 0, 0, -2.98023e-06, 25, 0, -25, -2.98023e-06, 0, 0, 0 )
 mesh = SubResource( 1 )
 material/0 = null
 material/1 = null
 material/2 = null
 
-[node name="CollisionShape" type="CollisionShape" parent="TheUfo/Red"]
+[node name="CollisionShape" type="CollisionShape" parent="TheUfo/Gris"]
 transform = Transform( 25, 0, 0, 0, -2.98023e-06, 25, 0, -25, -2.98023e-06, 0, 0, 0 )
 shape = SubResource( 2 )
 
-[node name="Blue" type="RigidBody" parent="TheUfo"]
+[node name="Turquoise" type="RigidBody" parent="TheUfo" groups=[
+"Turquois",
+"Ufo",
+]]
 transform = Transform( 1, 0, 0, 0, 1, -1.42109e-14, 0, 1.42109e-14, 1, 0, 0, 0 )
 visible = false
 physics_material_override = ExtResource( 10 )
 
-[node name="triangle_nice2" type="MeshInstance" parent="TheUfo/Blue"]
+[node name="Alien_turquoise" parent="TheUfo/Turquoise" instance=ExtResource( 14 )]
+
+[node name="triangle_nice2" type="MeshInstance" parent="TheUfo/Turquoise"]
 transform = Transform( 100, 0, 0, 0, -1.19209e-05, 100, 0, -100, -1.19209e-05, 0, 0, 0 )
 mesh = SubResource( 3 )
 material/0 = null
 material/1 = null
 
-[node name="CollisionShape" type="CollisionShape" parent="TheUfo/Blue"]
+[node name="CollisionShape" type="CollisionShape" parent="TheUfo/Turquoise"]
 transform = Transform( 100, 0, 0, 0, -1.19209e-05, 100, 0, -100, -1.19209e-05, 0, 0, 0 )
 shape = SubResource( 4 )
 
-[node name="Yellow" type="RigidBody" parent="TheUfo"]
+[node name="Yellow" type="RigidBody" parent="TheUfo" groups=[
+"Jaune",
+"Ufo",
+]]
 transform = Transform( 1, 0, 0, 0, 1, -1.42109e-14, 0, 1.42109e-14, 1, 0, 0, 0 )
 visible = false
 physics_material_override = ExtResource( 10 )
+
+[node name="Alien_jaune" parent="TheUfo/Yellow" instance=ExtResource( 15 )]
 
 [node name="cylindre_long_nice2" type="MeshInstance" parent="TheUfo/Yellow"]
 transform = Transform( 50, 0, 0, 0, -1.19209e-05, 50, 0, -100, -5.96046e-06, 0, 0, 0 )
@@ -277,9 +293,14 @@ material/3 = null
 transform = Transform( 50, 0, 0, 0, -1.19209e-05, 50, 0, -100, -5.96046e-06, 0, 0, 0 )
 shape = SubResource( 6 )
 
-[node name="Green" type="RigidBody" parent="TheUfo"]
+[node name="Green" type="RigidBody" parent="TheUfo" groups=[
+"Ufo",
+"Vert",
+]]
 visible = false
 physics_material_override = ExtResource( 10 )
+
+[node name="Alien_vert" parent="TheUfo/Green" instance=ExtResource( 13 )]
 
 [node name="rectangle_nice2" type="MeshInstance" parent="TheUfo/Green"]
 transform = Transform( 100, 0, 0, 0, -8.34465e-06, 30, 0, -70, -3.57628e-06, 0, 0, 0 )
@@ -291,10 +312,15 @@ material/1 = null
 transform = Transform( 100, 0, 0, 0, -8.34465e-06, 30, 0, -70, -3.57628e-06, 0, 0, 0 )
 shape = SubResource( 8 )
 
-[node name="Purple" type="RigidBody" parent="TheUfo"]
+[node name="Purple" type="RigidBody" parent="TheUfo" groups=[
+"Mauve",
+"Ufo",
+]]
 transform = Transform( 1, 0, 0, 0, 1, -1.42109e-14, 0, 1.42109e-14, 1, 0, 0, 0 )
 visible = false
 physics_material_override = ExtResource( 10 )
+
+[node name="Alien_violet" parent="TheUfo/Purple" instance=ExtResource( 16 )]
 
 [node name="Cylinder_nice2" type="MeshInstance" parent="TheUfo/Purple"]
 transform = Transform( 100, 0, 0, 0, -1.19209e-05, 100, 0, -100, -1.19209e-05, 0, 0, 0 )
@@ -308,3 +334,8 @@ transform = Transform( 100, 0, 0, 0, -1.19209e-05, 100, 0, -100, -1.19209e-05, 0
 shape = SubResource( 10 )
 
 [node name="Spawner" type="Spatial" parent="."]
+
+[node name="Timer" type="Timer" parent="."]
+one_shot = true
+autostart = true
+[connection signal="timeout" from="Timer" to="." method="pop"]

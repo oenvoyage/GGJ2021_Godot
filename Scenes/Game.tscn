@@ -12,7 +12,7 @@
 [ext_resource path="res://anims/camera_hall_to_belt.tres" type="Animation" id=10]
 
 [sub_resource type="BoxShape" id=1]
-extents = Vector3( 5.7, 4.3, 2.2 )
+extents = Vector3( 5.7, 1.6, 2.2 )
 
 [sub_resource type="BoxShape" id=2]
 extents = Vector3( 86.4, 0.3, 83.8 )
@@ -46,6 +46,7 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -22.2, -1.1, -30.9 )
 
 [node name="Area" type="Area" parent="Counters/Exit3"]
 script = ExtResource( 4 )
+exitNb = 3
 
 [node name="BaggageClaim" type="CollisionShape" parent="Counters/Exit3/Area"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.4, -3.2, -4.6 )
@@ -56,6 +57,7 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -11.4, -1.1, -40.7 )
 
 [node name="Area" type="Area" parent="Counters/Exit2"]
 script = ExtResource( 4 )
+exitNb = 2
 
 [node name="BaggageClaim" type="CollisionShape" parent="Counters/Exit2/Area"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.4, -3.2, -4.6 )
@@ -72,13 +74,13 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.4, -3.2, -4.6 )
 shape = SubResource( 1 )
 
 [node name="Decor_Background" parent="." instance=ExtResource( 5 )]
-transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -11.0722, -5.27277, -21.0089 )
+transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -10.9722, -5.77277, -21.4089 )
 
 [node name="Ground" type="StaticBody" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -9.44775, 0 )
 
 [node name="CollisionShape" type="CollisionShape" parent="Ground"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -11.6, -5.3, -30.7 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -11.6, 2.8, -30.7 )
 shape = SubResource( 2 )
 [connection signal="body_entered" from="Counters/Exit3/Area" to="Counters/Exit3/Area" method="_on_Area_body_entered"]
 [connection signal="body_entered" from="Counters/Exit2/Area" to="Counters/Exit2/Area" method="_on_Area_body_entered"]

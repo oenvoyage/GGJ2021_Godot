@@ -225,43 +225,52 @@ script = ExtResource( 11 )
 [node name="Luggages" type="Spatial" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0 )
 
-[node name="Red" type="RigidBody" parent="Luggages"]
+[node name="Gris" type="RigidBody" parent="Luggages" groups=[
+"Gris",
+"Lug",
+]]
 transform = Transform( 1, 0, 0, 0, 1, -1.42109e-14, 0, 1.42109e-14, 1, 0, 0, 0 )
 visible = false
 physics_material_override = ExtResource( 10 )
 
-[node name="cube_nice2" type="MeshInstance" parent="Luggages/Red"]
+[node name="cube_nice2" type="MeshInstance" parent="Luggages/Gris"]
 transform = Transform( 25, 0, 0, 0, -2.98023e-06, 25, 0, -25, -2.98023e-06, 0, 0, 0 )
 mesh = SubResource( 1 )
 material/0 = null
 material/1 = null
 material/2 = null
 
-[node name="CollisionShape" type="CollisionShape" parent="Luggages/Red"]
+[node name="CollisionShape" type="CollisionShape" parent="Luggages/Gris"]
 transform = Transform( 25, 0, 0, 0, -2.98023e-06, 25, 0, -25, -2.98023e-06, 0, 0, 0 )
 shape = SubResource( 2 )
 
-[node name="Blue" type="RigidBody" parent="Luggages"]
+[node name="Turquois" type="RigidBody" parent="Luggages" groups=[
+"Lug",
+"Turquois",
+]]
 transform = Transform( 1, 0, 0, 0, 1, -1.42109e-14, 0, 1.42109e-14, 1, 0, 0, 0 )
 visible = false
 physics_material_override = ExtResource( 10 )
 
-[node name="triangle_nice2" type="MeshInstance" parent="Luggages/Blue"]
+[node name="triangle_nice2" type="MeshInstance" parent="Luggages/Turquois"]
 transform = Transform( 100, 0, 0, 0, -1.19209e-05, 100, 0, -100, -1.19209e-05, 0, 0, 0 )
 mesh = SubResource( 3 )
 material/0 = null
 material/1 = null
 
-[node name="CollisionShape" type="CollisionShape" parent="Luggages/Blue"]
+[node name="CollisionShape" type="CollisionShape" parent="Luggages/Turquois"]
 transform = Transform( 100, 0, 0, 0, -1.19209e-05, 100, 0, -100, -1.19209e-05, 0, 0, 0 )
 shape = SubResource( 4 )
 
-[node name="Yellow" type="RigidBody" parent="Luggages"]
+[node name="Jaune" type="RigidBody" parent="Luggages" groups=[
+"Jaune",
+"Lug",
+]]
 transform = Transform( 1, 0, 0, 0, 1, -1.42109e-14, 0, 1.42109e-14, 1, 0, 0, 0 )
 visible = false
 physics_material_override = ExtResource( 10 )
 
-[node name="cylindre_long_nice2" type="MeshInstance" parent="Luggages/Yellow"]
+[node name="cylindre_long_nice2" type="MeshInstance" parent="Luggages/Jaune"]
 transform = Transform( 50, 0, 0, 0, -1.19209e-05, 50, 0, -100, -5.96046e-06, 0, 0, 0 )
 mesh = SubResource( 5 )
 material/0 = null
@@ -269,37 +278,43 @@ material/1 = null
 material/2 = null
 material/3 = null
 
-[node name="CollisionShape" type="CollisionShape" parent="Luggages/Yellow"]
+[node name="CollisionShape" type="CollisionShape" parent="Luggages/Jaune"]
 transform = Transform( 50, 0, 0, 0, -1.19209e-05, 50, 0, -100, -5.96046e-06, 0, 0, 0 )
 shape = SubResource( 6 )
 
-[node name="Green" type="RigidBody" parent="Luggages"]
+[node name="Vert" type="RigidBody" parent="Luggages" groups=[
+"Lug",
+"Vert",
+]]
 visible = false
 physics_material_override = ExtResource( 10 )
 
-[node name="rectangle_nice2" type="MeshInstance" parent="Luggages/Green"]
+[node name="rectangle_nice2" type="MeshInstance" parent="Luggages/Vert"]
 transform = Transform( 100, 0, 0, 0, -8.34465e-06, 30, 0, -70, -3.57628e-06, 0, 0, 0 )
 mesh = SubResource( 7 )
 material/0 = null
 material/1 = null
 
-[node name="CollisionShape" type="CollisionShape" parent="Luggages/Green"]
+[node name="CollisionShape" type="CollisionShape" parent="Luggages/Vert"]
 transform = Transform( 100, 0, 0, 0, -8.34465e-06, 30, 0, -70, -3.57628e-06, 0, 0, 0 )
 shape = SubResource( 8 )
 
-[node name="Purple" type="RigidBody" parent="Luggages"]
+[node name="Mauve" type="RigidBody" parent="Luggages" groups=[
+"Lug",
+"Mauve",
+]]
 transform = Transform( 1, 0, 0, 0, 1, -1.42109e-14, 0, 1.42109e-14, 1, 0, 0, 0 )
 visible = false
 physics_material_override = ExtResource( 10 )
 
-[node name="Cylinder_nice2" type="MeshInstance" parent="Luggages/Purple"]
+[node name="Cylinder_nice2" type="MeshInstance" parent="Luggages/Mauve"]
 transform = Transform( 100, 0, 0, 0, -1.19209e-05, 100, 0, -100, -1.19209e-05, 0, 0, 0 )
 mesh = SubResource( 9 )
 material/0 = null
 material/1 = null
 material/2 = null
 
-[node name="CollisionShape" type="CollisionShape" parent="Luggages/Purple"]
+[node name="CollisionShape" type="CollisionShape" parent="Luggages/Mauve"]
 transform = Transform( 100, 0, 0, 0, -1.19209e-05, 100, 0, -100, -1.19209e-05, 0, 0, 0 )
 shape = SubResource( 10 )
 

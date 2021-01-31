@@ -20,23 +20,25 @@ extents = Vector3( 2.8, 2.8, 2.2 )
 [node name="LuggagesSpawner" parent="." instance=ExtResource( 3 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 18.4, 2.7, -1.19209e-06 )
 
-[node name="UFOSpawner1" parent="." instance=ExtResource( 9 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.7, -5.2, -55.5 )
+[node name="waiting_area" parent="." instance=ExtResource( 11 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2, -6.5, -55.5 )
 
-[node name="waiting_area" parent="UFOSpawner1" instance=ExtResource( 11 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -2, 0 )
+[node name="UFOSpawner1" parent="." instance=ExtResource( 9 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.7, -2.2, -55.5 )
+
+[node name="waiting_area2" parent="." instance=ExtResource( 11 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -12.5, -6.5, -45.6 )
 
 [node name="UFOSpawner2" parent="." instance=ExtResource( 9 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -13.5, -6.2, -45.6 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -13.5, -2.1, -45.6 )
+visible = false
 
-[node name="waiting_area" parent="UFOSpawner2" instance=ExtResource( 11 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.2, 0 )
+[node name="waiting_area3" parent="." instance=ExtResource( 11 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -23, -6.5, -35.8 )
 
 [node name="UFOSpawner3" parent="." instance=ExtResource( 9 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -23.6, -6.3, -35.8 )
-
-[node name="waiting_area" parent="UFOSpawner3" instance=ExtResource( 11 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, 0 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -23.6, -2.4, -35.8 )
+visible = false
 
 [node name="Controller" type="Spatial" parent="."]
 script = ExtResource( 6 )
