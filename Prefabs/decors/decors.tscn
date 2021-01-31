@@ -3,7 +3,7 @@
 [ext_resource path="res://Prefabs/decors/facade.tscn" type="PackedScene" id=1]
 [ext_resource path="res://3D/decors/background_set.fbx" type="PackedScene" id=2]
 
-[node name="Spatial" type="Spatial"]
+[node name="Decor_Background" type="Spatial"]
 
 [node name="background_set" parent="." instance=ExtResource( 2 )]
 
