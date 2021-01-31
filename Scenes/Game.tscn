@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://Scripts/Game.gd" type="Script" id=1]
 [ext_resource path="res://Scenes/Convey.tscn" type="PackedScene" id=2]
@@ -8,86 +8,24 @@
 [ext_resource path="res://Environment/env_spaceport.tres" type="Environment" id=6]
 [ext_resource path="res://Scripts/Camera.gd" type="Script" id=7]
 [ext_resource path="res://Scenes/Score.tscn" type="PackedScene" id=8]
+[ext_resource path="res://anims/Camera_intro_movement.tres" type="Animation" id=9]
+[ext_resource path="res://anims/camera_hall_to_belt.tres" type="Animation" id=10]
 
-[sub_resource type="Animation" id=1]
-resource_name = "camera_animation"
-length = 12.0
-tracks/0/type = "bezier"
-tracks/0/path = NodePath(".:rotation_degrees:x")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"points": PoolRealArray( 9.67563, -0.25, 0, 0.25, 0, 1.37589, -0.25, 0, 0.544644, -6.87589, -45.0329, -0.775726, 3.53286, 0.25, 0, -39.0773, -0.25, 0, 0.25, 0 ),
-"times": PoolRealArray( 1.9, 6, 8, 11.9 )
-}
-tracks/1/type = "bezier"
-tracks/1/path = NodePath(".:rotation_degrees:y")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/keys = {
-"points": PoolRealArray( -152.174, -0.25, 0, 0.25, 0, -151.674, -0.25, 0, 0.411673, 0.173782, -141.963, -0.421137, 2.46315, 0.25, 0, -145.89, -0.25, 0, 0.25, 0 ),
-"times": PoolRealArray( 1.9, 6, 8, 11.9 )
-}
-tracks/2/type = "bezier"
-tracks/2/path = NodePath(".:rotation_degrees:z")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/keys = {
-"points": PoolRealArray( -1.11337, -0.25, 0, 0.25, 0, 0.805019, -0.25, 0, 0.25, 0, -5.73439, -0.25, 0, 0.25, 0, 0.102275, -0.25, 0, 0.25, 0 ),
-"times": PoolRealArray( 1.9, 6, 8, 11.9 )
-}
-tracks/3/type = "bezier"
-tracks/3/path = NodePath(".:translation:x")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/keys = {
-"points": PoolRealArray( -25.0805, -0.25, 0, 0.25, 0, -1.44381, -0.25, 0, 0.25, 0, -1.25315, -0.539208, 0.944098, 0.539208, -0.944098, -13.3891, -0.509304, 0.0883856, 0.509304, -0.0883856 ),
-"times": PoolRealArray( 1.9, 6, 8, 11.9 )
-}
-tracks/4/type = "bezier"
-tracks/4/path = NodePath(".:translation:y")
-tracks/4/interp = 1
-tracks/4/loop_wrap = true
-tracks/4/imported = false
-tracks/4/enabled = true
-tracks/4/keys = {
-"points": PoolRealArray( -4.20549, -0.25, 0, 0.25, 0, -2.11237, -0.356603, -2.32568, 0.356603, 2.32568, 17.9466, -0.48011, -3.77927, 0.48011, 3.77927, 25.7888, -0.25, 0, 0.25, 0 ),
-"times": PoolRealArray( 1.9, 6, 8, 11.9 )
-}
-tracks/5/type = "bezier"
-tracks/5/path = NodePath(".:translation:z")
-tracks/5/interp = 1
-tracks/5/loop_wrap = true
-tracks/5/imported = false
-tracks/5/enabled = true
-tracks/5/keys = {
-"points": PoolRealArray( -81.1271, -0.576207, 0.252258, 0.576207, -0.252258, -51.3061, -0.485546, -6.55625, 0.485546, 6.55625, -29.1736, -0.583532, -5.16108, 0.583532, 5.16108, -25.7568, -0.388006, 3.29472, 0.388006, -3.29472, -70.6715, -0.553627, -0.823654, 0.553627, 0.823654 ),
-"times": PoolRealArray( 1.9, 6, 8, 9.4, 11.9 )
-}
-
-[sub_resource type="BoxShape" id=2]
+[sub_resource type="BoxShape" id=1]
 extents = Vector3( 5.7, 4.3, 2.2 )
 
-[sub_resource type="BoxShape" id=3]
+[sub_resource type="BoxShape" id=2]
 extents = Vector3( 86.4, 0.3, 83.8 )
 
 [node name="Main" type="Spatial"]
 script = ExtResource( 1 )
 
-[node name="HUD" parent="." instance=ExtResource( 3 )]
-
 [node name="Score" parent="." instance=ExtResource( 8 )]
 
+[node name="HUD" parent="." instance=ExtResource( 3 )]
+
 [node name="Camera" type="Camera" parent="."]
-transform = Transform( -0.882675, -0.0956231, -0.460154, -0.0191543, 0.985589, -0.16807, 0.469594, -0.139537, -0.871786, -25.0805, -4.20549, -81.1271 )
+transform = Transform( -0.833307, 0.389837, -0.391952, 0.0217514, 0.73159, 0.681398, 0.552382, 0.559289, -0.618118, -21.4328, 28.4884, -61.03 )
 environment = ExtResource( 6 )
 fov = 50.4
 size = 32.3
@@ -95,8 +33,9 @@ far = 195.0
 script = ExtResource( 7 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Camera"]
-autoplay = "camera_animation"
-anims/camera_animation = SubResource( 1 )
+autoplay = "Camera_intro_movement"
+anims/Camera_intro_movement = ExtResource( 9 )
+anims/hall_to_belt = ExtResource( 10 )
 
 [node name="Convey" parent="." instance=ExtResource( 2 )]
 
@@ -107,22 +46,20 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -22.2, -1.1, -30.9 )
 
 [node name="Area" type="Area" parent="Counters/Exit3"]
 script = ExtResource( 4 )
-exitNb = 3
 
 [node name="BaggageClaim" type="CollisionShape" parent="Counters/Exit3/Area"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.4, -3.2, -4.6 )
-shape = SubResource( 2 )
+shape = SubResource( 1 )
 
 [node name="Exit2" type="Spatial" parent="Counters"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -11.4, -1.1, -40.7 )
 
 [node name="Area" type="Area" parent="Counters/Exit2"]
 script = ExtResource( 4 )
-exitNb = 2
 
 [node name="BaggageClaim" type="CollisionShape" parent="Counters/Exit2/Area"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.4, -3.2, -4.6 )
-shape = SubResource( 2 )
+shape = SubResource( 1 )
 
 [node name="Exit1" type="Spatial" parent="Counters"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.7, -1.1, -51.5 )
@@ -132,7 +69,7 @@ script = ExtResource( 4 )
 
 [node name="BaggageClaim" type="CollisionShape" parent="Counters/Exit1/Area"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.4, -3.2, -4.6 )
-shape = SubResource( 2 )
+shape = SubResource( 1 )
 
 [node name="Decor_Background" parent="." instance=ExtResource( 5 )]
 transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -11.0722, -5.27277, -21.0089 )
@@ -141,8 +78,8 @@ transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -11.072
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -9.44775, 0 )
 
 [node name="CollisionShape" type="CollisionShape" parent="Ground"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -11.6, 2.9, -30.7 )
-shape = SubResource( 3 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -11.6, -5.3, -30.7 )
+shape = SubResource( 2 )
 [connection signal="body_entered" from="Counters/Exit3/Area" to="Counters/Exit3/Area" method="_on_Area_body_entered"]
 [connection signal="body_entered" from="Counters/Exit2/Area" to="Counters/Exit2/Area" method="_on_Area_body_entered"]
 [connection signal="body_entered" from="Counters/Exit1/Area" to="Counters/Exit1/Area" method="_on_Area_body_entered"]
