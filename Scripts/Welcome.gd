@@ -14,3 +14,4 @@ func _show_credits():
 
 func _on_quit_game():
 		get_tree().quit()
+
