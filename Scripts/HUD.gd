@@ -12,7 +12,8 @@ func _on_GameOver_input_event(viewport, event, shape_idx):
   if event is InputEventMouseButton \
     and event.button_index == BUTTON_LEFT \
     and event.pressed:
-     main._on_GameOver()
+    get_tree().paused = false
+    main._on_GameOver()
 	
 	
 
@@ -23,6 +24,7 @@ func _on_Button_Credits_End_pressed():
 	get_tree().change_scene("res://Scenes/Welcome.tscn")
 	
 func _on_Button_Restart_Game():
+	get_tree().paused = false
 	get_tree().change_scene("res://Scenes/Game.tscn")
 	
 	

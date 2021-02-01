@@ -6,6 +6,7 @@ var scoreNode = null
 var maxNode = null
 var gameOver = null
 var UFOs = []
+onready var main = get_tree().root.find_node("Main", true, false)
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -34,8 +35,9 @@ func _process(delta):
     onGameOver()
 
 func onGameOver():
-  pass
-#  gameOver.visible = true
+  get_tree().paused = true
+  Universe.playGameOver()
+  gameOver.visible = true
 
 func _on_Timer_timeout():
   score += 1

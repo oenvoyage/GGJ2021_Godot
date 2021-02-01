@@ -24,6 +24,21 @@ func stopBackGroundMusic():
 	$NoiseConveyor.stop()
 	$Music.stop()
 
+func switchOn():
+  $SwitchOn.play()
+  
+func switchOff():
+  $SwitchOff.play()
+  
+func playGameOver():
+  $MusicGameOver.play()
+  
+func playMenuMusic():
+  $MusicMenu.play()
+
+func stopMenuMusic():
+  $MusicMenu.stop()
+
 func _conveyor_wobbling():
 	conveyor_wobbling -= 1
 	if conveyor_wobbling == 0:

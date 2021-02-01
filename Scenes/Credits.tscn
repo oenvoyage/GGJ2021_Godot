@@ -7,6 +7,7 @@
 extents = Vector2( 514.94, 301.257 )
 
 [node name="Credits" type="Node2D"]
+pause_mode = 2
 script = ExtResource( 2 )
 
 [node name="GameOver" type="Node2D" parent="."]

@@ -28,6 +28,7 @@ func _on_Area_body_entered(body):
         var b = bods.pop_back()
         if b != null:
           currentColorsInArrival[currentAlienColor] = bods
+          score.removeLuggage(exitNb)
           destroyLuggage(b, bods)
   elif dict["type"] == "Lug":
     print_debug("luggage %s entered in exit nb: %s" % [dict, exitNb])
@@ -42,6 +43,7 @@ func _on_Area_body_entered(body):
         var b = bodies.pop_back()
         if b != null:
           currentColorsInArrival[currentAlienColor] = bodies
+          score.removeLuggage(exitNb)
           destroyLuggage(b, bodies)
         else:
           addLuggage(tag, body)
@@ -56,8 +58,7 @@ func addLuggage(color, body):
   score.addLuggage(exitNb)
 
 func destroyLuggage(body, bodies):
-  body.queue_free()
-  score.removeLuggage(exitNb) 
+  body.queue_free() 
   popNewAlien()
 
 func popNewAlien():

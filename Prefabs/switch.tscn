@@ -32,7 +32,7 @@ script = ExtResource( 2 )
 [node name="Armature" parent="." index="0"]
 transform = Transform( 100, 0, 0, 0, -1.19209e-05, 100, 0, -100, -1.19209e-05, -0.521648, 0.6, 0 )
 
-[node name="opening_L" parent="Armature" index="1"]
+[node name="opening_L" parent="Armature" index="0"]
 transform = Transform( -1.43051e-06, -1, 0.000218391, 1.43051e-06, -0.000218391, -1, 1, -1.43051e-06, 1.43051e-06, 0.03746, -0.0124855, 0.00680963 )
 
 [node name="Cube_L2" parent="Armature/opening_L" index="1"]
@@ -46,7 +46,7 @@ physics_material_override = SubResource( 1 )
 transform = Transform( 1, 1.45519e-11, 1.1352e-14, 0, 1, 1.13687e-13, -2.81442e-14, -1.13687e-13, 1, 0, 0, 0 )
 shape = SubResource( 2 )
 
-[node name="opening_R" parent="Armature" index="2"]
+[node name="opening_R" parent="Armature" index="1"]
 transform = Transform( 2.38419e-07, -1, 2.38419e-07, 0, -2.38419e-07, -1, 1, 2.38419e-07, 0, 0.03746, 0.0125153, 0.00680884 )
 
 [node name="Cube_R2" parent="Armature/opening_R" index="1"]
@@ -60,13 +60,13 @@ physics_material_override = SubResource( 3 )
 transform = Transform( 1, 7.10543e-15, -4.73695e-15, -2.84217e-14, 1, 0, 1.59872e-14, 0, 1, 0, 0, 0 )
 shape = SubResource( 4 )
 
-[node name="opening_L001" parent="Armature" index="3"]
+[node name="opening_L001" parent="Armature" index="2"]
 transform = Transform( 2.38419e-07, -1, 2.38419e-07, 0, -2.38419e-07, -1, 1, 2.38419e-07, 0, 0.050848, -0.0124847, 0.00680884 )
 
 [node name="petit_cube_L2" parent="Armature/opening_L001" index="1"]
 material/0 = ExtResource( 4 )
 
-[node name="opening_R001" parent="Armature" index="4"]
+[node name="opening_R001" parent="Armature" index="3"]
 transform = Transform( 2.38419e-07, -1, 2.38419e-07, 0, -2.38419e-07, -1, 1, 2.38419e-07, 0, 0.050848, 0.0125153, 0.00680884 )
 
 [node name="petit_cube_R2" parent="Armature/opening_R001" index="1"]

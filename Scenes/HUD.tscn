@@ -22,7 +22,6 @@ __meta__ = {
 }
 
 [node name="GameOver" type="Node2D" parent="."]
-visible = false
 
 [node name="Area2D" type="Area2D" parent="GameOver"]
 
@@ -31,7 +30,6 @@ position = Vector2( 511.153, 298.743 )
 shape = SubResource( 1 )
 
 [node name="Sprite" type="Sprite" parent="GameOver/Area2D"]
-visible = false
 position = Vector2( 529.653, 304.91 )
 scale = Vector2( 0.759531, 0.812818 )
 texture = ExtResource( 2 )
@@ -60,9 +58,9 @@ __meta__ = {
 [node name="Button restart" type="Button" parent="GameOver"]
 modulate = Color( 1, 1, 1, 0 )
 margin_left = 54.0
-margin_top = 297.0
+margin_top = 295.324
 margin_right = 416.0
-margin_bottom = 406.0
+margin_bottom = 404.324
 text = "restart"
 __meta__ = {
 "_edit_use_anchors_": false
