@@ -44,7 +44,7 @@ _global_script_class_icons={
 
 [application]
 
-config/name="GodotTest"
+config/name="SpacePort"
 run/main_scene="res://Scenes/Welcome.tscn"
 boot_splash/image="res://images/Team_Cuisine_Logo.png"
 config/icon="res://images/Team_Cuisine_Logo.png"
@@ -57,6 +57,11 @@ Universe="*res://Universe.tscn"
 [debug]
 
 settings/image=""
+
+[display]
+
+window/size/width=1280
+window/size/height=720
 
 [editor_plugins]
 

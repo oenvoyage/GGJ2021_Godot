@@ -1,33 +1,32 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=3 format=2]
 
 [ext_resource path="res://Scripts/Welcome.gd" type="Script" id=1]
 [ext_resource path="res://images/Main_menu_Concept_V3.jpg" type="Texture" id=2]
 
-[sub_resource type="StyleBoxFlat" id=1]
-bg_color = Color( 0.615686, 0.145098, 0.145098, 1 )
-
 [node name="Control" type="Control"]
 pause_mode = 2
+margin_left = 52.9121
+margin_top = 21.8367
+margin_right = 52.9121
+margin_bottom = 21.8367
 script = ExtResource( 1 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="Sprite" type="Sprite" parent="."]
-position = Vector2( 530.837, 307.41 )
-scale = Vector2( 0.773495, 0.773495 )
+position = Vector2( 588.242, 339.279 )
+scale = Vector2( 0.858076, 0.858073 )
 texture = ExtResource( 2 )
 
 [node name="Button" type="Button" parent="."]
 modulate = Color( 1, 1, 1, 0 )
-anchor_left = 0.523
-anchor_top = 0.5
-anchor_right = 0.523
-anchor_bottom = 0.5
-margin_left = 793.047
-margin_top = 444.273
-margin_right = 1038.05
-margin_bottom = 512.273
+margin_left = 869.0
+margin_top = 490.0
+margin_right = 1040.0
+margin_bottom = 534.0
+rect_scale = Vector2( 1.68, 1.64 )
+rect_pivot_offset = Vector2( -1.09393, -0.835236 )
 mouse_default_cursor_shape = 3
 text = "Play!"
 __meta__ = {
@@ -36,14 +35,10 @@ __meta__ = {
 
 [node name="Button Quit Game" type="Button" parent="."]
 modulate = Color( 1, 1, 1, 0 )
-anchor_left = 0.523
-anchor_top = 0.5
-anchor_right = 0.523
-anchor_bottom = 0.5
-margin_left = 791.368
-margin_top = 531.717
-margin_right = 1036.37
-margin_bottom = 599.717
+margin_left = 867.287
+margin_top = 584.287
+margin_right = 1160.29
+margin_bottom = 666.287
 mouse_default_cursor_shape = 3
 text = "Quit"
 __meta__ = {
@@ -52,16 +47,11 @@ __meta__ = {
 
 [node name="Button Credits" type="Button" parent="."]
 modulate = Color( 1, 1, 1, 0 )
-anchor_left = 0.523
-anchor_top = 0.5
-anchor_right = 0.523
-anchor_bottom = 0.5
-margin_left = 26.0738
-margin_top = 530.445
-margin_right = 271.074
-margin_bottom = 598.445
+margin_left = 20.0
+margin_top = 579.0
+margin_right = 307.0
+margin_bottom = 662.0
 mouse_default_cursor_shape = 3
-custom_styles/normal = SubResource( 1 )
 text = "Credit"
 __meta__ = {
 "_edit_use_anchors_": false
