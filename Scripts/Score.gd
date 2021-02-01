@@ -22,7 +22,8 @@ func addLuggage(nb):
   score += 1
 
 func removeLuggage(nb):
-  score -= 1
+  if score > 0 :
+    score -= 1
   UFOs[nb-1].pop()
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

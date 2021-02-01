@@ -13,8 +13,9 @@ func pop():
 
 func _ready():
   for luggage in $Luggages.get_children():
-    luggage.set_mode(RigidBody.MODE_STATIC)
-    luggage.visible = false
-    luggages.append(luggage)
+    var rigid =  luggage.get_node("RigidBody")
+    rigid.set_mode(RigidBody.MODE_STATIC)
+    rigid.visible = false
+    luggages.append(rigid)
   $Timer.wait_time = Universe.spawner_speed
   
