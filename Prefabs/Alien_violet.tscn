@@ -3,3 +3,24 @@
 [ext_resource path="res://3D/characters/Alien_violet.fbx" type="PackedScene" id=1]
 
 [node name="Alien_violet" instance=ExtResource( 1 )]
+
+[node name="Basic_armature" parent="." index="0"]
+transform = Transform( 100, 0, 0, 0, -1.19209e-05, 100, 0, -100, -1.19209e-05, 0, 0, 0 )
+
+[node name="body" parent="Basic_armature" index="0"]
+transform = Transform( 1, 5.68434e-14, 2.38419e-07, 2.38419e-07, -1.19209e-07, -1, -2.84217e-14, 1, -1.19209e-07, 0, 0, 0 )
+
+[node name="claviculeL" parent="Basic_armature/body" index="0"]
+transform = Transform( 0.172169, 0.98182, -0.0799241, -0.98182, 0.164453, -0.0947912, -0.0799241, 0.0947912, 0.992284, 0, 0.0231647, 0 )
+
+[node name="armL" parent="Basic_armature/body/claviculeL" index="0"]
+transform = Transform( 0.0506474, 0.987336, -0.150344, -0.998716, 0.0502883, -0.00619183, 0.00144715, 0.150465, 0.988614, -4.09782e-10, 0.0103684, -1.49012e-10 )
+
+[node name="claviculeR" parent="Basic_armature/body" index="1"]
+transform = Transform( 0.172169, -0.98182, 0.0799236, 0.98182, 0.164453, -0.0947912, 0.0799242, 0.0947907, 0.992284, 0, 0.0231647, 0 )
+
+[node name="armR" parent="Basic_armature/body/claviculeR" index="0"]
+transform = Transform( 0.134594, -0.982324, 0.130093, 0.990866, 0.132319, -0.0260099, 0.00833635, 0.132405, 0.991161, -1.85333e-09, 0.0103684, -7.45058e-11 )
+
+[node name="head" parent="Basic_armature/body" index="2"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0231647, 0 )

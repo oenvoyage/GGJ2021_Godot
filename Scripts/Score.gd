@@ -1,7 +1,7 @@
 extends Spatial
 
 var score = 0
-var maxScore = 2
+var maxScore = 10
 var scoreNode = null
 var maxNode = null
 var gameOver = null
