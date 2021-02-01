@@ -61,6 +61,7 @@ points = PoolVector3Array( -0.987655, -1, -0.987654, -0.987655, -1, 0.987654, -0
 ]]
 mass = 20.0
 physics_material_override = ExtResource( 4 )
+gravity_scale = 5.0
 
 [node name="valise_turquoise2" type="MeshInstance" parent="RigidBody" index="0"]
 transform = Transform( 0.25, 0, 0, 0, 2.6077e-08, 0.25, 0, -0.4375, 1.49012e-08, 0, 0, 0 )

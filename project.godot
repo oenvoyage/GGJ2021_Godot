@@ -51,7 +51,6 @@ config/icon="res://images/Team_Cuisine_Logo.png"
 
 [autoload]
 
-DragDropController="*res://addons/DragDrop3D/DragDropController.gd"
 Universe="*res://Universe.tscn"
 
 [debug]

@@ -30,7 +30,7 @@ position = Vector2( 511.153, 298.743 )
 shape = SubResource( 1 )
 
 [node name="Sprite" type="Sprite" parent="GameOver/Area2D"]
-position = Vector2( 639.963, 392.101 )
+position = Vector2( 639.963, 386.131 )
 scale = Vector2( 0.912335, 0.976343 )
 texture = ExtResource( 2 )
 
@@ -57,10 +57,10 @@ __meta__ = {
 
 [node name="Button restart" type="Button" parent="GameOver"]
 modulate = Color( 1, 1, 1, 0 )
-margin_left = 75.0
-margin_top = 387.0
-margin_right = 491.0
-margin_bottom = 511.0
+margin_left = 74.2744
+margin_top = 382.646
+margin_right = 490.274
+margin_bottom = 506.646
 text = "restart"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -68,10 +68,10 @@ __meta__ = {
 
 [node name="Button Credits" type="Button" parent="GameOver"]
 modulate = Color( 1, 1, 1, 0 )
-margin_left = 793.0
-margin_top = 389.0
-margin_right = 1218.0
-margin_bottom = 509.0
+margin_left = 792.274
+margin_top = 382.469
+margin_right = 1217.27
+margin_bottom = 502.469
 text = "restart"
 __meta__ = {
 "_edit_use_anchors_": false
