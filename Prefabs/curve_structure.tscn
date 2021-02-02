@@ -1125,3 +1125,4 @@ transform = Transform( 1, 0, 0, 0, 1, -1.42109e-14, 0, 1.42109e-14, 1, 0, 0, 0 )
 shape = SubResource( 159 )
 
 [node name="curve_decor" parent="." index="1" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1.22421, 0, 0, 0, 1, 0, -0.25405, 0 )

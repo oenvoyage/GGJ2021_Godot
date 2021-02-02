@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=2]
+[gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://Scripts/Game.gd" type="Script" id=1]
 [ext_resource path="res://Scenes/Convey.tscn" type="PackedScene" id=2]
@@ -10,6 +10,7 @@
 [ext_resource path="res://Scenes/Score.tscn" type="PackedScene" id=8]
 [ext_resource path="res://anims/Camera_intro_movement.tres" type="Animation" id=9]
 [ext_resource path="res://anims/camera_hall_to_belt.tres" type="Animation" id=10]
+[ext_resource path="res://Prefabs/decors/Alien_Queue.tscn" type="PackedScene" id=11]
 
 [sub_resource type="BoxShape" id=1]
 extents = Vector3( 5.7, 1.6, 2.2 )
@@ -84,6 +85,16 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -9.44775, 0 )
 [node name="CollisionShape" type="CollisionShape" parent="Ground"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -11.6, 2.2, -30.7 )
 shape = SubResource( 2 )
+
+[node name="3_Alien_queues" type="Spatial" parent="."]
+
+[node name="Alien_Queue" parent="3_Alien_queues" instance=ExtResource( 11 )]
+
+[node name="Alien_Queue2" parent="3_Alien_queues" instance=ExtResource( 11 )]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -28.121, -6.83078, -35.619 )
+
+[node name="Alien_Queue3" parent="3_Alien_queues" instance=ExtResource( 11 )]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -5.98612, -6.83078, -55.0626 )
 [connection signal="body_entered" from="Counters/Exit3/Area" to="Counters/Exit3/Area" method="_on_Area_body_entered"]
 [connection signal="body_entered" from="Counters/Exit2/Area" to="Counters/Exit2/Area" method="_on_Area_body_entered"]
 [connection signal="body_entered" from="Counters/Exit1/Area" to="Counters/Exit1/Area" method="_on_Area_body_entered"]
