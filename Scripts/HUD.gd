@@ -28,3 +28,7 @@ func _on_Button_Restart_Game():
 	get_tree().change_scene("res://Scenes/Game.tscn")
 	
 	
+
+
+func _on_Button_ChangeView_pressed():
+  main.get_node("Camera").switch_camera()
