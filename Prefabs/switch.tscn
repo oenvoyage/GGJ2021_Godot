@@ -30,10 +30,10 @@ points = PoolVector3Array( -0.000116754, -0.0151391, -0.000652374, -0.000116754,
 script = ExtResource( 2 )
 
 [node name="Armature" parent="." index="0"]
-transform = Transform( 100, 0, 0, 0, -1.19209e-05, 100, 0, -100, -1.19209e-05, -0.521648, 0.6, 0 )
+transform = Transform( 100, 0, 0, 0, -1.19209e-05, 100, 0, -100, -1.19209e-05, -0.5, 0.6, 0 )
 
 [node name="opening_L" parent="Armature" index="0"]
-transform = Transform( -1.43051e-06, -1, 0.000218391, 1.43051e-06, -0.000218391, -1, 1, -1.43051e-06, 1.43051e-06, 0.03746, -0.0124855, 0.00680963 )
+transform = Transform( 2.38419e-07, -1, 2.38419e-07, 0, -2.38419e-07, -1, 1, 2.38419e-07, 0, 0.03746, -0.0124847, 0.00680884 )
 
 [node name="Cube_L2" parent="Armature/opening_L" index="1"]
 transform = Transform( -1.78814e-07, 7.54979e-08, 1, -1.5, -4.37114e-08, -1.19209e-07, 6.55671e-08, -1, 7.54979e-08, 0, 0, -2.79397e-09 )
@@ -50,7 +50,7 @@ shape = SubResource( 2 )
 transform = Transform( 2.38419e-07, -1, 2.38419e-07, 0, -2.38419e-07, -1, 1, 2.38419e-07, 0, 0.03746, 0.0125153, 0.00680884 )
 
 [node name="Cube_R2" parent="Armature/opening_R" index="1"]
-transform = Transform( -5.56718e-08, 0.227807, 0.973706, -1.5, -1.62921e-07, -2.95467e-14, 2.37955e-07, -0.973706, 0.227807, 0, 0, 1.86265e-09 )
+transform = Transform( 3.98147e-14, -1.62921e-07, 1, -1.5, -1.62921e-07, 0, 2.44381e-07, -1, -1.62921e-07, 0, 0, 1.86265e-09 )
 material/0 = ExtResource( 4 )
 
 [node name="StaticBody" type="StaticBody" parent="Armature/opening_R/Cube_R2" index="0"]

@@ -42,7 +42,7 @@ points = PoolVector3Array( -0.483872, -0.0159514, 0.0524951, -0.48136, -0.014850
 "Gris",
 "Lug",
 ]]
-mass = 5.1
+mass = 2.55102
 physics_material_override = ExtResource( 4 )
 gravity_scale = 5.0
 
@@ -55,3 +55,6 @@ material/1 = null
 [node name="CollisionShape" type="CollisionShape" parent="RigidBody" index="1"]
 transform = Transform( 0.92388, -0.382683, -1.67276e-08, 0, -4.37114e-08, 1, -0.382683, -0.92388, -4.03841e-08, 0, 0, 0 )
 shape = SubResource( 2 )
+
+[node name="valise_gris2" parent="." index="1"]
+visible = false

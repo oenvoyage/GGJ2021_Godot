@@ -100,14 +100,14 @@ transform = Transform( -1, 0, 2.06632e-07, 0, 1, 0, -2.06632e-07, 0, -1, -12.854
 [node name="curve_belt_elements" parent="Controller/Curve_NE_Front" instance=ExtResource( 5 )]
 
 [node name="Straight_S_3" type="Spatial" parent="Controller"]
-transform = Transform( -1, 0, -2.98023e-08, 0, 1, 0, 2.98023e-08, 0, -1, -8.3, 0, -20 )
+transform = Transform( -1, 0, -2.98023e-08, 0, 1, 0, 2.98023e-08, 0, -1, -8.24106, -0.0145484, -20 )
 
 [node name="straight_structure" parent="Controller/Straight_S_3" instance=ExtResource( 2 )]
 
 [node name="straight_belt_elements" parent="Controller/Straight_S_3" instance=ExtResource( 1 )]
 
 [node name="Switch_S_3" type="Spatial" parent="Controller"]
-transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -7.7, 7.45058e-09, -20 )
+transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -7.738, 0.0128699, -20 )
 script = ExtResource( 8 )
 
 [node name="switch" parent="Controller/Switch_S_3" instance=ExtResource( 7 )]
@@ -124,7 +124,7 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.900001, 1.1, -20.1 )
 shape = SubResource( 1 )
 
 [node name="Straight_S_2" type="Spatial" parent="Controller"]
-transform = Transform( -1, 0, -2.98023e-08, 0, 1, 0, 2.98023e-08, 0, -1, 1.9, 0, -20 )
+transform = Transform( -1, 0, -2.98023e-08, 0, 1, 0, 2.98023e-08, 0, -1, 1.9, -0.015, -20 )
 
 [node name="straight_structure" parent="Controller/Straight_S_2" instance=ExtResource( 2 )]
 
@@ -132,7 +132,7 @@ transform = Transform( -1, 0, -2.98023e-08, 0, 1, 0, 2.98023e-08, 0, -1, 1.9, 0,
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.2, 0, 0 )
 
 [node name="Switch_S_2" type="Spatial" parent="Controller"]
-transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 2.5, 7.45058e-09, -20 )
+transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 2.46943, 0.013, -20 )
 script = ExtResource( 8 )
 
 [node name="switch" parent="Controller/Switch_S_2" instance=ExtResource( 7 )]
@@ -149,14 +149,14 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.8, 0.9, -20.1 )
 shape = SubResource( 1 )
 
 [node name="Straight_S_1" type="Spatial" parent="Controller"]
-transform = Transform( -1, 0, -2.98023e-08, 0, 1, 0, 2.98023e-08, 0, -1, 12.1, 0, -20 )
+transform = Transform( -1, 0, -2.98023e-08, 0, 1, 0, 2.98023e-08, 0, -1, 12.1, -0.015, -20 )
 
 [node name="straight_structure" parent="Controller/Straight_S_1" instance=ExtResource( 2 )]
 
 [node name="straight_belt_elements" parent="Controller/Straight_S_1" instance=ExtResource( 1 )]
 
 [node name="Switch_S_1" type="Spatial" parent="Controller"]
-transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 12.8, 7.45058e-09, -20 )
+transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 12.6548, 0.013, -20 )
 script = ExtResource( 8 )
 
 [node name="switch" parent="Controller/Switch_S_1" instance=ExtResource( 7 )]

@@ -77,3 +77,6 @@ shape = SubResource( 2 )
 [node name="CollisionShape" type="CollisionShape" parent="RigidBody" index="2"]
 transform = Transform( 0.25, 0, 0, 0, 2.6077e-08, 0.25, 0, -0.4375, 1.49012e-08, 0, 0, 0 )
 shape = SubResource( 3 )
+
+[node name="valise_turquoise2" parent="." index="1"]
+visible = false
