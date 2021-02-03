@@ -56,6 +56,16 @@ text = "Credit"
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="Label" type="Label" parent="."]
+margin_left = 30.1772
+margin_top = 676.104
+margin_right = 70.1772
+margin_bottom = 690.104
+text = "v.1.2"
+__meta__ = {
+"_edit_use_anchors_": false
+}
 [connection signal="pressed" from="Button" to="." method="_on_Next_Scene"]
 [connection signal="pressed" from="Button Quit Game" to="." method="_on_quit_game"]
 [connection signal="mouse_entered" from="Button Credits" to="Button Credits" method="_on_Button_Credits_mouse_entered"]
