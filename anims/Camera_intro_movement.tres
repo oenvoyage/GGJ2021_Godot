@@ -63,3 +63,27 @@ tracks/5/keys = {
 "points": PoolRealArray( -81.1271, -2.66584, 0.0292358, 2.66584, -0.0292358, -51.3061, -0.516511, -7.36068, 0.516511, 7.36068, -29.1736, -0.583532, -5.16108, 0.583532, 5.16108, -9.825, -0.446767, -1.28571, 0.446767, 1.28571, -33.2194, -1.17651, 13.4366, 1.17651, -13.4366, -61.03, -0.25, 0, 0.25, 0 ),
 "times": PoolRealArray( 1.9, 6, 8, 11, 13.7, 15.9 )
 }
+tracks/6/type = "value"
+tracks/6/path = NodePath(".:environment:dof_blur_far_distance")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 7.7, 11.1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 1.13, 126.78 ]
+}
+tracks/7/type = "value"
+tracks/7/path = NodePath(".:environment:dof_blur_far_enabled")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/keys = {
+"times": PoolRealArray( 13.1, 15.9 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ true, false ]
+}
