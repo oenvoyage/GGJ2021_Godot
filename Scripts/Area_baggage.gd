@@ -28,6 +28,7 @@ func _on_Area_body_entered(body):
         var b = bods.pop_back()
         if b != null:
           currentColorsInArrival[currentAlienColor] = bods
+          score.matched()
           score.removeLuggage(exitNb)
           destroyLuggage(b, bods)
   elif dict["type"] == "Lug":
@@ -36,7 +37,8 @@ func _on_Area_body_entered(body):
     if currentAlienColor == "":
       return
     var bodies = currentColorsInArrival[currentAlienColor]
-    if tag == currentAlienColor: # directly destroy the luggage
+    if tag == currentAlienColor:
+      score.matched()
       destroyLuggage(body, bodies)
     else: # check the match because the current alien might have changed, or add the luggage
       if currentAlienColor in currentColorsInArrival:       
@@ -44,6 +46,7 @@ func _on_Area_body_entered(body):
         if b != null:
           currentColorsInArrival[currentAlienColor] = bodies
           score.removeLuggage(exitNb)
+          score.matched()
           destroyLuggage(b, bodies)
         else:
           addLuggage(tag, body)
