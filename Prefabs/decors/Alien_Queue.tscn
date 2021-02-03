@@ -9,34 +9,31 @@
 [node name="Alien_Queue" type="Spatial"]
 transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -17.9423, -6.83078, -46.6612 )
 
-[node name="Alien_gris" type="Spatial" parent="." instance=ExtResource( 4 )]
+[node name="Alien_gris" parent="." instance=ExtResource( 4 )]
 
-[node name="Alien_gris2" type="Spatial" parent="." instance=ExtResource( 4 )]
+[node name="Alien_gris2" parent="." instance=ExtResource( 4 )]
 transform = Transform( 1, 0, 0, 0, 0.633478, 0, 0, 0, 1, 0, 0, -7.86753 )
 
-[node name="Alien_turquoise" type="Spatial" parent="." instance=ExtResource( 5 )]
+[node name="Alien_turquoise" parent="." instance=ExtResource( 5 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -6.156 )
 
-[node name="Alien_violet" type="Spatial" parent="." instance=ExtResource( 1 )]
+[node name="Alien_violet" parent="." instance=ExtResource( 1 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -3.63474 )
 
-[node name="Alien_vert" type="Spatial" parent="." instance=ExtResource( 2 )]
+[node name="Alien_vert" parent="." instance=ExtResource( 2 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -4.91669 )
 
-[node name="Alien_jaune" type="Spatial" parent="." instance=ExtResource( 3 )]
+[node name="Alien_jaune" parent="." instance=ExtResource( 3 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -2.05129 )
 
-[node name="Alien_turquoise3" type="Spatial" parent="." instance=ExtResource( 5 )]
+[node name="Alien_turquoise3" parent="." instance=ExtResource( 5 )]
 transform = Transform( 1, 0, 1.3929e-08, 0, 1, 0, 1.3929e-08, 0, 0.681341, 0, 0, -12.2308 )
 
-[node name="Alien_violet2" type="Spatial" parent="." instance=ExtResource( 1 )]
+[node name="Alien_violet2" parent="." instance=ExtResource( 1 )]
 transform = Transform( 1, 0, 1.3929e-08, 0, 1, 0, 1.3929e-08, 0, 0.681341, 0, 0, -10.513 )
 
-[node name="Alien_vert2" type="Spatial" parent="." instance=ExtResource( 2 )]
+[node name="Alien_vert2" parent="." instance=ExtResource( 2 )]
 transform = Transform( 1, 0, 1.3929e-08, 0, 1, 0, 1.3929e-08, 0, 0.681341, 0, 0, -11.3864 )
 
-[node name="Alien_jaune2" type="Spatial" parent="." instance=ExtResource( 3 )]
+[node name="Alien_jaune2" parent="." instance=ExtResource( 3 )]
 transform = Transform( 1, 0, 1.3929e-08, 0, 1, 0, 1.3929e-08, 0, 0.681341, 0, 0, -9.43408 )
-
-[node name="Alien_turquoise2" type="Spatial" parent="." instance=ExtResource( 5 )]
-transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -46.6612, 6.07376, 17.9423 )
