@@ -42,9 +42,10 @@ points = PoolVector3Array( -0.483872, -0.0159514, 0.0524951, -0.48136, -0.014850
 "Gris",
 "Lug",
 ]]
-mass = 2.55102
+mass = 10.2041
 physics_material_override = ExtResource( 4 )
 gravity_scale = 5.0
+can_sleep = false
 
 [node name="valise_gris2" type="MeshInstance" parent="RigidBody" index="0"]
 transform = Transform( 0.92388, -0.382683, -1.67276e-08, 0, -4.37114e-08, 1, -0.382683, -0.92388, -4.03841e-08, 0, 0, 0 )
