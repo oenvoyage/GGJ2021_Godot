@@ -98,33 +98,53 @@ transform = Transform( -0.234447, 0, 0.972129, 0, 1, 0, -0.972129, 0, -0.234447,
 [node name="Alien_Queue3" parent="3_Alien_queues" instance=ExtResource( 11 )]
 transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -5.98612, -6.83078, -55.0626 )
 
-[node name="SpotLight" type="SpotLight" parent="3_Alien_queues"]
+[node name="SpotLight Arrival 1" type="SpotLight" parent="3_Alien_queues"]
 transform = Transform( 1, 0, 0, 0, -0.000994964, 1, 0, -1, -0.000994964, -2.76358, 5.62484, -55.4594 )
 light_color = Color( 0.615686, 0.568627, 0.815686, 1 )
 light_energy = 8.48
+shadow_enabled = true
 spot_range = 34.6608
 spot_angle = 36.7942
 
-[node name="SpotLight2" type="SpotLight" parent="3_Alien_queues"]
+[node name="SpotLight2 arrival 2" type="SpotLight" parent="3_Alien_queues"]
 transform = Transform( 1, 0, 0, 0, -0.000994964, 1, 0, -1, -0.000994964, -10.245, 5.62484, -41.7805 )
 light_color = Color( 0.615686, 0.568627, 0.815686, 1 )
 light_energy = 8.48
+shadow_enabled = true
 spot_range = 36.0
 spot_angle = 41.6615
 
-[node name="SpotLight3" type="SpotLight" parent="3_Alien_queues"]
+[node name="SpotLight3 Arrival 3" type="SpotLight" parent="3_Alien_queues"]
 transform = Transform( 1, 0, 0, 0, -0.000994964, 1, 0, -1, -0.000994964, -21.6276, 5.62484, -32.9539 )
-light_color = Color( 0.615686, 0.568627, 0.815686, 1 )
+light_color = Color( 0.694118, 0.67451, 0.780392, 1 )
 light_energy = 8.48
+shadow_enabled = true
 spot_range = 36.0
-spot_angle = 37.9688
+spot_angle = 50.6599
 
-[node name="SpotLight4" type="SpotLight" parent="3_Alien_queues"]
+[node name="SpotLight column 01" type="SpotLight" parent="3_Alien_queues"]
+transform = Transform( 1, 0, 0, 0, -0.262947, 0.96481, 0, -0.96481, -0.262947, 16.0268, 14.6113, -16.9221 )
+light_color = Color( 0.611765, 0.756863, 0.803922, 1 )
+light_energy = 9.26
+shadow_enabled = true
+spot_range = 23.4
+spot_angle = 41.6615
+
+[node name="SpotLight column 02" type="SpotLight" parent="3_Alien_queues"]
+transform = Transform( 1, 0, 0, 0, -0.262947, 0.96481, 0, -0.96481, -0.262947, -13.2227, 14.6113, -16.9221 )
+light_color = Color( 0.611765, 0.756863, 0.803922, 1 )
+light_energy = 9.26
+shadow_enabled = true
+spot_range = 23.4
+spot_angle = 41.6615
+
+[node name="SpotLight4 Belt Switches" type="SpotLight" parent="3_Alien_queues"]
 transform = Transform( 1, 0, 0, 0, -0.895028, 0.44601, 0, -0.44601, -0.895028, 3.80179, 12.0118, -43.4984 )
-light_color = Color( 0.596078, 0.745098, 0.956863, 1 )
+light_color = Color( 0.666667, 0.729412, 0.815686, 1 )
 light_energy = 8.48
-spot_range = 36.0
-spot_angle = 37.9688
+shadow_enabled = true
+spot_range = 34.3642
+spot_angle = 45.7865
 [connection signal="body_entered" from="Counters/Exit3/Area" to="Counters/Exit3/Area" method="_on_Area_body_entered"]
 [connection signal="body_entered" from="Counters/Exit2/Area" to="Counters/Exit2/Area" method="_on_Area_body_entered"]
 [connection signal="body_entered" from="Counters/Exit1/Area" to="Counters/Exit1/Area" method="_on_Area_body_entered"]
