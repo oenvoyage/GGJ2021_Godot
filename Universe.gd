@@ -24,14 +24,51 @@ func stopBackGroundMusic():
   $NoiseConveyor.stop()
   $Music.stop()
 
-func switchOn():
-  $SwitchOn.play()
+func switchOn(nb):
+  match nb:
+    1:
+      switchOn_1()
+    2:
+      switchOn_2()
+    3:
+      switchOn_3()
+
+func switchOff(nb):
+  match nb:
+    1:
+      switchOff_1()
+    2:
+      switchOff_2()
+    3:
+      switchOff_3()
+
+func switchOn_1():
+  $SwitchOff1.stop()  
+  $SwitchOn1.play()
   
-func switchOff():
-  $SwitchOff.play()
   
+func switchOff_1():
+  $SwitchOn1.stop()  
+  $SwitchOff1.play()
+
+func switchOn_2():
+  $SwitchOff2.stop()  
+  $SwitchOn2.play()
+  
+func switchOff_2():
+  $SwitchOn2.stop()  
+  $SwitchOff2.play()
+
+func switchOn_3():
+  $SwitchOff3.stop()  
+  $SwitchOn3.play()
+  
+func switchOff_3():
+  $SwitchOn3.stop()  
+  $SwitchOff3.play()
+
 func playGameOver():
-  print("Play GameOver")
+  print("")
   $MusicGameOver.play()
   
 func playMenuMusic():

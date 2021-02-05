@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Switch_Sound_Forward_3.ogg-e0da316f06c292ccf6b3bba03e7b9732.oggstr"
+
+[deps]
+
+source_file="res://Scenes/Switch_Sound_Forward_3.ogg"
+dest_files=[ "res://.import/Switch_Sound_Forward_3.ogg-e0da316f06c292ccf6b3bba03e7b9732.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

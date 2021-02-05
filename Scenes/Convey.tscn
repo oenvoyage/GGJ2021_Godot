@@ -112,6 +112,7 @@ script = ExtResource( 8 )
 
 [node name="switch" parent="Controller/Switch_S_3" instance=ExtResource( 7 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -4.5, 0, 0 )
+switch_nb = 3
 
 [node name="straight_belt_elements" parent="Controller/Switch_S_3" instance=ExtResource( 1 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -4.6, 0, 0 )
@@ -137,6 +138,7 @@ script = ExtResource( 8 )
 
 [node name="switch" parent="Controller/Switch_S_2" instance=ExtResource( 7 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -4.5, 0, -7.62939e-06 )
+switch_nb = 2
 
 [node name="straight_belt_elements" parent="Controller/Switch_S_2" instance=ExtResource( 1 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -4.6, 0, 0 )

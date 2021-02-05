@@ -1,12 +1,16 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://sounds/GGJ_Team_Cuisine_Music_V2.ogg" type="AudioStream" id=1]
 [ext_resource path="res://Universe.gd" type="Script" id=2]
 [ext_resource path="res://sounds/Conveyer_Belt_D3.ogg" type="AudioStream" id=3]
-[ext_resource path="res://sounds/New_Switch_Sound_1.ogg" type="AudioStream" id=4]
+[ext_resource path="res://sounds/Switch_Sound_Backwards_1.ogg" type="AudioStream" id=4]
 [ext_resource path="res://sounds/GGJ_Team_Cuisine_Game_Over_Music.ogg" type="AudioStream" id=5]
 [ext_resource path="res://sounds/GGJ_Team_Cuisine_Menu_Music.ogg" type="AudioStream" id=6]
-[ext_resource path="res://sounds/Switch_Sound.ogg" type="AudioStream" id=7]
+[ext_resource path="res://sounds/Switch_Sound_Forward_2.ogg" type="AudioStream" id=7]
+[ext_resource path="res://sounds/Switch_Sound_Forward_3.ogg" type="AudioStream" id=8]
+[ext_resource path="res://sounds/Switch_Sound_Forward_1.ogg" type="AudioStream" id=9]
+[ext_resource path="res://sounds/Switch_Sound_Backwards_3.ogg" type="AudioStream" id=10]
+[ext_resource path="res://sounds/Switch_Sound_Backwards_2.ogg" type="AudioStream" id=11]
 
 [node name="Universe" type="Node"]
 pause_mode = 2
@@ -19,11 +23,23 @@ stream = ExtResource( 1 )
 stream = ExtResource( 3 )
 volume_db = -10.624
 
-[node name="SwitchOn" type="AudioStreamPlayer" parent="."]
+[node name="SwitchOn1" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 9 )
+
+[node name="SwitchOff1" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 4 )
 
-[node name="SwitchOff" type="AudioStreamPlayer" parent="."]
+[node name="SwitchOn2" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 7 )
+
+[node name="SwitchOff2" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 11 )
+
+[node name="SwitchOn3" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 8 )
+
+[node name="SwitchOff3" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 10 )
 
 [node name="MusicMenu" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 6 )

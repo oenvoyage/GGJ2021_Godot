@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Switch_Sound_Backwards_1.ogg-1ccffc3c816e850d3ec2f71fb045328f.oggstr"
+
+[deps]
+
+source_file="res://sounds/Switch_Sound_Backwards_1.ogg"
+dest_files=[ "res://.import/Switch_Sound_Backwards_1.ogg-1ccffc3c816e850d3ec2f71fb045328f.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

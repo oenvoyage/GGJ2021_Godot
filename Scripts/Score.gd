@@ -7,7 +7,7 @@ onready var gameOverNode = get_node("../HUD/GameOver")
 onready var main = get_tree().root.find_node("Main", true, false)
 
 var score = 0
-var maxScore = 1
+var maxScore = 10
 var point = 0
 var UFOs = []
 var notGameOver = true
