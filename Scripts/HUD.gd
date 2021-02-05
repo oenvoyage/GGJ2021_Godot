@@ -7,16 +7,6 @@ func _ready():
 	main = get_tree().root.find_node("Main", true, false)
 	button.connect("pressed",main,"_on_GameOver") 
 
-func _on_GameOver_input_event(viewport, event, shape_idx):
-  print("restart...")
-  if event is InputEventMouseButton \
-    and event.button_index == BUTTON_LEFT \
-    and event.pressed:
-    get_tree().paused = false
-    main._on_GameOver()
-	
-	
-
 func _on_Button_Load_Credits():
 	get_tree().change_scene("res://Scenes/Credits.tscn")
 	

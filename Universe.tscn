@@ -9,6 +9,7 @@
 [ext_resource path="res://sounds/Switch_Sound.ogg" type="AudioStream" id=7]
 
 [node name="Universe" type="Node"]
+pause_mode = 2
 script = ExtResource( 2 )
 
 [node name="Music" type="AudioStreamPlayer" parent="."]

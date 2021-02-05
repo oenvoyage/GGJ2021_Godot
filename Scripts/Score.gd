@@ -7,9 +7,10 @@ onready var gameOverNode = get_node("../HUD/GameOver")
 onready var main = get_tree().root.find_node("Main", true, false)
 
 var score = 0
-var maxScore = 10
+var maxScore = 1
 var point = 0
 var UFOs = []
+var notGameOver = true
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -35,11 +36,13 @@ func _process(delta):
   scoreNode.text = score as String
   maxNode.text = maxScore as String
   pointNode.text = point as String
-  if score > maxScore:
+  if score > maxScore and notGameOver:
     onGameOver()
 
 func onGameOver():
+  notGameOver = false
   get_tree().paused = true
+  Universe.stopBackGroundMusic()
   Universe.playGameOver()
   gameOverNode.visible = true
 

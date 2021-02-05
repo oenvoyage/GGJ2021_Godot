@@ -12,7 +12,8 @@ func onExitScene():
   Universe.stopBackGroundMusic()
 
 func _on_GameOver():
-  Universe.playGameOver()
+  Universe.stopBackGroundMusic()
+#  Universe.playGameOver()
   self.onExitScene()
   get_tree().change_scene("res://Scenes/Welcome.tscn")
 

@@ -32,7 +32,6 @@ __meta__ = {
 }
 
 [node name="GameOver" type="Node2D" parent="."]
-visible = false
 
 [node name="Area2D" type="Area2D" parent="GameOver"]
 
@@ -213,6 +212,5 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 [connection signal="pressed" from="Button_ChangeView" to="." method="_on_Button_ChangeView_pressed"]
-[connection signal="input_event" from="GameOver/Area2D" to="." method="_on_GameOver_input_event"]
 [connection signal="pressed" from="GameOver/Button restart" to="." method="_on_Button_Restart_Game"]
 [connection signal="pressed" from="GameOver/Button Credits" to="." method="_on_Button_Load_Credits"]
