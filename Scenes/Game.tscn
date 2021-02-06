@@ -80,13 +80,14 @@ shape = SubResource( 1 )
 transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -10.9708, -6.86331, -20.9011 )
 
 [node name="Ground" type="StaticBody" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -9.44775, 0 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -10.6028, 0 )
 
 [node name="CollisionShape" type="CollisionShape" parent="Ground"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -11.6, 2.2, -30.7 )
 shape = SubResource( 2 )
 
 [node name="3_Alien_queues" type="Spatial" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.01186, 0 )
 
 [node name="Alien_Queue" parent="3_Alien_queues" instance=ExtResource( 11 )]
 transform = Transform( -0.101525, 0, 0.994833, 0, 1, 0, -0.994833, 0, -0.101525, -17.3844, -8.05239, -46.0072 )
