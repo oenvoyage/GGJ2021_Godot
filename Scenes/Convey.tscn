@@ -18,7 +18,7 @@ extents = Vector3( 2.8, 2.8, 2.2 )
 [node name="Convey" type="Spatial"]
 
 [node name="LuggagesSpawner" parent="." instance=ExtResource( 3 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 18.4, 2.7, -1.19209e-06 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -12.368, 2.7, -1.19209e-06 )
 
 [node name="waiting_area" parent="." instance=ExtResource( 11 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2, -6.5, -55.5 )
