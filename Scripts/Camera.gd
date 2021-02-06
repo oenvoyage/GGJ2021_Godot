@@ -3,6 +3,7 @@ extends Camera
 
 # Declare member variables here. Examples:
 var isCameraInHall = true
+var isCameraInBelt = true
 # var b = "text"
 
 
@@ -19,9 +20,15 @@ func switch_camera():
   if isCameraInHall == true:
     $AnimationPlayer.play("hall_to_belt")
     isCameraInHall = false
-  else:
-    $AnimationPlayer.play_backwards("hall_to_belt")
+    isCameraInBelt = true
+  elif isCameraInBelt == true:
+    $AnimationPlayer.play("belt_to_backoffice")
+    isCameraInHall = false
+    isCameraInBelt = false
+  else :
+    $AnimationPlayer.play("backoffice_to_hall")
     isCameraInHall = true
+    isCameraInBelt = false
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):
 #	pass

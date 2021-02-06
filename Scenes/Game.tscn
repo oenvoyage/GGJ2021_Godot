@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=2]
+[gd_scene load_steps=16 format=2]
 
 [ext_resource path="res://Scripts/Game.gd" type="Script" id=1]
 [ext_resource path="res://Scenes/Convey.tscn" type="PackedScene" id=2]
@@ -11,6 +11,8 @@
 [ext_resource path="res://anims/Camera_intro_movement.tres" type="Animation" id=9]
 [ext_resource path="res://anims/camera_hall_to_belt.tres" type="Animation" id=10]
 [ext_resource path="res://Prefabs/decors/Alien_Queue.tscn" type="PackedScene" id=11]
+[ext_resource path="res://anims/camera_backoffice_to_hall.tres" type="Animation" id=12]
+[ext_resource path="res://anims/camerat_to_backoffice.tres" type="Animation" id=13]
 
 [sub_resource type="BoxShape" id=1]
 extents = Vector3( 5.7, 1.6, 2.2 )
@@ -25,19 +27,6 @@ script = ExtResource( 1 )
 
 [node name="HUD" parent="." instance=ExtResource( 3 )]
 pause_mode = 2
-
-[node name="Camera" type="Camera" parent="."]
-transform = Transform( -0.833307, 0.389837, -0.391952, 0.0217514, 0.73159, 0.681398, 0.552382, 0.559289, -0.618118, -21.4328, 28.4884, -61.03 )
-environment = ExtResource( 6 )
-fov = 50.4
-size = 32.3
-far = 195.0
-script = ExtResource( 7 )
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="Camera"]
-autoplay = "Camera_intro_movement"
-anims/Camera_intro_movement = ExtResource( 9 )
-anims/hall_to_belt = ExtResource( 10 )
 
 [node name="Convey" parent="." instance=ExtResource( 2 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.832518, 0 )
@@ -145,6 +134,25 @@ light_energy = 8.48
 shadow_enabled = true
 spot_range = 34.3642
 spot_angle = 45.7865
+
+[node name="Camera" type="Camera" parent="."]
+transform = Transform( -0.833307, 0.389837, -0.391952, 0.0217514, 0.73159, 0.681398, 0.552382, 0.559288, -0.618118, -21.4328, 28.4884, -61.03 )
+environment = ExtResource( 6 )
+current = true
+fov = 55.0
+size = 32.3
+far = 195.0
+script = ExtResource( 7 )
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Camera"]
+autoplay = "Camera_intro_movement"
+anims/Camera_intro_movement = ExtResource( 9 )
+anims/backoffice_to_hall = ExtResource( 12 )
+anims/belt_to_backoffice = ExtResource( 13 )
+anims/hall_to_belt = ExtResource( 10 )
 [connection signal="body_entered" from="Counters/Exit3/Area" to="Counters/Exit3/Area" method="_on_Area_body_entered"]
 [connection signal="body_entered" from="Counters/Exit2/Area" to="Counters/Exit2/Area" method="_on_Area_body_entered"]
 [connection signal="body_entered" from="Counters/Exit1/Area" to="Counters/Exit1/Area" method="_on_Area_body_entered"]
