@@ -6,7 +6,7 @@ var conveyor_speed: float = 0.5
 var conveyor_speed_target: float = 1.0
 var conveyor_wobbling: int = CONVEYOR_WOBBLING_MAX
 
-var spawner_speed: float = 1
+var spawner_speed: float = 2.0
 
 func conveyor_speed_set(speed: float):
   conveyor_speed_target = speed

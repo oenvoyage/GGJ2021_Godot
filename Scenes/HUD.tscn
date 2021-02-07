@@ -89,13 +89,14 @@ __meta__ = {
 
 [node name="Score" type="Node" parent="."]
 
-[node name="TextureRect" type="TextureRect" parent="Score"]
+[node name="WrongLuggagePanel" type="TextureRect" parent="Score"]
+self_modulate = Color( 1, 1, 1, 0.6 )
 anchor_left = 1.0
 anchor_right = 1.0
-margin_left = -217.0
-margin_top = -5.0
-margin_right = -1.0
-margin_bottom = 133.0
+margin_left = -280.0
+margin_top = -4.0
+margin_right = 17.0
+margin_bottom = 134.0
 texture = ExtResource( 3 )
 expand = true
 stretch_mode = 1
@@ -103,25 +104,37 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="LabelCurrent" type="Label" parent="Score"]
+[node name="wrong luggages text" type="Label" parent="Score/WrongLuggagePanel"]
 anchor_left = 1.0
 anchor_right = 1.0
-margin_left = -132.43
-margin_top = 42.3457
-margin_right = -85.4299
-margin_bottom = 56.3457
+margin_left = -248.43
+margin_top = 38.3457
+margin_right = -43.4299
+margin_bottom = 52.3457
+text = "Wrong Luggages in Landing Area"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="LabelCurrent" type="Label" parent="Score/WrongLuggagePanel"]
+anchor_left = 1.0
+anchor_right = 1.0
+margin_left = -130.43
+margin_top = 61.3457
+margin_right = -83.4299
+margin_bottom = 75.3457
 text = "Current"
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Current" type="Label" parent="Score"]
+[node name="Current" type="Label" parent="Score/WrongLuggagePanel/LabelCurrent"]
 anchor_left = 1.0
 anchor_right = 1.0
-margin_left = -77.7651
-margin_top = 32.4777
-margin_right = -42.7651
-margin_bottom = 69.4777
+margin_left = 7.66479
+margin_top = -9.868
+margin_right = 42.6648
+margin_bottom = 27.132
 text = "30"
 align = 1
 valign = 1
@@ -129,12 +142,12 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Sep" type="Label" parent="Score"]
+[node name="Sep" type="Label" parent="Score/WrongLuggagePanel"]
 visible = false
-margin_left = 946.124
-margin_top = 14.0
-margin_right = 981.124
-margin_bottom = 51.0
+margin_left = -20.876
+margin_top = 18.0
+margin_right = 14.124
+margin_bottom = 55.0
 text = "/"
 align = 1
 valign = 1
@@ -142,28 +155,28 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Max" type="Label" parent="Score"]
+[node name="LabelMax" type="Label" parent="Score/WrongLuggagePanel"]
 anchor_left = 1.0
 anchor_right = 1.0
-margin_left = -79.2711
-margin_top = 56.9314
-margin_right = -44.2711
-margin_bottom = 93.9314
-text = "30"
-align = 1
-valign = 1
+margin_left = -160.873
+margin_top = 81.6009
+margin_right = -79.873
+margin_bottom = 95.6009
+text = "Max Allowed"
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="LabelMax" type="Label" parent="Score"]
+[node name="Max" type="Label" parent="Score/WrongLuggagePanel/LabelMax"]
 anchor_left = 1.0
 anchor_right = 1.0
-margin_left = -162.873
-margin_top = 67.6009
-margin_right = -81.873
-margin_bottom = 81.6009
-text = "Max Allowed"
+margin_left = 2.60193
+margin_top = -10.6695
+margin_right = 37.6019
+margin_bottom = 26.3305
+text = "30"
+align = 1
+valign = 1
 __meta__ = {
 "_edit_use_anchors_": false
 }

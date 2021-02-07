@@ -1,8 +1,8 @@
 extends Spatial
 
-onready var scoreNode = get_node("../HUD/Score/Current")
+onready var scoreNode = get_node("../HUD/Score/WrongLuggagePanel/LabelCurrent/Current")
+onready var maxNode = get_node("../HUD/Score/WrongLuggagePanel/LabelMax/Max")
 onready var pointNode = get_node("../HUD/PointPanel/Point")
-onready var maxNode = get_node("../HUD/Score/Max")
 onready var gameOverNode = get_node("../HUD/GameOver")
 onready var main = get_tree().root.find_node("Main", true, false)
 
