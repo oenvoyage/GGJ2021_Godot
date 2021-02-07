@@ -16,3 +16,8 @@ func switch():
   else:
     get_node("switch").closeLeft()
   isClosed = !isClosed
+
+func closeSwitch():
+   if !isClosed:
+      get_node("switch").closeLeft()
+      isClosed = true
