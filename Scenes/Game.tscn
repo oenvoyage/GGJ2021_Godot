@@ -15,7 +15,7 @@
 [ext_resource path="res://anims/camerat_to_backoffice.tres" type="Animation" id=13]
 
 [sub_resource type="BoxShape" id=1]
-extents = Vector3( 5.7, 1.6, 2.2 )
+extents = Vector3( 5.7, 3.64261, 2.2 )
 
 [sub_resource type="BoxShape" id=2]
 extents = Vector3( 86.4, 0.3, 83.8 )
@@ -41,7 +41,7 @@ script = ExtResource( 4 )
 exitNb = 3
 
 [node name="BaggageClaim" type="CollisionShape" parent="Counters/Exit3/Area"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.4, -3.2, -4.6 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.20573, -5.00008, -4.6 )
 shape = SubResource( 1 )
 
 [node name="Exit2" type="Spatial" parent="Counters"]
@@ -52,7 +52,7 @@ script = ExtResource( 4 )
 exitNb = 2
 
 [node name="BaggageClaim" type="CollisionShape" parent="Counters/Exit2/Area"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.4, -3.2, -4.6 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.4, -4.58896, -4.6 )
 shape = SubResource( 1 )
 
 [node name="Exit1" type="Spatial" parent="Counters"]
@@ -62,7 +62,7 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.7, -1.1, -51.5 )
 script = ExtResource( 4 )
 
 [node name="BaggageClaim" type="CollisionShape" parent="Counters/Exit1/Area"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.4, -3.2, -4.6 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.4, -3.69229, -4.6 )
 shape = SubResource( 1 )
 
 [node name="Decor_Background" parent="." instance=ExtResource( 5 )]
