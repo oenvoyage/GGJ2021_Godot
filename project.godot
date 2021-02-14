@@ -52,7 +52,7 @@ config/icon="res://images/Logo_Square_Black.png"
 [autoload]
 
 Universe="*res://Universe.tscn"
-DragDropController="*res://addons/DragDrop3D/DragDropController.gd"
+Events="*res://Events.tscn"
 
 [debug]
 

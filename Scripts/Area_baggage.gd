@@ -1,19 +1,11 @@
 extends Area
 
-
-# Declare member variables here. Examples:
-# var a = 2
-# var b = "text"
-
 export var exitNb = 1
 var currentColorsInArrival = {"Gris" : [], "Jaune": [],"Mauve": [],"Turquois": [],"Vert": []}
 var currentAlienColor = ""
 const existingColors = ["Gris", "Jaune","Mauve","Turquois","Vert"]
 const existingType = ["Ufo","Lug"]
 const existingSpawnerID = ["Spawner1","Spawner2", "Spawner3"]
-
-onready var score = get_tree().root.get_node("Main/Score")
-onready var spawner = get_tree().root.get_node("Main/Convey/UFOSpawner%s" % exitNb)
 
 
 func _on_Area_body_entered(body):
@@ -28,8 +20,8 @@ func _on_Area_body_entered(body):
         var b = bods.pop_back()
         if b != null:
           currentColorsInArrival[currentAlienColor] = bods
-          score.matched()
-          score.removeLuggage(exitNb)
+          Events.emit_signal("luggage_Matched")
+          Events.emit_signal("luggage_removed", exitNb)
           destroyLuggage(b, bods)
   elif dict["type"] == "Lug":
     print_debug("luggage %s entered in exit nb: %s" % [dict, exitNb])
@@ -38,15 +30,15 @@ func _on_Area_body_entered(body):
       return
     var bodies = currentColorsInArrival[currentAlienColor]
     if tag == currentAlienColor:
-      score.matched()
+      Events.emit_signal("luggage_Matched")
       destroyLuggage(body, bodies)
     else: # check the match because the current alien might have changed, or add the luggage
       if currentAlienColor in currentColorsInArrival:       
         var b = bodies.pop_back()
         if b != null:
           currentColorsInArrival[currentAlienColor] = bodies
-          score.removeLuggage(exitNb)
-          score.matched()
+          Events.emit_signal("luggage_removed")          
+          Events.emit_signal("luggage_Matched")          
           destroyLuggage(b, bodies)
         else:
           addLuggage(tag, body)
@@ -58,7 +50,7 @@ func addLuggage(color, body):
   var bodies = currentColorsInArrival[color]
   bodies.push_front(body)
   currentColorsInArrival[color] = bodies
-  score.addLuggage(exitNb)
+  Events.emit_signal("luggage_added")  
 
 func destroyLuggage(body, bodies):
   body.queue_free() 
@@ -66,7 +58,7 @@ func destroyLuggage(body, bodies):
 
 func popNewAlien():
   currentAlienColor = ""
-  spawner.pop()
+  Events.emit_signal("ufo_spawned_exit%s" % exitNb)
 
 func getTags(body):
   var ret = {}

@@ -30,6 +30,7 @@ func pop():
   return currentUfo.name
 
 func _ready():
+  Events.connect("ufo_spawned_exit%s" % spawnerId,self, "pop")
   for ufo in $TheUfo.get_children():
     ufo.set_mode(RigidBody.MODE_STATIC)
     ufo.visible = false

@@ -1,42 +1,40 @@
 extends Spatial
 
-onready var scoreNode = get_node("../HUD/Score/WrongLuggagePanel/LabelCurrent/Current")
-onready var maxNode = get_node("../HUD/Score/WrongLuggagePanel/LabelMax/Max")
-onready var pointNode = get_node("../HUD/PointPanel/Point")
-onready var gameOverNode = get_node("../HUD/GameOver")
-onready var main = get_tree().root.find_node("Main", true, false)
 
-var score = 0
-var maxScore = 10
+var currentLuggage = 0
+var maxLuggage = 10
 var point = 0
 var UFOs = []
 var notGameOver = true
 
-# Called when the node enters the scene tree for the first time.
-func _ready():
-  score = 0
-  UFOs.append(get_node("../Convey/UFOSpawner1"))
-  UFOs.append(get_node("../Convey/UFOSpawner2")) 
-  UFOs.append(get_node("../Convey/UFOSpawner3"))    
-  gameOverNode.visible = false
+func _enter_tree():
+  Events.connect("luggage_added", self,"addLuggage")
+  Events.connect("luggage_removed", self,"removeLuggage")
+  Events.connect("luggage_Matched", self, "matched")
   
-func addLuggage(nb):
-  score += 1
+# Called when the node enters the scene tree for the first time.
+func _ready() -> void:
+  Events.emit_signal("hud_max_luggage_set", maxLuggage)
+  Events.emit_signal("hud_current_luggage_set", currentLuggage)
+  
+func addLuggage() -> void:
+  setCurrentLuggage(currentLuggage + 1)
 
-func removeLuggage(nb):
-  if score > 0 :
-    score -= 1
-  UFOs[nb-1].pop()
+func removeLuggage(nb) -> void:
+  if currentLuggage > 0 :
+    setCurrentLuggage(currentLuggage - 1)
+
+func setCurrentLuggage(value) -> void:
+  currentLuggage = value
+  Events.emit_signal("hud_current_luggage_set", currentLuggage)
 
 func matched():
   point += 1
+  Events.emit_signal("hud_scored", point)
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-  scoreNode.text = score as String
-  maxNode.text = maxScore as String
-  pointNode.text = point as String
-  if score > maxScore and notGameOver:
+  if currentLuggage > maxLuggage and notGameOver:
     onGameOver()
 
 func onGameOver():
@@ -44,7 +42,4 @@ func onGameOver():
   get_tree().paused = true
   Universe.stopBackGroundMusic()
   Universe.playGameOver()
-  gameOverNode.visible = true
-
-func _on_Timer_timeout():
-  score += 1
+  Events.emit_signal("hud_gameover")
