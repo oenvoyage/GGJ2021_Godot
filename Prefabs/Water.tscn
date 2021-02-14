@@ -1,0 +1,93 @@
+[gd_scene load_steps=10 format=2]
+
+[sub_resource type="PlaneMesh" id=1]
+subdivide_width = 32
+subdivide_depth = 32
+
+[sub_resource type="Shader" id=2]
+code = "shader_type spatial;
+
+render_mode specular_toon;
+
+uniform sampler2D noise;
+uniform sampler2D normalMap;
+uniform float height_scale = 0.5;
+
+varying vec2 tex_position;
+
+float wave(vec2 position){
+  position += texture(noise, position / 10.0).x * 2.0 - 1.0;
+  vec2 wv = 1.0 - abs(sin(position));
+  return pow(1.0 - pow(wv.x * wv.y, 0.65), 4.0);
+}
+
+float height(vec2 position, float time) {
+  float d = wave((position + time) * 0.5) * 0.3;
+  d += wave((position - time) * 0.3) * 0.3;
+  d += wave((position + time) * 0.5) * 0.2;
+  d += wave((position - time) * 0.6) * 0.2;
+  return d;
+}
+
+void vertex() {
+//  tex_position = VERTEX.xz / 2.0 + 0.5;
+//  float height = texture(noise, tex_position).x;
+  //VERTEX.y += cos(VERTEX.x * 4.0) * sin(VERTEX.z * 4.0);
+  vec2 pos = VERTEX.xz;
+  float k = height(pos, TIME);
+  VERTEX.y = k;
+  NORMAL = normalize(vec3(k - height(pos + vec2(0.1, 0.0), TIME), 0.1, k - height(pos + vec2(0.0, 0.1), TIME)));
+  
+//  VERTEX.y += height * height_scale;
+ }
+
+void fragment() {
+  float fresnel = sqrt(1.0 - dot(NORMAL, VIEW));
+  RIM = 0.2;
+  METALLIC = 0.0;
+  ROUGHNESS = 0.01 * (1.0 - fresnel);
+  ALBEDO = vec3(0.01, 0.03, 0.05);
+//  NORMALMAP = texture(normalMap, tex_position).xyz;
+ }
+
+
+"
+
+[sub_resource type="OpenSimplexNoise" id=3]
+
+[sub_resource type="NoiseTexture" id=4]
+noise = SubResource( 3 )
+
+[sub_resource type="OpenSimplexNoise" id=5]
+
+[sub_resource type="NoiseTexture" id=6]
+as_normalmap = true
+noise = SubResource( 5 )
+
+[sub_resource type="ShaderMaterial" id=7]
+shader = SubResource( 2 )
+shader_param/height_scale = 0.66
+shader_param/noise = SubResource( 4 )
+shader_param/normalMap = SubResource( 6 )
+
+[sub_resource type="ProceduralSky" id=8]
+sun_latitude = 22.96
+sun_longitude = -28.08
+sun_energy = 1.89
+
+[sub_resource type="Environment" id=9]
+background_mode = 2
+background_sky = SubResource( 8 )
+
+[node name="Water" type="Spatial"]
+
+[node name="MeshInstance" type="MeshInstance" parent="."]
+transform = Transform( 24.7672, 0, 0, 0, 24.7672, 0, 0, 0, 24.7672, 0, 0.128551, 9.3082 )
+mesh = SubResource( 1 )
+material/0 = SubResource( 7 )
+
+[node name="OmniLight" type="OmniLight" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.95178, 4.12893, 6.42203 )
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource( 9 )
