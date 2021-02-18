@@ -156,3 +156,5 @@ anims/hall_to_belt = ExtResource( 10 )
 [connection signal="body_entered" from="Counters/Exit3/Area" to="Counters/Exit3/Area" method="_on_Area_body_entered"]
 [connection signal="body_entered" from="Counters/Exit2/Area" to="Counters/Exit2/Area" method="_on_Area_body_entered"]
 [connection signal="body_entered" from="Counters/Exit1/Area" to="Counters/Exit1/Area" method="_on_Area_body_entered"]
+
+[editable path="Convey"]

@@ -1,5 +1,6 @@
 extends Spatial
 
+class_name Switch
 
 export var OnLeft : bool = false
 

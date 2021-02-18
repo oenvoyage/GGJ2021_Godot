@@ -33,13 +33,19 @@ _global_script_classes=[ {
 "class": "RepositoryItem",
 "language": "GDScript",
 "path": "res://addons/github-integration/scripts/RepositoryItem.gd"
+}, {
+"base": "Spatial",
+"class": "Switch",
+"language": "GDScript",
+"path": "res://Scripts/SwitchCtr.gd"
 } ]
 _global_script_class_icons={
 "ContributorClass": "",
 "Draggable": "",
 "GistItem": "",
 "InvitationItem": "",
-"RepositoryItem": ""
+"RepositoryItem": "",
+"Switch": ""
 }
 
 [application]
@@ -53,6 +59,7 @@ config/icon="res://images/Logo_Square_Black.png"
 
 Universe="*res://Universe.tscn"
 Events="*res://Events.tscn"
+DragDropController="*res://addons/DragDrop3D/DragDropController.gd"
 
 [debug]
 

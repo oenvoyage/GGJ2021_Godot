@@ -42,6 +42,9 @@ spawnerId = 3
 
 [node name="Controller" type="Spatial" parent="."]
 script = ExtResource( 6 )
+switch_1 = NodePath("Switch_S_1")
+switch_2 = NodePath("Switch_S_2")
+switch_3 = NodePath("Switch_S_3")
 
 [node name="Straight_N_1" type="Spatial" parent="Controller"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 13.2, 0, 0 )

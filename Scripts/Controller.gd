@@ -1,9 +1,9 @@
 extends Spatial
 
 
-onready var switch_1 = get_node("Switch_S_1")
-onready var switch_2 = get_node("Switch_S_2")
-onready var switch_3 = get_node("Switch_S_3")
+export(NodePath) onready var switch_1 = get_node(switch_1)
+export(NodePath) onready var switch_2 = get_node(switch_2)
+export(NodePath) onready var switch_3 = get_node(switch_3)
 
 
 
