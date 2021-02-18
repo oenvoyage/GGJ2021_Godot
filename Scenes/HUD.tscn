@@ -1,12 +1,29 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://Scripts/HUD.gd" type="Script" id=1]
 [ext_resource path="res://images/Game_Over_Screen_Final.png" type="Texture" id=2]
 [ext_resource path="res://images/button_empty.png" type="Texture" id=3]
 [ext_resource path="res://images/Thanks_for_playing.jpg" type="Texture" id=4]
+[ext_resource path="res://Font/jd_lcd_rounded.ttf" type="DynamicFontData" id=5]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 514.94, 301.257 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 30
+font_data = ExtResource( 5 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 30
+font_data = ExtResource( 5 )
+
+[sub_resource type="DynamicFont" id=4]
+size = 76
+font_data = ExtResource( 5 )
+
+[sub_resource type="DynamicFont" id=5]
+size = 40
+font_data = ExtResource( 5 )
 
 [node name="HUD" type="Node2D"]
 script = ExtResource( 1 )
@@ -131,12 +148,15 @@ __meta__ = {
 [node name="Current" type="Label" parent="Score/WrongLuggagePanel/LabelCurrent"]
 anchor_left = 1.0
 anchor_right = 1.0
-margin_left = 7.66479
-margin_top = -9.868
-margin_right = 42.6648
-margin_bottom = 27.132
+margin_left = 12.3468
+margin_top = -8.39184
+margin_right = 34.3468
+margin_bottom = 16.6082
+custom_fonts/font = SubResource( 2 )
+custom_colors/font_color = Color( 1, 0.0196078, 0.0196078, 1 )
+custom_colors/font_color_shadow = Color( 0.0275395, 0.201458, 0.220783, 1 )
 text = "30"
-align = 1
+align = 2
 valign = 1
 __meta__ = {
 "_edit_use_anchors_": false
@@ -170,12 +190,13 @@ __meta__ = {
 [node name="Max" type="Label" parent="Score/WrongLuggagePanel/LabelMax"]
 anchor_left = 1.0
 anchor_right = 1.0
-margin_left = 2.60193
-margin_top = -10.6695
-margin_right = 37.6019
-margin_bottom = 26.3305
+margin_left = 9.65112
+margin_top = -6.91428
+margin_right = 31.6511
+margin_bottom = 18.0857
+custom_fonts/font = SubResource( 3 )
 text = "30"
-align = 1
+align = 2
 valign = 1
 __meta__ = {
 "_edit_use_anchors_": false
@@ -200,10 +221,11 @@ __meta__ = {
 [node name="Point" type="Label" parent="PointPanel"]
 anchor_left = 0.5
 anchor_right = 0.5
-margin_left = 562.719
-margin_top = 29.7193
-margin_right = 702.719
-margin_bottom = 86.7193
+margin_left = 562.819
+margin_top = 24.0
+margin_right = 669.819
+margin_bottom = 90.0
+custom_fonts/font = SubResource( 4 )
 text = "0"
 align = 1
 valign = 1
@@ -214,11 +236,12 @@ __meta__ = {
 [node name="LabelPoint" type="Label" parent="PointPanel"]
 anchor_left = 0.5
 anchor_right = 0.5
-margin_left = 534.719
-margin_top = 29.7193
-margin_right = 674.719
-margin_bottom = 86.7193
-text = "Score:"
+margin_left = 576.892
+margin_top = -1.67355
+margin_right = 651.892
+margin_bottom = 31.3264
+custom_fonts/font = SubResource( 5 )
+text = "Score"
 align = 1
 valign = 1
 __meta__ = {
