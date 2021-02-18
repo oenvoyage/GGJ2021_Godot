@@ -20,8 +20,8 @@ func _on_Area_body_entered(body):
         var b = bods.pop_back()
         if b != null:
           currentColorsInArrival[currentAlienColor] = bods
-          Events.emit_signal("luggage_Matched")
-          Events.emit_signal("luggage_removed", exitNb)
+          Events.emit_luggage_Matched()
+          Events.emit_luggage_removed(exitNb)
           destroyLuggage(b, bods)
   elif dict["type"] == "Lug":
     print_debug("luggage %s entered in exit nb: %s" % [dict, exitNb])
@@ -30,15 +30,15 @@ func _on_Area_body_entered(body):
       return
     var bodies = currentColorsInArrival[currentAlienColor]
     if tag == currentAlienColor:
-      Events.emit_signal("luggage_Matched")
+      Events.emit_luggage_Matched()
       destroyLuggage(body, bodies)
     else: # check the match because the current alien might have changed, or add the luggage
       if currentAlienColor in currentColorsInArrival:       
         var b = bodies.pop_back()
         if b != null:
           currentColorsInArrival[currentAlienColor] = bodies
-          Events.emit_signal("luggage_removed")          
-          Events.emit_signal("luggage_Matched")          
+          Events.emit_luggage_removed(exitNb)          
+          Events.emit_luggage_Matched()          
           destroyLuggage(b, bodies)
         else:
           addLuggage(tag, body)
@@ -50,7 +50,7 @@ func addLuggage(color, body):
   var bodies = currentColorsInArrival[color]
   bodies.push_front(body)
   currentColorsInArrival[color] = bodies
-  Events.emit_signal("luggage_added")  
+  Events.emit_luggage_added()  
 
 func destroyLuggage(body, bodies):
   body.queue_free() 
@@ -58,7 +58,7 @@ func destroyLuggage(body, bodies):
 
 func popNewAlien():
   currentAlienColor = ""
-  Events.emit_signal("ufo_spawned_exit%s" % exitNb)
+  Events.emit_ufo_spawned_exit(exitNb)
 
 func getTags(body):
   var ret = {}

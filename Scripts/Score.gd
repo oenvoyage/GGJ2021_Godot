@@ -14,8 +14,8 @@ func _enter_tree():
   
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-  Events.emit_signal("hud_max_luggage_set", maxLuggage)
-  Events.emit_signal("hud_current_luggage_set", currentLuggage)
+  Events.emit_hud_max_luggage_set(maxLuggage)
+  Events.emit_hud_current_luggage_set(currentLuggage)
   
 func addLuggage() -> void:
   setCurrentLuggage(currentLuggage + 1)
@@ -26,11 +26,11 @@ func removeLuggage(nb) -> void:
 
 func setCurrentLuggage(value) -> void:
   currentLuggage = value
-  Events.emit_signal("hud_current_luggage_set", currentLuggage)
+  Events.emit_hud_current_luggage_set(currentLuggage)
 
 func matched():
   point += 1
-  Events.emit_signal("hud_scored", point)
+  Events.emit_hud_scored(point)
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
@@ -42,4 +42,4 @@ func onGameOver():
   get_tree().paused = true
   Universe.stopBackGroundMusic()
   Universe.playGameOver()
-  Events.emit_signal("hud_gameover")
+  Events.emit_hud_gameover()
